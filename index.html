@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d17">
+  <meta name="description" content="MX GetServer — Telegram IPTV server index">
+  <title>MX GetServer</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080c15;--panel:#111725;--panel2:#171e2f;--text:#f3f5fc;--muted:#8992aa;--line:#273047;--accent:#fd4c68;--cyan:#40d4d0;--green:#67e2aa}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse 65% 38% at 85% -10%,#69204055,transparent),radial-gradient(ellipse 55% 36% at 0% 15%,#123c5760,transparent),var(--bg);font:15px/1.55 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;color:var(--text)}
+    a{color:inherit}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    .shell{max-width:1240px;margin:auto;padding:26px 24px 64px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:14px;direction:ltr}
+    .mark{display:grid;place-items:center;width:54px;height:54px;border:1px solid #fd4c6880;border-radius:17px;background:linear-gradient(145deg,#ed395a,#611a3d);font-size:23px;font-weight:900;box-shadow:0 12px 44px #fc39524a}
+    .brand-name{font-size:24px;font-weight:850;letter-spacing:-.9px;line-height:1.2}.brand-name b{color:var(--accent)}
+    .brand-caption{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+    .top-right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .badge{border:1px solid var(--line);background:#111a27c9;border-radius:999px;padding:8px 13px;font-size:12px;color:var(--muted)}
+    .dot{display:inline-block;width:8px;height:8px;margin-left:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #67e2aa16}
+    .btn{border:1px solid #404a61;border-radius:11px;background:#1a2537;color:var(--text);padding:10px 14px;transition:.18s}
+    .btn:hover{border-color:var(--cyan);background:#203044;transform:translateY(-1px)}.btn-primary{border-color:#fe6582;background:linear-gradient(135deg,#fd4c68,#b52e58);font-weight:700}
+    .hero{padding:65px 0 28px;max-width:820px}.eyebrow{text-transform:uppercase;letter-spacing:2.4px;font-size:12px;font-weight:850;color:var(--cyan)}
+    h1{font-size:clamp(33px,5vw,60px);letter-spacing:-1.6px;line-height:1.13;margin:13px 0 18px}h1 span{color:var(--accent)}
+    .hero p{max-width:630px;font-size:16px;color:#a6aec3;line-height:1.9;margin:0}
+    .sources{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 27px}
+    .source{display:inline-flex;align-items:center;gap:9px;background:#151e2e;border:1px solid #293249;padding:10px 13px;border-radius:12px;text-decoration:none;font-size:13px;direction:ltr}
+    .source:hover{border-color:var(--cyan)}.source-icon{background:#229ed9;border-radius:8px;padding:4px 8px;color:white;font-weight:900}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:12px 0 28px}
+    .stat{padding:19px 22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,#182034,#101522);box-shadow:0 10px 35px #0002}
+    .stat-label{font-size:13px;color:var(--muted)}.stat strong{display:block;font-size:30px;letter-spacing:-1px;line-height:1.4}
+    .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:17px 0 19px;border-top:1px solid var(--line)}
+    .toolbar-left,.toolbar-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .search{display:flex;align-items:center;gap:8px;min-width:min(320px,85vw);border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:0 13px}
+    .search input{width:100%;height:45px;border:0;outline:0;background:transparent;color:var(--text)}
+    .search:focus-within{border-color:var(--cyan)}.search input::placeholder{color:#77829a}
+    .tabs{display:flex;gap:4px;border:1px solid var(--line);padding:4px;border-radius:12px;background:#111725}
+    .tab{background:transparent;border:0;border-radius:9px;padding:9px 13px;color:var(--muted)}
+    .tab[aria-pressed="true"]{background:#2a3347;color:#fff}
+    .updated{font-size:12px;color:var(--muted)}.count{color:#aab4ca;font-size:13px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+    .card{min-width:0;position:relative;border:1px solid #2c344a;background:linear-gradient(155deg,#192135,#111723 65%);border-radius:18px;padding:21px;box-shadow:0 10px 32px #0003;transition:.2s;overflow:hidden}
+    .card:hover{border-color:#505c78;transform:translateY(-2px)}.card:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.75}
+    .card.mac:before{background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+    .card-top,.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .type{display:inline-flex;gap:7px;align-items:center;padding:6px 10px;background:#fc45671b;color:#ff7f99;border:1px solid #d8406040;border-radius:9px;font-size:11px;font-weight:850;letter-spacing:.6px}
+    .mac .type{background:#3bd5ca17;border-color:#3bd5ca44;color:#63e5e0}
+    .number{color:#75819b;font-size:12px}.card h3{direction:ltr;text-align:left;margin:20px 0 3px;font-size:18px;overflow-wrap:anywhere}
+    .origin{color:#9ba7bf;font-size:12px;margin-bottom:17px;direction:ltr;text-align:left}
+    .field{margin-top:10px;border:1px solid #2c3650;background:#0a111f;border-radius:11px;padding:10px 11px}
+    .field-head{display:flex;align-items:center;justify-content:space-between;color:#8f9bb4;font-size:11px;margin-bottom:4px}
+    .field-value{display:flex;align-items:center;justify-content:space-between;gap:10px;direction:ltr}
+    .value{font:13px/1.6 ui-monospace,Consolas,monospace;overflow-wrap:anywhere;min-width:0;color:#f3f6ff;user-select:text}
+    .placeholder{font-family:inherit;color:#65748d;font-size:12px;direction:rtl}
+    .copy{flex:0 0 auto;background:#1a283b;color:#cbdaf0;border:1px solid #33425b;border-radius:7px;padding:4px 8px;font-size:11px}
+    .copy:disabled{opacity:.4;cursor:not-allowed}
+    .card-bottom{border-top:1px solid #283249;margin-top:20px;padding-top:15px;flex-wrap:wrap}
+    .post-link{font-weight:700;text-decoration:none;color:var(--cyan);font-size:12px}
+    .post-link:hover{text-decoration:underline}.date{font-size:11px;color:#8692ac}.local-button{width:100%;margin-top:13px}
+    .empty{text-align:center;border:1px dashed #3b4764;border-radius:17px;background:#141c2b;grid-column:1/-1;padding:55px 18px;color:#a5b1c9}.empty strong{display:block;font-size:20px;color:#f3f6ff;margin-bottom:6px}
+    .foot{margin-top:35px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:12px}
+    dialog{max-width:min(480px,calc(100% - 32px));width:100%;padding:0;border:1px solid #35435d;border-radius:19px;background:#151c2c;color:var(--text);box-shadow:0 40px 120px #0009}
+    dialog::backdrop{background:#030813d4;backdrop-filter:blur(5px)}
+    .modal{padding:26px}.modal h2{margin:0 0 8px}.modal p{color:var(--muted);margin:0 0 20px;font-size:13px}
+    .form-row{margin-bottom:13px}.form-row label{display:block;font-size:12px;color:#a6b5c9;margin-bottom:6px}
+    .form-row input{width:100%;direction:ltr;border-radius:10px;background:#0a101c;border:1px solid #34415a;color:var(--text);height:43px;padding:0 12px}
+    .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:22px}
+    .hide{display:none!important}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:650px){.shell{padding:20px 15px 40px}.hero{padding-top:38px}.grid{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:25px}.toolbar-left,.search{width:100%}.search{min-width:0}.brand-name{font-size:21px}.badge{display:none}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div class="brand"><div class="mark">MX</div><div><div class="brand-name">MX <b>GetServer</b></div><div class="brand-caption">Telegram server monitor</div></div></div>
+    <div class="top-right"><div class="badge"><span class="dot"></span> Telegram Feed</div><button class="btn" id="refresh">↻ تحديث</button></div>
+  </header>
+  <section class="hero">
+    <div class="eyebrow">SERVER DISCOVERY · TWO CHANNELS</div>
+    <h1>السيرفرات، <span>بمكان واحد.</span></h1>
+    <p>تجميع تلقائي لروابط السيرفرات المنشورة بالقناتين، مرتبة حسب أحدث منشور. تفاصيل الحسابات الخاصة تگدر تضيفها مؤقتاً من جهازك، بدون نشرها على GitHub.</p>
+    <div class="sources">
+      <a class="source" target="_blank" rel="noopener noreferrer" href="https://t.me/IPTVXtremeFlix"><span class="source-icon">➤</span>@IPTVXtremeFlix ↗</a>
+      <a class="source" target="_blank" rel="noopener noreferrer" href="https://t.me/AisosElho"><span class="source-icon">➤</span>@AisosElho ↗</a>
+    </div>
+  </section>
+  <section class="stats" aria-label="Statistics">
+    <div class="stat"><span class="stat-label">السيرفرات</span><strong id="stat-all">—</strong></div>
+    <div class="stat"><span class="stat-label">Xtream</span><strong id="stat-xtream">—</strong></div>
+    <div class="stat"><span class="stat-label">Stalker / MAC</span><strong id="stat-mac">—</strong></div>
+  </section>
+  <section class="toolbar">
+    <div class="toolbar-left">
+      <div class="search"><span>⌕</span><input id="search" placeholder="ابحث عن سيرفر أو قناة..." type="search" aria-label="بحث"></div>
+      <div class="tabs" aria-label="Filters">
+        <button class="tab" aria-pressed="true" data-filter="all">الكل</button>
+        <button class="tab" aria-pressed="false" data-filter="xtream">Xtream</button>
+        <button class="tab" aria-pressed="false" data-filter="mac">Stalker</button>
+      </div>
+    </div>
+    <div class="toolbar-right"><span class="count" id="count"></span><span class="updated" id="updated">جاري جلب آخر تحديث…</span></div>
+  </section>
+  <main class="grid" id="grid" aria-live="polite">
+    <div class="empty"><strong>جاري التحميل…</strong>نجلب آخر السيرفرات المفهرسة.</div>
+  </main>
+  <footer class="foot"><span>MX GetServer · Server links indexed from public Telegram previews</span><span>المزامنة الدورية تعتمد على إتاحة منشورات تيليگرام العلنية.</span></footer>
+</div>
+<dialog id="editor" aria-labelledby="editor-title">
+ <form class="modal" id="credentials-form">
+  <h2 id="editor-title">إضافة بيانات اشتراكك</h2>
+  <p>تنحفظ البيانات فقط بهالجلسة داخل المتصفح، ما تنرسل للسيرفر ولا لـ GitHub.</p>
+  <div class="form-row"><label for="user">Username</label><input autocomplete="off" id="user" placeholder="Username"></div>
+  <div class="form-row"><label for="pass">Password</label><input autocomplete="off" id="pass" placeholder="Password" type="password"></div>
+  <div class="form-row"><label for="mac">MAC address</label><input autocomplete="off" id="mac" placeholder="00:1A:79:XX:XX:XX"></div>
+  <div class="modal-actions"><button class="btn" type="button" id="cancel">إلغاء</button><button class="btn btn-primary" type="submit">حفظ بهالجلسة</button></div>
+ </form>
+</dialog>
+<script>
+(function(){
+'use strict';
+const $ = id => document.getElementById(id);
+let items=[], filter='all', editing='';
+const stored = {};
+try{Object.assign(stored,JSON.parse(sessionStorage.getItem('mxgetserver-local')||'{}'))}catch(e){}
+const escape = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const dateLabel = s => {if(!s)return 'بدون تاريخ'; const d=new Date(s);return isNaN(d)?'بدون تاريخ':new Intl.DateTimeFormat('ar-IQ',{dateStyle:'medium',timeStyle:'short'}).format(d)};
+const local = id => stored[id]||{};
+function row(label,value){
+  return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!value?'placeholder':'')+'">'+(value?escape(value):'أضف بياناتك أو افتح المنشور')+'</span><button class="copy" type="button" '+(!value?'disabled':'')+' data-copy="'+escape(value||'')+'">نسخ</button></div></div>';
+}
+function card(x,i){
+ const cred=local(x.id), isMac=x.type==='mac', u=isMac?'':cred.username||'',p=isMac?'':cred.password||'',m=isMac?cred.mac||'':'';
+ const host=String(x.server||''), source=x.source==='IPTVXtremeFlix'?'IPTVXtremeFlix':'AisosElho';
+ const link=/^https:\/\/t\.me\/[a-zA-Z0-9_]+\/\d+$/.test(x.post_url||'')?x.post_url:'https://t.me/'+source;
+ return '<article class="card '+(isMac?'mac':'')+'"><div class="card-top"><span class="type">'+(isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">#'+String(i+1).padStart(3,'0')+'</span></div><h3>'+escape(host.replace(/^https?:\/\//,''))+'</h3><div class="origin">✧ @'+source+'</div>'+
+ row('SERVER / PORTAL',host)+(isMac?row('MAC ADDRESS',m):row('USERNAME',u)+row('PASSWORD',p))+
+ '<div class="card-bottom"><span class="date">'+escape(dateLabel(x.date))+'</span><a class="post-link" target="_blank" rel="noopener noreferrer" href="'+escape(link)+'">المنشور الأصلي ↗</a></div>'+
+ '<button class="btn local-button" type="button" data-edit="'+escape(x.id)+'">＋ بيانات اشتراكي</button></article>';
+}
+function render(){
+ const text=$('search').value.toLowerCase().trim();
+ const list=items.filter(x=>(filter==='all'||x.type===filter)&&(!text||(x.server+' '+x.source+' '+x.type).toLowerCase().includes(text)));
+ $('count').textContent=list.length+' نتيجة';
+ $('grid').innerHTML=list.length?list.map(card).join(''):'<div class="empty"><strong>ماكو نتائج حالياً</strong>جرّب تبدّل الفلتر، أو افتح القناتين للتأكد من وجود منشورات عامة.</div>';
+}
+async function load(){
+ $('refresh').disabled=true;$('refresh').textContent='↻ جاري التحديث';
+ try{
+  const r=await fetch('./data/servers.json?t='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const d=await r.json();
+  items=Array.isArray(d.items)?d.items.filter(x=>x&&typeof x.id==='string'&&typeof x.server==='string'&&/^https?:\/\//.test(x.server)&&['mac','xtream'].includes(x.type)).slice(0,500):[];
+  items.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  $('stat-all').textContent=items.length;$('stat-xtream').textContent=items.filter(x=>x.type==='xtream').length;$('stat-mac').textContent=items.filter(x=>x.type==='mac').length;
+  $('updated').textContent=d.updated_at?'آخر مزامنة: '+dateLabel(d.updated_at):'ماكو مزامنة ناجحة بعد';
+  render();
+ }catch(e){$('updated').textContent='تعذّر جلب التحديث';$('grid').innerHTML='<div class="empty"><strong>تعذّر تحميل البيانات</strong>تأكد من تشغيل مزامنة GitHub Actions ونشر الصفحة.</div>'}
+ finally{$('refresh').disabled=false;$('refresh').textContent='↻ تحديث'}
+}
+$('refresh').addEventListener('click',load);
+$('search').addEventListener('input',render);
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
+$('grid').addEventListener('click',async e=>{
+ const copy=e.target.closest('[data-copy]');if(copy&&!copy.disabled){
+  try{await navigator.clipboard.writeText(copy.dataset.copy);const o=copy.textContent;copy.textContent='تم ✓';setTimeout(()=>copy.textContent=o,1300)}catch(err){}
+ }
+ const edit=e.target.closest('[data-edit]');if(edit){
+  editing=edit.dataset.edit;const data=local(editing);
+  $('user').value=data.username||'';$('pass').value=data.password||'';$('mac').value=data.mac||'';
+  const type=items.find(x=>x.id===editing)?.type;
+  $('user').closest('.form-row').classList.toggle('hide',type==='mac');
+  $('pass').closest('.form-row').classList.toggle('hide',type==='mac');
+  $('mac').closest('.form-row').classList.toggle('hide',type!=='mac');
+  $('editor').showModal();
+ }
+});
+$('cancel').addEventListener('click',()=>$('editor').close());
+$('credentials-form').addEventListener('submit',e=>{
+ e.preventDefault();if(!editing)return;
+ const type=items.find(x=>x.id===editing)?.type;
+ const mac=$('mac').value.trim();
+ if(type==='mac' && mac&&!/^(?:[a-fA-F0-9]{2}:){5}[a-fA-F0-9]{2}$/.test(mac)){$('mac').setCustomValidity('صيغة MAC لازم XX:XX:XX:XX:XX:XX');$('mac').reportValidity();return}
+ $('mac').setCustomValidity('');
+ stored[editing]={username:$('user').value.trim(),password:$('pass').value,mac};
+ try{sessionStorage.setItem('mxgetserver-local',JSON.stringify(stored))}catch(e){}
+ $('editor').close();render();
+});
+setInterval(load,60000);load();
+})();
+</script>
+</body>
+</html>
