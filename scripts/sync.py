@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Index publicly visible IPTV server endpoints from two Telegram channels.
+"""Index publicly visible IPTV server endpoints from public Telegram channels.
 
 Only public host/portal URLs and Telegram post metadata are published.
 The script deliberately does not collect, store, or republish passwords,
@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "servers.json"
-CHANNELS = ("IPTVXtremeFlix", "AisosElho")
+CHANNELS = ("IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal")
 RECENT_PAGES = 8
 BACKFILL_PAGES = 55
 MAX_PER_CHANNEL = 2500
