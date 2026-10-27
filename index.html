@@ -59,6 +59,13 @@
     .source-name{font-size:11px;color:#8395ad;direction:ltr}
     #message-source{background:#151d2e;border:1px solid #334158;border-radius:10px;padding:9px 13px;color:#e9effd;max-width:190px}
     .post-card{min-height:240px}
+    .grid.messages-view{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+    .telegram-embed-slot{width:100%;min-height:190px;overflow:hidden;border-radius:11px;background:#0c1220;padding:7px;margin-top:12px}
+    .telegram-embed-slot iframe{width:100%!important;max-width:100%!important;border:0}
+    .telegram-embed-slot .embed-loading{text-align:center;padding:55px 8px;color:#93a4bc;font-size:12px}
+    .embed-button{display:block;margin-top:13px;width:100%;padding:10px 12px;background:#132c3b;border:1px solid #36869c;border-radius:10px;color:#8fe9f4;font-size:13px;font-weight:700;text-align:center}
+    .embed-button:hover{background:#174356}
+    @media(max-width:900px){.grid.messages-view{grid-template-columns:1fr}}
     .post-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
     .post-title{margin:15px 0 9px;font-size:16px;font-weight:800;direction:ltr;text-align:left;color:#edf6ff}
     .post-summary{font-size:14px;color:#c0ccde;line-height:1.8;overflow-wrap:anywhere;white-space:pre-wrap;margin:10px 0 18px}
@@ -67,6 +74,10 @@
     .post-hosts{display:flex;flex-direction:column;gap:7px}
     .post-host{direction:ltr;text-align:left;color:#d9e7f5;background:#0b1423;border:1px solid #2b3850;border-radius:9px;padding:9px 11px;font:12px/1.5 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
     .post-bottom{border-top:1px solid #2a3648;padding-top:12px;margin-top:17px;color:#8291a5;font-size:11px}
+    .indexed-details{margin-top:12px;color:#9ec6d7;font-size:12px}
+    .indexed-details summary{cursor:pointer;padding:6px 0}
+    .indexed-details .post-hosts{margin-top:8px}
+
     .note-message{color:#9eacc2;font-size:12px;padding:10px 12px;border:1px solid #30405b;border-radius:11px;margin:0 0 15px;background:#131c2d}
 
     .foot{margin-top:35px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:12px}
@@ -163,13 +174,48 @@ function row(label,value){
  const available=Boolean(value);
  return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!available?'placeholder':'')+'">'+(available?escape(value):'غير متوفر')+'</span><button class="copy" type="button" '+(!available?'disabled':'')+' data-copy="'+escape(value||'')+'">نسخ</button></div></div>';
 }
+function telegramRef(source,postId){
+ if(!['IPTVXtremeFlix','AisosElho'].includes(source))return '';
+ const id=String(postId||'');
+ return /^\d{1,12}$/.test(id)?source+'/'+id:'';
+}
+function refForServer(item){
+ const url=String(item.post_url||'');
+ const match=url.match(/^https:\/\/t\.me\/([A-Za-z0-9_]+)\/(\d+)$/);
+ if(!match||match[1]!==item.source)return '';
+ return telegramRef(match[1],match[2]);
+}
+function mountTelegramWidget(slot){
+ if(!slot||slot.dataset.loaded)return;
+ const ref=String(slot.dataset.telegramRef||'');
+ const parts=ref.split('/');
+ if(parts.length!==2||telegramRef(parts[0],parts[1])!==ref)return;
+ slot.dataset.loaded='true';
+ slot.innerHTML='<div class="embed-loading">جاري عرض النص الكامل للمنشور…</div>';
+ const script=document.createElement('script');
+ script.src='https://telegram.org/js/telegram-widget.js?22';
+ script.async=true;
+ script.setAttribute('data-telegram-post',ref);
+ script.setAttribute('data-width','100%');
+ script.setAttribute('data-userpic','false');
+ script.setAttribute('data-color','151E2E');
+ script.setAttribute('data-dark-color','151E2E');
+ script.onerror=()=>{slot.innerHTML='<div class="embed-loading">تعذّر عرض المنشور. قد يكون محذوفاً أو غير متاح للعامة.</div>'};
+ slot.appendChild(script);
+}
+function mountVisibleTelegramWidgets(){
+ document.querySelectorAll('.telegram-embed-slot').forEach(mountTelegramWidget);
+}
+
 function card(x,i){
  const cred=local(x.id), isMac=x.type==='mac', u=isMac?'':cred.username||'',p=isMac?'':cred.password||'',m=isMac?cred.mac||'':'';
  const host=String(x.server||''), source=x.source==='IPTVXtremeFlix'?'IPTVXtremeFlix':'AisosElho';
  const details=isMac?row('MAC ADDRESS',m):row('USERNAME',u)+row('PASSWORD',p);
+ const postRef=refForServer(x);
  return '<article class="card '+(isMac?'mac':'')+'"><div class="card-top"><span class="type">'+(isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">#'+String(i+1).padStart(3,'0')+'</span></div><h3>'+escape(host.replace(/^https?:\/\//,''))+'</h3><div class="origin">✧ @'+source+'</div>'+
  row('SERVER / PORTAL',host)+details+
  '<div class="card-bottom"><span class="date">'+escape(dateLabel(x.date))+'</span><span class="source-name">من @'+source+'</span></div>'+
+ (postRef?'<button class="embed-button" type="button" data-embed="'+escape(postRef)+'">عرض معلومات المنشور كاملة هنا</button><div class="telegram-server-slot"></div>':'')+
  '<button class="btn local-button" type="button" data-edit="'+escape(x.id)+'">＋ إضافة بيانات اشتراكي</button></article>';
 }
 
@@ -343,22 +389,24 @@ $('bulk-submit').addEventListener('click',async()=>{
 
 function messageCard(post, i){
  const source=post.source==='AisosElho'?'AisosElho':'IPTVXtremeFlix';
+ const ref=telegramRef(source,post.post_id);
  const servers=Array.isArray(post.servers)?post.servers.filter(s=>/^https?:\/\//.test(s)).slice(0,8):[];
- const summary=typeof post.summary==='string'?post.summary:'ملخص منشور عام';
  return '<article class="card post-card"><div class="post-top"><span class="post-preview-type">Telegram · '+escape(source)+'</span><span class="post-meta">#'+escape(post.post_id||String(i+1))+'</span></div>'+
  '<div class="post-title">@'+escape(source)+'</div>'+
- '<div class="post-summary">'+escape(summary)+'</div>'+
- (servers.length?'<div class="post-hosts">'+servers.map(s=>'<div class="post-host">'+escape(s)+'</div>').join('')+'</div>':'')+
- '<div class="post-bottom">'+escape(dateLabel(post.date))+' · '+(post.excerpt?'مقتطف مختصر بدون بيانات دخول':'ملخص من الفهرس السابق؛ النص الأصلي غير متاح')+'</div></article>';
+ (ref?'<div class="telegram-embed-slot" data-telegram-ref="'+escape(ref)+'"></div>':'<div class="post-summary">المنشور غير متاح للعرض</div>')+
+ (servers.length?'<details class="indexed-details"><summary>عناوين السيرفرات المفهرسة ('+servers.length+')</summary><div class="post-hosts">'+servers.map(s=>'<div class="post-host">'+escape(s)+'</div>').join('')+'</div></details>':'')+
+ '<div class="post-bottom">'+escape(dateLabel(post.date))+'</div></article>';
 }
 function render(){
  const isMessages=filter==='messages';
  $('message-source').classList.toggle('hide',!isMessages);
+ $('grid').classList.toggle('messages-view',isMessages);
  if(isMessages){
    const query=$('search').value.toLowerCase().trim();
    const list=messages.filter(x=>(messageSource==='all'||x.source===messageSource)&&(!query||(x.summary+' '+x.source+' '+x.servers.join(' ')).toLowerCase().includes(query)));
    $('count').textContent=list.length+' منشور';
-   $('grid').innerHTML=list.length?list.slice(0,shown).map(messageCard).join(''):'<div class="empty"><strong>ماكو رسائل متاحة من هالقناة حالياً</strong>القناة ممكن تكون خاصة أو ما تعرض منشوراتها بشكل عام. الملخصات الحالية تظهر للقنوات المتاحة فقط.</div>';
+   $('grid').innerHTML=list.length?list.slice(0,shown).map(messageCard).join(''):'<div class="empty"><strong>ماكو منشورات متاحة من هالقناة حالياً</strong>القناة ممكن ما تسمح بعرض المنشورات للعامة.</div>';
+   mountVisibleTelegramWidgets();
    $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
    return;
  }
@@ -387,16 +435,32 @@ async function load(){
     messages.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
    }
   }catch(err){/* Preserve server feed when message feed is unavailable. */}
-  shown=72; render();
+  shown=filter==='messages'?8:72; render();
  }catch(e){$('updated').textContent='تعذّر جلب التحديث';$('grid').innerHTML='<div class="empty"><strong>تعذّر تحميل البيانات</strong>تأكد من تشغيل مزامنة GitHub Actions ونشر الصفحة.</div>'}
  finally{$('refresh').disabled=false;$('refresh').textContent='↻ تحديث'}
 }
 $('refresh').addEventListener('click',load);
-$('search').addEventListener('input',()=>{shown=72;render()});
-$('message-source').addEventListener('change',e=>{messageSource=e.target.value;shown=72;render()});
-$('pagination').addEventListener('click',e=>{if(e.target.id==='show-more'){shown+=72;render()}});
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;shown=72;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
+$('search').addEventListener('input',()=>{shown=filter==='messages'?8:72;render()});
+$('message-source').addEventListener('change',e=>{messageSource=e.target.value;shown=8;render()});
+$('pagination').addEventListener('click',e=>{if(e.target.id==='show-more'){shown+=filter==='messages'?8:72;render()}});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;shown=filter==='messages'?8:72;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
 $('grid').addEventListener('click',async e=>{
+ const embed=e.target.closest('[data-embed]');
+ if(embed){
+  const ref=embed.dataset.embed;
+  const parts=String(ref||'').split('/');
+  if(parts.length===2&&telegramRef(parts[0],parts[1])===ref){
+   const slot=embed.parentElement.querySelector('.telegram-server-slot');
+   if(slot){
+    slot.classList.add('telegram-embed-slot');
+    slot.dataset.telegramRef=ref;
+    mountTelegramWidget(slot);
+    embed.remove();
+   }
+  }
+  return;
+ }
+
  const copy=e.target.closest('[data-copy]');if(copy&&!copy.disabled){
   try{await navigator.clipboard.writeText(copy.dataset.copy);const o=copy.textContent;copy.textContent='تم ✓';setTimeout(()=>copy.textContent=o,1300)}catch(err){}
  }
