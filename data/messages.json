@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T10:33:18Z",
+  "updated_at": "2026-10-27T11:35:51Z",
   "last_deep_scan": "2026-10-27T10:33:18Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,11 @@
     },
     "AisosElho": {
       "status": "ok",
-      "posts": 108
+      "posts": 102
+    },
+    "StbEmucodesStalkerPortal": {
+      "status": "ok",
+      "posts": 140
     }
   },
   "items": [
@@ -358,6 +362,136 @@
       "excerpt": true
     },
     {
+      "id": "StbEmucodesStalkerPortal-5423",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5423",
+      "date": "2026-08-29T11:08:28+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://mag.tiger-ott.net:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5422",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5422",
+      "date": "2026-08-29T11:08:27+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://bvv01.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5421",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5421",
+      "date": "2026-08-29T11:08:25+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://91.208.115.23:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5420",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5420",
+      "date": "2026-08-29T11:08:23+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://alpha-ott1.me:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5419",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5419",
+      "date": "2026-08-29T11:08:21+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://p2.iptvprivateserver.ru/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5418",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5418",
+      "date": "2026-08-29T11:08:20+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://mag.marsweb.co:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5417",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5417",
+      "date": "2026-08-29T11:08:18+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://4y-ott.online:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5416",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5416",
+      "date": "2026-08-29T11:08:16+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://91.208.115.23:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5415",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5415",
+      "date": "2026-08-29T11:08:15+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://mag.tiger-ott.net:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5414",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5414",
+      "date": "2026-08-29T11:08:11+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tv.redmax.tv/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5413",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5413",
+      "date": "2026-08-29T11:08:09+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://94.102.49.81:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5412",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5412",
+      "date": "2026-08-29T11:08:01+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
       "id": "AisosElho-164",
       "source": "AisosElho",
       "post_id": "164",
@@ -487,11 +621,584 @@
       "excerpt": true
     },
     {
+      "id": "StbEmucodesStalkerPortal-5411",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5411",
+      "date": "2026-08-15T18:26:45+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://45.159.94.49:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5410",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5410",
+      "date": "2026-08-15T18:26:44+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://185.80.197.55:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5409",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5409",
+      "date": "2026-08-15T18:26:42+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://maindnskullanma.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5408",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5408",
+      "date": "2026-08-15T18:26:40+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://89.187.191.58:80/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5407",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5407",
+      "date": "2026-08-15T18:26:38+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://dragonbox.nl:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5406",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5406",
+      "date": "2026-08-15T18:26:37+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://votwo.info:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5405",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5405",
+      "date": "2026-08-15T18:26:35+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tv.infomir.com.ua/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5404",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5404",
+      "date": "2026-08-15T18:26:33+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://ip73.ip-5-196-40.eu:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5403",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5403",
+      "date": "2026-08-15T18:26:31+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.moja-teve9.me:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5402",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5402",
+      "date": "2026-08-15T18:24:46+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://178.63.13.164:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5401",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5401",
+      "date": "2026-08-15T18:24:44+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://pro.most8knew.com/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5400",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5400",
+      "date": "2026-08-15T18:24:43+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tfx1.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5399",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5399",
+      "date": "2026-08-15T18:24:40+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://178.63.13.164:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5398",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5398",
+      "date": "2026-08-15T18:24:39+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nk.team-tx.st/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5397",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5397",
+      "date": "2026-08-15T18:24:37+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://maindnskullanma.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5396",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5396",
+      "date": "2026-08-15T18:24:32+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
       "id": "AisosElho-151",
       "source": "AisosElho",
       "post_id": "151",
       "date": "2026-08-14T09:17:02+00:00",
       "summary": "SENHAS IPTV SMARTERS",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5395",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5395",
+      "date": "2026-08-07T22:43:13+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://ip73.ip-5-196-40.eu:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5394",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5394",
+      "date": "2026-08-07T22:43:11+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://chaotic-streams.cc/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5393",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5393",
+      "date": "2026-08-07T22:43:09+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://mag.tivi-one-iptv.net/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5392",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5392",
+      "date": "2026-08-07T22:43:06+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://d.devtv.cc:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5391",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5391",
+      "date": "2026-08-07T22:43:03+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5390",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5390",
+      "date": "2026-08-07T22:43:03+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tv4u1.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5389",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5389",
+      "date": "2026-08-07T22:43:01+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://trextv.org/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5388",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5388",
+      "date": "2026-08-07T22:42:58+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://safetv.vip:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5387",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5387",
+      "date": "2026-08-07T22:42:56+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://111.1234vb.com/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5386",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5386",
+      "date": "2026-08-07T22:42:51+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5385",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5385",
+      "date": "2026-08-07T08:39:54+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://103.176.90.143:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5384",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5384",
+      "date": "2026-08-07T08:39:53+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nexusconnects.org:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5383",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5383",
+      "date": "2026-08-07T08:39:50+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://garaveli.123tv.to:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5382",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5382",
+      "date": "2026-08-07T08:39:48+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://77.74.193.158:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5381",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5381",
+      "date": "2026-08-07T08:39:47+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://main2.cwdn.cx/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5380",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5380",
+      "date": "2026-08-07T08:39:45+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://p1.iptvrocket.tv/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5379",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5379",
+      "date": "2026-08-07T08:39:43+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://89.187.191.54/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5378",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5378",
+      "date": "2026-08-07T08:39:42+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://auth.streamtv.to:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5377",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5377",
+      "date": "2026-08-07T08:39:39+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://178.63.13.164:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5376",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5376",
+      "date": "2026-08-07T08:39:37+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://vpn.tiptopking.me:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5375",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5375",
+      "date": "2026-08-07T08:39:36+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://safetv.vip:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5374",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5374",
+      "date": "2026-08-07T08:39:26+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5373",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5373",
+      "date": "2026-07-30T07:21:24+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://weaseltv.live:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5372",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5372",
+      "date": "2026-07-30T07:21:22+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://hottest.plus:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5371",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5371",
+      "date": "2026-07-30T07:21:21+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://103.176.90.183/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5370",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5370",
+      "date": "2026-07-30T07:21:18+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://ricola.tel:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5369",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5369",
+      "date": "2026-07-30T07:21:16+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://sclw2.live:8443/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5368",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5368",
+      "date": "2026-07-30T07:21:15+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://haiermain01.xyz:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5367",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5367",
+      "date": "2026-07-30T07:21:12+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://vater.live/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5366",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5366",
+      "date": "2026-07-30T07:21:11+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://204.52.191.254/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5365",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5365",
+      "date": "2026-07-30T07:21:10+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://madboxtv.com/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5364",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5364",
+      "date": "2026-07-30T07:21:07+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://38.99.82.165:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5363",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5363",
+      "date": "2026-07-30T07:21:05+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://votwo.info:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5362",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5362",
+      "date": "2026-07-30T07:21:04+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://ott.kosnet.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5361",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5361",
+      "date": "2026-07-30T07:21:01+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://voone.info/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5360",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5360",
+      "date": "2026-07-30T07:21:00+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://dinoon.sbs/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5359",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5359",
+      "date": "2026-07-30T07:20:53+00:00",
+      "summary": "منشور عام من القناة",
       "servers": [],
       "excerpt": true
     },
@@ -535,6 +1242,158 @@
       "excerpt": true
     },
     {
+      "id": "StbEmucodesStalkerPortal-5358",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5358",
+      "date": "2026-07-19T09:11:47+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://lefanten.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5357",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5357",
+      "date": "2026-07-19T09:11:45+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://semprea100.org:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5356",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5356",
+      "date": "2026-07-19T09:11:44+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://m9tvip.com:8547/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5355",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5355",
+      "date": "2026-07-19T09:11:41+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://main.light-ott.net/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5354",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5354",
+      "date": "2026-07-19T09:11:39+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tfx1.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5353",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5353",
+      "date": "2026-07-19T09:11:38+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://fastrunner.live:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5352",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5352",
+      "date": "2026-07-19T09:11:36+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.vueott.com:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5351",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5351",
+      "date": "2026-07-19T09:11:34+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tfx1.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5350",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5350",
+      "date": "2026-07-19T09:11:33+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://vpn.tvmoderne.ca:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5349",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5349",
+      "date": "2026-07-19T09:11:30+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://votwo.info:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5348",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5348",
+      "date": "2026-07-19T09:11:29+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://ottinfinity.net/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5347",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5347",
+      "date": "2026-07-19T09:11:28+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tv.infomir.com.ua/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5346",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5346",
+      "date": "2026-07-19T09:11:25+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://sny57.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5345",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5345",
+      "date": "2026-07-19T09:11:19+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
       "id": "AisosElho-147",
       "source": "AisosElho",
       "post_id": "147",
@@ -543,6 +1402,103 @@
       "servers": [
         "http://live.tvpython.net:2052"
       ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5344",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5344",
+      "date": "2026-07-16T19:16:47+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://12876-ottawa.cdn-o2.me/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5343",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5343",
+      "date": "2026-07-16T19:16:45+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://204.52.191.254:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5342",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5342",
+      "date": "2026-07-16T19:16:44+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.tivi-ott.net/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5341",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5341",
+      "date": "2026-07-16T19:16:42+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://simpletv.uk/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5340",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5340",
+      "date": "2026-07-16T19:16:40+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://hsneu.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5339",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5339",
+      "date": "2026-07-16T19:16:38+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://foxbleu.pro/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5338",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5338",
+      "date": "2026-07-16T19:16:37+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://votwo.info:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5337",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5337",
+      "date": "2026-07-16T19:16:36+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nxtbox.uk/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5336",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5336",
+      "date": "2026-07-16T19:16:30+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
       "excerpt": true
     },
     {
@@ -562,6 +1518,698 @@
         "http://tr.4kbest.one:80"
       ],
       "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5335",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5335",
+      "date": "2026-07-13T20:52:44+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.vueott.com/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5334",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5334",
+      "date": "2026-07-13T20:52:42+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://400400.fyi:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5333",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5333",
+      "date": "2026-07-13T20:52:41+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nexusconnects.org/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5332",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5332",
+      "date": "2026-07-13T20:52:37+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5331",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5331",
+      "date": "2026-07-13T20:52:34+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://pro.premiummrzoo.xyz:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5330",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5330",
+      "date": "2026-07-13T20:52:33+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.godofiptv.com/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5329",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5329",
+      "date": "2026-07-13T20:52:31+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://marmor.streamtv.to:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5328",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5328",
+      "date": "2026-07-13T20:52:29+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://178.63.13.164:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5327",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5327",
+      "date": "2026-07-13T20:52:28+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://euro-deluxe.com:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5326",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5326",
+      "date": "2026-07-13T20:52:21+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5325",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5325",
+      "date": "2026-07-11T08:33:02+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://pro.jekol.cfd/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5324",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5324",
+      "date": "2026-07-11T08:33:00+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nexusconnects.org:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5323",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5323",
+      "date": "2026-07-11T08:32:58+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://besttv2.store:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5322",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5322",
+      "date": "2026-07-11T08:32:56+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://votwo.info:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5321",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5321",
+      "date": "2026-07-11T08:32:54+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://boss.ddns.net/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5320",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5320",
+      "date": "2026-07-11T08:32:52+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5319",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5319",
+      "date": "2026-07-11T08:32:49+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://31.133.44.78:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5318",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5318",
+      "date": "2026-07-11T08:32:48+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://51.222.42.44/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5317",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5317",
+      "date": "2026-07-11T08:32:46+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://45.159.94.49:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5316",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5316",
+      "date": "2026-07-11T08:32:43+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://45.139.122.199:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5315",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5315",
+      "date": "2026-07-11T08:32:40+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://xp1.tv/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5314",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5314",
+      "date": "2026-07-11T08:32:38+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://77.74.193.158:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5313",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5313",
+      "date": "2026-07-11T08:32:36+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://bingmediauk.uk:8880/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5312",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5312",
+      "date": "2026-07-11T08:32:34+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://bariporto.xyz:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5311",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5311",
+      "date": "2026-07-11T08:32:33+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nk.team-tx.st/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5310",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5310",
+      "date": "2026-07-11T08:32:25+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5309",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5309",
+      "date": "2026-07-10T16:11:29+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://vod.supremetv.live:80/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5308",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5308",
+      "date": "2026-07-10T16:11:28+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://45.139.122.199:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5307",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5307",
+      "date": "2026-07-10T16:11:26+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://wowtv.cc/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5306",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5306",
+      "date": "2026-07-10T16:11:24+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://103.176.90.186/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5305",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5305",
+      "date": "2026-07-10T16:11:22+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://tvmoultv.xyz/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5304",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5304",
+      "date": "2026-07-10T16:11:20+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://d.devtv.cc/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5303",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5303",
+      "date": "2026-07-10T16:11:17+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.bure.online/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5302",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5302",
+      "date": "2026-07-10T16:11:15+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://nexusconnects.org/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5301",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5301",
+      "date": "2026-07-10T16:11:13+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://400400.fyi:8080/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5300",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5300",
+      "date": "2026-07-10T16:11:11+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5299",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5299",
+      "date": "2026-07-10T16:11:09+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://votwo.info:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5298",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5298",
+      "date": "2026-07-10T16:11:08+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://31.133.44.78:88/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5297",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5297",
+      "date": "2026-07-10T16:11:04+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.vueott.com/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5296",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5296",
+      "date": "2026-07-10T16:10:58+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5295",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5295",
+      "date": "2026-07-05T17:09:04+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://weaseltv.live/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5294",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5294",
+      "date": "2026-07-05T17:09:03+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://xp1.tv/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5293",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5293",
+      "date": "2026-07-05T17:09:01+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://di5me.icu/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5292",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5292",
+      "date": "2026-07-05T17:08:59+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://innovationtv.eu/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5291",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5291",
+      "date": "2026-07-05T17:08:57+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.tvdsz.cc/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5290",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5290",
+      "date": "2026-07-05T17:08:56+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://moul4tv.xyz/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5289",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5289",
+      "date": "2026-07-05T17:08:54+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://line.wishiptv.vip/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5288",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5288",
+      "date": "2026-07-05T17:08:52+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://main2.cwdn.cx/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5287",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5287",
+      "date": "2026-07-05T17:08:51+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "https://line.hostytv.store/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5286",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5286",
+      "date": "2026-07-05T17:08:48+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://pon.access.ly/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5285",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5285",
+      "date": "2026-07-05T17:08:47+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://pro.auramax.name/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5284",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5284",
+      "date": "2026-07-05T17:08:45+00:00",
+      "summary": "منشور عن سيرفرات mac",
+      "servers": [
+        "http://iptv.jalatech.ps/stalker_portal/c/"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5282",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5282",
+      "date": "2026-07-05T17:08:41+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://5.6350.top:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5281",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5281",
+      "date": "2026-07-05T17:08:40+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://nk.team-tx.st:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5279",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5279",
+      "date": "2026-07-01T16:19:31+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://8.mdtv.me/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5277",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5277",
+      "date": "2026-07-01T16:19:27+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://skunkytv.live/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5276",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5276",
+      "date": "2026-07-01T16:19:25+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "https://line.vueott.com/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5274",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5274",
+      "date": "2026-07-01T16:19:21+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://trxx.in/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5272",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5272",
+      "date": "2026-07-01T16:19:18+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://164.215.103.149:8080/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5269",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5269",
+      "date": "2026-07-01T16:19:10+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://portal.bbb1.me/stalker_portal/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5267",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5267",
+      "date": "2026-07-01T16:19:07+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://line.glantv.com:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5266",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5266",
+      "date": "2026-07-01T16:19:05+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://400400.fyi/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5265",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5265",
+      "date": "2026-07-01T16:19:00+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://92.62.110.118:88/stalker_portal/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5264",
+      "source": "StbEmucodesStalkerPortal",
+      "post_id": "5264",
+      "date": "2026-07-01T16:18:58+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://globalgnet.live:80/c/"
+      ],
+      "excerpt": false
     },
     {
       "id": "AisosElho-145",
