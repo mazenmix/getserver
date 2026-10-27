@@ -52,14 +52,11 @@
     .copy{flex:0 0 auto;background:#1a283b;color:#cbdaf0;border:1px solid #33425b;border-radius:7px;padding:4px 8px;font-size:11px}
     .copy:disabled{opacity:.4;cursor:not-allowed}
     .card-bottom{border-top:1px solid #283249;margin-top:20px;padding-top:15px;flex-wrap:wrap}
-    .post-details{display:flex;align-items:center;gap:13px;margin-top:12px;padding:13px 14px;border:1px solid #355063;border-radius:11px;background:linear-gradient(125deg,#0c2630,#122032);color:#e9faf8;text-decoration:none;font-size:13px;font-weight:700;line-height:1.5}
-    .post-details>span:first-child{font-size:19px;color:var(--cyan)}
-    .post-details small{font-size:11px;font-weight:400;color:#9ab7c4}
-    .post-details:hover{border-color:var(--cyan);background:#16303b}
 
     .post-link{font-weight:700;text-decoration:none;color:var(--cyan);font-size:12px}
     .post-link:hover{text-decoration:underline}.date{font-size:11px;color:#8692ac}.local-button{width:100%;margin-top:13px}
     .empty{text-align:center;border:1px dashed #3b4764;border-radius:17px;background:#141c2b;grid-column:1/-1;padding:55px 18px;color:#a5b1c9}.empty strong{display:block;font-size:20px;color:#f3f6ff;margin-bottom:6px}
+    .source-name{font-size:11px;color:#8395ad;direction:ltr}
     .foot{margin-top:35px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:12px}
     dialog{max-width:min(480px,calc(100% - 32px));width:100%;padding:0;border:1px solid #35435d;border-radius:19px;background:#151c2c;color:var(--text);box-shadow:0 40px 120px #0009}
     dialog::backdrop{background:#030813d4;backdrop-filter:blur(5px)}
@@ -121,18 +118,16 @@ const escape = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<'
 const dateLabel = s => {if(!s)return 'بدون تاريخ'; const d=new Date(s);return isNaN(d)?'بدون تاريخ':new Intl.DateTimeFormat('ar-IQ',{dateStyle:'medium',timeStyle:'short'}).format(d)};
 const local = id => stored[id]||{};
 function row(label,value){
-  return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!value?'placeholder':'')+'">'+(value?escape(value):'أضف بياناتك أو افتح المنشور')+'</span><button class="copy" type="button" '+(!value?'disabled':'')+' data-copy="'+escape(value||'')+'">نسخ</button></div></div>';
+ const available=Boolean(value);
+ return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!available?'placeholder':'')+'">'+(available?escape(value):'غير متوفر')+'</span><button class="copy" type="button" '+(!available?'disabled':'')+' data-copy="'+escape(value||'')+'">نسخ</button></div></div>';
 }
 function card(x,i){
  const cred=local(x.id), isMac=x.type==='mac', u=isMac?'':cred.username||'',p=isMac?'':cred.password||'',m=isMac?cred.mac||'':'';
  const host=String(x.server||''), source=x.source==='IPTVXtremeFlix'?'IPTVXtremeFlix':'AisosElho';
- const link=/^https:\/\/t\.me\/[a-zA-Z0-9_]+\/\d+$/.test(x.post_url||'')?x.post_url:'https://t.me/'+source;
- const hasSaved=isMac?Boolean(m):Boolean(u||p);
- const ownFields=hasSaved?(isMac?row('MAC ADDRESS',m):row('USERNAME',u)+row('PASSWORD',p)):'';
- const details=hasSaved?'':'<a class="post-details" target="_blank" rel="noopener noreferrer" href="'+escape(link)+'"><span>↗</span><span>تفاصيل الاشتراك بالمنشور الأصلي<br><small>اسم المستخدم / كلمة المرور / MAC إن كانت منشورة</small></span></a>';
+ const details=isMac?row('MAC ADDRESS',m):row('USERNAME',u)+row('PASSWORD',p);
  return '<article class="card '+(isMac?'mac':'')+'"><div class="card-top"><span class="type">'+(isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">#'+String(i+1).padStart(3,'0')+'</span></div><h3>'+escape(host.replace(/^https?:\/\//,''))+'</h3><div class="origin">✧ @'+source+'</div>'+
- row('SERVER / PORTAL',host)+ownFields+details+
- '<div class="card-bottom"><span class="date">'+escape(dateLabel(x.date))+'</span><a class="post-link" target="_blank" rel="noopener noreferrer" href="'+escape(link)+'">المنشور الأصلي ↗</a></div>'+
+ row('SERVER / PORTAL',host)+details+
+ '<div class="card-bottom"><span class="date">'+escape(dateLabel(x.date))+'</span><span class="source-name">من @'+source+'</span></div>'+
  '<button class="btn local-button" type="button" data-edit="'+escape(x.id)+'">＋ إضافة بيانات اشتراكي</button></article>';
 }
 function render(){
