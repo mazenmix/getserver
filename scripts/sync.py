@@ -190,7 +190,7 @@ def main() -> int:
 
     today = datetime.now(timezone.utc).date().isoformat()
     is_sunday_deep = datetime.now(timezone.utc).weekday() == 6 and previous.get("last_deep_scan", "")[:10] != today
-    deep_scan = os.environ.get("MX_DEEP_SCAN") == "1" or not previous.get("deep_scan_completed") or is_sunday_deep
+    deep_scan = os.environ.get("MX_DEEP_SCAN") == "1" or not previous.get("last_deep_scan") or is_sunday_deep
     pages = BACKFILL_PAGES if deep_scan else RECENT_PAGES
     print("Scan mode:", "historical backfill" if deep_scan else "recent", "- pages/channel:", pages)
     updated = []
@@ -246,8 +246,8 @@ def main() -> int:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     payload = {
         "updated_at": now,
-        "last_deep_scan": now if deep_scan and all_ok else previous.get("last_deep_scan"),
-        "deep_scan_completed": bool(previous.get("deep_scan_completed")) or (deep_scan and all_ok),
+        "last_deep_scan": now if deep_scan and any(s["status"] == "ok" for s in statuses.values()) else previous.get("last_deep_scan"),
+        "deep_scan_completed": bool(previous.get("deep_scan_completed")) or (deep_scan and any(s["status"] == "ok" for s in statuses.values())),
         "sources": statuses,
         "items": result,
         "note": "Historical public server endpoints only. No third-party account credentials or MACs are collected.",
