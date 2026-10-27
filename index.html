@@ -109,7 +109,7 @@
     /* Minimal single-page dashboard: keep only completed server records. */
     .top-right,#refresh,#bulk-open,.local-button,.origin,.source-name,.date,.card-bottom,
     .tabs .tab:not([data-filter="all"]),#message-source,.post-link {display:none!important}
-    .card:has(.trial-note),.card:has(.placeholder){display:none!important}
+    /* Completed cards are selected by the application, not display:none. */
     .card{min-height:0}
     .toolbar{margin-top:20px}
   </style>
@@ -117,7 +117,7 @@
 <body>
 <div class="shell">
   <header class="top">
-    <div class="brand"><div class="mark">MX</div><div><div class="brand-name">MX <b>GetServer</b></div><div class="brand-caption">Telegram server monitor</div></div></div>
+    <div class="brand"><div class="mark">MX</div><div><div class="brand-name">MX <b>GetServer</b></div></div></div>
     <div class="top-right"><div class="badge"><span class="dot"></span> Telegram Feed</div><button class="btn" id="bulk-open" type="button">＋ استيراد اشتراكاتي</button><button class="btn" id="refresh">↻ تحديث</button></div>
   </header>
   <section class="stats" aria-label="Statistics">
@@ -142,7 +142,7 @@
     <div class="empty"><strong>جاري التحميل…</strong>نجلب آخر السيرفرات المفهرسة.</div>
   </main>
   <div id="pagination" style="display:flex;justify-content:center;padding-top:22px"></div>
-  <footer class="foot"><span>MX GetServer · Server links indexed from public Telegram previews</span><span>المزامنة الدورية تعتمد على إتاحة منشورات تيليگرام العلنية.</span></footer>
+  
 </div>
 <dialog id="editor" aria-labelledby="editor-title">
  <form class="modal" id="credentials-form">
