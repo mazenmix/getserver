@@ -139,7 +139,7 @@
         <button class="tab" aria-pressed="false" data-filter="messages">Telegram Posts</button>
       </div>
     </div>
-    <div class="toolbar-right"><select id="message-source" class="hide" aria-label="Filter channels"><option value="all">All Channels</option><option value="IPTVXtremeFlix">@IPTVXtremeFlix</option><option value="AisosElho">@AisosElho</option></select><span class="count" id="count"></span><span class="updated" id="updated">Checking for updates…</span></div>
+    <div class="toolbar-right"><select id="message-source" class="hide" aria-label="Filter channels"><option value="all">All Channels</option><option value="IPTVXtremeFlix">@IPTVXtremeFlix</option><option value="AisosElho">@AisosElho</option><option value="StbEmucodesStalkerPortal">@StbEmucodesStalkerPortal</option></select><span class="count" id="count"></span><span class="updated" id="updated">Checking for updates…</span></div>
   </section>
   <main class="grid" id="grid" aria-live="polite">
     <div class="empty"><strong>Loading…</strong>Retrieving indexed servers.</div>
@@ -193,7 +193,7 @@ function row(label,value){
  return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!available?'placeholder':'')+'">'+(available?escape(value):'Not available')+'</span><button class="copy" type="button" '+(!available?'disabled':'')+' data-copy="'+escape(value||'')+'">Copy</button></div></div>';
 }
 function telegramRef(source,postId){
- if(!['IPTVXtremeFlix','AisosElho'].includes(source))return '';
+ if(!['IPTVXtremeFlix','AisosElho','StbEmucodesStalkerPortal'].includes(source))return '';
  const id=String(postId||'');
  return /^\d{1,12}$/.test(id)?source+'/'+id:'';
 }
@@ -483,7 +483,7 @@ $('bulk-submit').addEventListener('click',async()=>{
 });
 
 function messageCard(post,i){
- const source=post.source==='AisosElho'?'AisosElho':'IPTVXtremeFlix';
+ const source=['IPTVXtremeFlix','AisosElho','StbEmucodesStalkerPortal'].includes(post.source)?post.source:'IPTVXtremeFlix';
  const ref=telegramRef(source,post.post_id);
  return '<article class="card post-card"><div class="post-top"><span class="post-preview-type">Telegram · '+escape(source)+'</span><span class="post-meta">#'+escape(post.post_id||String(i+1))+'</span></div>'+
  '<div class="post-title">@'+escape(source)+' <span class="date">'+escape(dateLabel(post.date))+'</span></div>'+
@@ -528,7 +528,7 @@ async function load(){
    const mr=await fetch('./data/messages.json?t='+Date.now(),{cache:'no-store'});
    if(mr.ok){
     const md=await mr.json();
-    messages=Array.isArray(md.items)?md.items.filter(x=>x&&typeof x.id==='string'&&typeof x.summary==='string'&&['IPTVXtremeFlix','AisosElho'].includes(x.source)).map(x=>({...x,servers:Array.isArray(x.servers)?x.servers:[]})):[];
+    messages=Array.isArray(md.items)?md.items.filter(x=>x&&typeof x.id==='string'&&typeof x.summary==='string'&&['IPTVXtremeFlix','AisosElho','StbEmucodesStalkerPortal'].includes(x.source)).map(x=>({...x,servers:Array.isArray(x.servers)?x.servers:[]})):[];
     messages.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
    }
   }catch(err){/* Preserve server feed when message feed is unavailable. */}
