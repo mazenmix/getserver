@@ -27,6 +27,8 @@ CHANNELS = ("IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal")
 RECENT_PAGES = 8
 BACKFILL_PAGES = 55
 MAX_PER_CHANNEL = 2500
+# Keep the high-volume Stalker feed focused on fresh entries for fast card loading.
+SOURCE_LIMITS = {"StbEmucodesStalkerPortal": 180}
 URL_RX = re.compile(r"https?://[^\s<>\[\]\"'،،]+", re.IGNORECASE)
 MAC_RX = re.compile(r"(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])", re.I)
 USERNAME_RX = re.compile(r"\b(?:user(?:name)?|login)\s*[:=👉–-]\s*\S+", re.I)
@@ -198,7 +200,7 @@ def main() -> int:
     all_ok = True
     for channel in CHANNELS:
         try:
-            channel_items = fetch(channel, pages)
+            channel_items = fetch(channel, min(pages, 12) if channel in SOURCE_LIMITS else pages)
             statuses[channel] = {"status": "ok", "found": len(channel_items)}
             updated.extend(channel_items)
             print(channel + ": " + str(len(channel_items)) + " public server endpoints indexed")
@@ -241,7 +243,7 @@ def main() -> int:
             by_server[key] = item
 
     result = sorted(by_server.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
-    result = [x for c in CHANNELS for x in [z for z in result if z["source"] == c][:MAX_PER_CHANNEL]]
+    result = [x for c in CHANNELS for x in [z for z in result if z["source"] == c][:SOURCE_LIMITS.get(c, MAX_PER_CHANNEL)]]
     result.sort(key=lambda x: (x["date"], x["id"]), reverse=True)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     payload = {
