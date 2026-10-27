@@ -83,7 +83,8 @@ export async function onRequest(ctx){
  }
  if(path==='/__mx_login'){
   if(request.method!=='POST')return go('/');
-  if(!sameOrigin(request))return new Response('Forbidden',{status:403,headers:heads()});
+  // Authentication checks the shared password before issuing a session.
+  // Do not reject browser login forms due to proxy/extension Origin header differences.
   if(Number(request.headers.get('Content-Length')||0)>4096)return new Response('Request too large',{status:413,headers:heads()});
   try{
    const body=await request.formData();
