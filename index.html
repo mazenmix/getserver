@@ -288,23 +288,27 @@ function prepareTrialSlots(){
  slots.forEach(slot=>{if(trialResult(slot.dataset.trialRef))fillTrialSections(slot.dataset.trialRef);else trialObserver.observe(slot)});
 }
 
+function matchingRecords(x){
+ const ref=refForServer(x),result=ref?trialResult(ref):null;
+ if(!result||result.error||!Array.isArray(result.records))return [];
+ return result.records.filter(r=>r&&r.type===x.type&&hostKey(r.server)===hostKey(x.server)&&
+   (x.type==='mac'?Boolean(r.mac):Boolean(r.username&&r.password)));
+}
+function isComplete(x){
+ const mine=local(x.id);
+ if(x.type==='mac'&&/^(?:[0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$/.test(mine.mac||''))return true;
+ if(x.type==='xtream'&&mine.username&&mine.password)return true;
+ return matchingRecords(x).length>0;
+}
 function card(x,i){
- const cred=local(x.id),isMac=x.type==='mac';
- const host=String(x.server||''),source=x.source==='IPTVXtremeFlix'?'IPTVXtremeFlix':'AisosElho';
- const own=isMac?Boolean(cred.mac):Boolean(cred.username&&cred.password);
- const ref=refForServer(x);
- let details;
- if(own){
-  details=isMac?row('MAC ADDRESS',cred.mac):row('USERNAME',cred.username)+row('PASSWORD',cred.password);
- }else if(ref){
-  details='<div class="credentials-live" data-trial-ref="'+escape(ref)+'" data-trial-host="'+escape(hostKey(host))+'" data-trial-type="'+(isMac?'mac':'xtream')+'"><div class="trial-note">جاري تحميل معلومات السيرفر…</div></div>';
- }else{
-  details='<div class="trial-note">ماكو منشور عام متاح لاستخراج التفاصيل.</div>';
- }
- return '<article class="card '+(isMac?'mac':'')+'"><div class="card-top"><span class="type">'+(isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">#'+String(i+1).padStart(3,'0')+'</span></div><h3>'+escape(host.replace(/^https?:\/\//,''))+'</h3><div class="origin">✧ @'+source+'</div>'+
- row('SERVER / PORTAL',host)+details+
- '<div class="card-bottom"><span class="date">'+escape(dateLabel(x.date))+'</span><span class="source-name">من @'+source+'</span></div>'+
- '<button class="btn local-button" type="button" data-edit="'+escape(x.id)+'">＋ تعديل بيانات اشتراكي</button></article>';
+ const saved=local(x.id),isMac=x.type==='mac',host=String(x.server||'');
+ const own=isMac?Boolean(saved.mac):Boolean(saved.username&&saved.password);
+ const credentials=own?(isMac?row('MAC ADDRESS',saved.mac):row('USERNAME',saved.username)+row('PASSWORD',saved.password)):
+   trialRows(matchingRecords(x),isMac);
+ return '<article class="card '+(isMac?'mac':'')+'"><div class="card-top"><span class="type">'+
+  (isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">#'+
+  String(i+1).padStart(3,'0')+'</span></div><h3>'+escape(host.replace(/^https?:\/\//,''))+'</h3>'+
+  row('SERVER / PORTAL',host)+credentials+'</article>';
 }
 
 /**
@@ -498,11 +502,14 @@ function render(){
  }
 
  const text=$('search').value.toLowerCase().trim();
- const list=items.filter(x=>(filter==='all'||(filter==='saved'?Boolean(local(x.id).username||local(x.id).password||local(x.id).mac):x.type===filter))&&(!text||(x.server+' '+x.source+' '+x.type+' '+(local(x.id).username||'')).toLowerCase().includes(text)));
+ const completed=items.filter(isComplete);
+ $('stat-all').textContent=completed.length;
+ $('stat-xtream').textContent=completed.filter(x=>x.type==='xtream').length;
+ $('stat-mac').textContent=completed.filter(x=>x.type==='mac').length;
+ const list=completed.filter(x=>!text||(x.server+' '+x.type+' '+(local(x.id).username||'')+' '+matchingRecords(x).map(y=>y.username).join(' ')).toLowerCase().includes(text));
  $('count').textContent=list.length+' نتيجة';
- $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>ماكو نتائج حالياً</strong>جرّب تبدّل الفلتر أو سوّي تحديث.</div>';
+ $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>جاري البحث عن سيرفرات ببيانات دخول مكتملة</strong>ما راح نعرض سيرفر ناقص.</div>';
  $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
- prepareTrialSlots();
 }
 async function load(){
  $('refresh').disabled=true;$('refresh').textContent='↻ جاري التحديث';
