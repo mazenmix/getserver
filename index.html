@@ -58,7 +58,15 @@
     .empty{text-align:center;border:1px dashed #3b4764;border-radius:17px;background:#141c2b;grid-column:1/-1;padding:55px 18px;color:#a5b1c9}.empty strong{display:block;font-size:20px;color:#f3f6ff;margin-bottom:6px}
     .source-name{font-size:11px;color:#8395ad;direction:ltr}
     #message-source{background:#151d2e;border:1px solid #334158;border-radius:10px;padding:9px 13px;color:#e9effd;max-width:190px}
-    .post-card{min-height:240px}
+    .post-card{min-height:200px}
+    .trial-server-group{background:#0d1624;border:1px solid #303d54;border-radius:13px;padding:14px;margin:13px 0;overflow:hidden}
+    .trial-group-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+    .trial-entry{background:#141d2d;border:1px solid #344159;border-radius:10px;padding:10px 12px;margin-top:10px}
+    .trial-entry .field{margin-top:6px}
+    .trial-entry-label{font-size:12px;font-weight:700;color:var(--cyan);margin:0 0 8px}
+    .trial-note{font-size:12px;color:#96a9bd;margin:12px 0;padding:10px 12px;border:1px dashed #3a4b63;border-radius:9px}
+    .post-records{margin-top:16px}
+    .credentials-live{min-height:60px}
     .grid.messages-view{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
     .telegram-embed-slot{width:100%;min-height:190px;overflow:hidden;border-radius:11px;background:#0c1220;padding:7px;margin-top:12px}
     .telegram-embed-slot iframe{width:100%!important;max-width:100%!important;border:0}
@@ -185,38 +193,111 @@ function refForServer(item){
  if(!match||match[1]!==item.source)return '';
  return telegramRef(match[1],match[2]);
 }
-function mountTelegramWidget(slot){
- if(!slot||slot.dataset.loaded)return;
- const ref=String(slot.dataset.telegramRef||'');
- const parts=ref.split('/');
- if(parts.length!==2||telegramRef(parts[0],parts[1])!==ref)return;
- slot.dataset.loaded='true';
- slot.innerHTML='<div class="embed-loading">جاري عرض النص الكامل للمنشور…</div>';
- const script=document.createElement('script');
- script.src='https://telegram.org/js/telegram-widget.js?22';
- script.async=true;
- script.setAttribute('data-telegram-post',ref);
- script.setAttribute('data-width','100%');
- script.setAttribute('data-userpic','false');
- script.setAttribute('data-color','151E2E');
- script.setAttribute('data-dark-color','151E2E');
- script.onerror=()=>{slot.innerHTML='<div class="embed-loading">تعذّر عرض المنشور. قد يكون محذوفاً أو غير متاح للعامة.</div>'};
- slot.appendChild(script);
+// Fetch public free-trial details only while visible; leave no secrets in GitHub.
+const trialData=new Map(),trialQueue=[],trialQueued=new Set();
+let trialRunning=0,trialObserver;
+const TRIAL_CACHE_MS=5*60*1000;
+function trialRows(records,isMac) {
+ if(!records.length)return '<div class="trial-note">ماكو بيانات دخول قابلة للقراءة لهذا السيرفر.</div>';
+ return records.map((r,i)=>{
+  const title=records.length>1?'<div class="trial-entry-label">حساب '+(i+1)+'</div>':'';
+  return '<div class="trial-entry">'+title+(isMac?row('MAC ADDRESS',r.mac):row('USERNAME',r.username)+row('PASSWORD',r.password))+'</div>';
+ }).join('');
 }
-function mountVisibleTelegramWidgets(){
- document.querySelectorAll('.telegram-embed-slot').forEach(mountTelegramWidget);
+function hostKey(raw){
+ try{const x=new URL(raw);return x.host.toLowerCase()}catch{return ''}
+}
+function groupedRecordCard(records){
+ if(!records.length)return '<div class="trial-note">المنشور ما يحتوي على سيرفر وبيانات دخول يمكن استخراجها بشكل موثوق.</div>';
+ const byHost=new Map();
+ for(const rec of records){
+  const key=rec.type+'|'+hostKey(rec.server);
+  if(!byHost.has(key))byHost.set(key,[]);
+  byHost.get(key).push(rec);
+ }
+ let serial=0;
+ return [...byHost].map(([key,groups])=>{
+  const first=groups[0],isMac=first.type==='mac';
+  return '<section class="trial-server-group"><div class="trial-group-heading"><span class="type">'+(isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">'+String(++serial).padStart(2,'0')+'</span></div>'+
+   row('SERVER / PORTAL',first.server)+trialRows(groups,isMac)+'</section>';
+ }).join('');
+}
+function trialResult(ref){
+ const stored=trialData.get(ref);
+ return stored && Date.now()-stored.time<TRIAL_CACHE_MS ? stored : null;
+}
+function fillTrialSections(ref){
+ const result=trialResult(ref);
+ if(!result)return;
+ const records=Array.isArray(result.records)?result.records:[];
+ document.querySelectorAll('[data-trial-ref]').forEach(slot=>{
+  if(slot.dataset.trialRef!==ref)return;
+  if(slot.classList.contains('post-records')){
+   slot.innerHTML=result.error?'<div class="trial-note">تعذّر قراءة هالمنشور حالياً.</div>':groupedRecordCard(records);
+   return;
+  }
+  if(slot.classList.contains('credentials-live')){
+   const host=slot.dataset.trialHost,type=slot.dataset.trialType;
+   const matching=records.filter(r=>r.type===type&&hostKey(r.server)===host);
+   slot.innerHTML=result.error?'<div class="trial-note">تعذّر جلب البيانات التجريبية حالياً.</div>':trialRows(matching,type==='mac');
+  }
+ });
+}
+async function runTrialQueue(){
+ if(trialRunning>=3||!trialQueue.length)return;
+ const ref=trialQueue.shift();trialQueued.delete(ref);
+ if(trialResult(ref)){fillTrialSections(ref);runTrialQueue();return}
+ trialRunning++;
+ try{
+  const [source,id]=ref.split('/');
+  const r=await fetch('/api/post-details?source='+encodeURIComponent(source)+'&id='+encodeURIComponent(id),{
+   cache:'no-store',credentials:'same-origin',headers:{'Accept':'application/json'}
+  });
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const obj=await r.json();
+  trialData.set(ref,{records:Array.isArray(obj.records)?obj.records:[],time:Date.now(),error:false});
+ }catch{
+  trialData.set(ref,{records:[],time:Date.now(),error:true});
+ }finally{
+  trialRunning--;fillTrialSections(ref);runTrialQueue();
+ }
+}
+function requestTrial(ref){
+ if(!ref||trialQueued.has(ref)||trialResult(ref))return;
+ trialQueued.add(ref);trialQueue.push(ref);runTrialQueue();
+}
+function prepareTrialSlots(){
+ if(trialObserver){trialObserver.disconnect();trialObserver=null}
+ const slots=[...document.querySelectorAll('[data-trial-ref]')];
+ const onVisible=slot=>{
+  const ref=slot.dataset.trialRef;
+  if(trialResult(ref)){fillTrialSections(ref);return}
+  requestTrial(ref);
+ };
+ if(typeof IntersectionObserver==='undefined'){slots.slice(0,10).forEach(onVisible);return}
+ trialObserver=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(entry.isIntersecting){trialObserver.unobserve(entry.target);onVisible(entry.target)}
+ },{rootMargin:'180px 0px',threshold:0});
+ slots.forEach(slot=>{if(trialResult(slot.dataset.trialRef))fillTrialSections(slot.dataset.trialRef);else trialObserver.observe(slot)});
 }
 
 function card(x,i){
- const cred=local(x.id), isMac=x.type==='mac', u=isMac?'':cred.username||'',p=isMac?'':cred.password||'',m=isMac?cred.mac||'':'';
- const host=String(x.server||''), source=x.source==='IPTVXtremeFlix'?'IPTVXtremeFlix':'AisosElho';
- const details=isMac?row('MAC ADDRESS',m):row('USERNAME',u)+row('PASSWORD',p);
- const postRef=refForServer(x);
+ const cred=local(x.id),isMac=x.type==='mac';
+ const host=String(x.server||''),source=x.source==='IPTVXtremeFlix'?'IPTVXtremeFlix':'AisosElho';
+ const own=isMac?Boolean(cred.mac):Boolean(cred.username&&cred.password);
+ const ref=refForServer(x);
+ let details;
+ if(own){
+  details=isMac?row('MAC ADDRESS',cred.mac):row('USERNAME',cred.username)+row('PASSWORD',cred.password);
+ }else if(ref){
+  details='<div class="credentials-live" data-trial-ref="'+escape(ref)+'" data-trial-host="'+escape(hostKey(host))+'" data-trial-type="'+(isMac?'mac':'xtream')+'"><div class="trial-note">جاري تحميل معلومات السيرفر…</div></div>';
+ }else{
+  details='<div class="trial-note">ماكو منشور عام متاح لاستخراج التفاصيل.</div>';
+ }
  return '<article class="card '+(isMac?'mac':'')+'"><div class="card-top"><span class="type">'+(isMac?'◉ STALKER / MAC':'◈ XTREAM CODES')+'</span><span class="number">#'+String(i+1).padStart(3,'0')+'</span></div><h3>'+escape(host.replace(/^https?:\/\//,''))+'</h3><div class="origin">✧ @'+source+'</div>'+
  row('SERVER / PORTAL',host)+details+
  '<div class="card-bottom"><span class="date">'+escape(dateLabel(x.date))+'</span><span class="source-name">من @'+source+'</span></div>'+
- (postRef?'<button class="embed-button" type="button" data-embed="'+escape(postRef)+'">عرض معلومات المنشور كاملة هنا</button><div class="telegram-server-slot"></div>':'')+
- '<button class="btn local-button" type="button" data-edit="'+escape(x.id)+'">＋ إضافة بيانات اشتراكي</button></article>';
+ '<button class="btn local-button" type="button" data-edit="'+escape(x.id)+'">＋ تعديل بيانات اشتراكي</button></article>';
 }
 
 /**
@@ -387,15 +468,13 @@ $('bulk-submit').addEventListener('click',async()=>{
  }finally{btn.disabled=false}
 });
 
-function messageCard(post, i){
+function messageCard(post,i){
  const source=post.source==='AisosElho'?'AisosElho':'IPTVXtremeFlix';
  const ref=telegramRef(source,post.post_id);
- const servers=Array.isArray(post.servers)?post.servers.filter(s=>/^https?:\/\//.test(s)).slice(0,8):[];
  return '<article class="card post-card"><div class="post-top"><span class="post-preview-type">Telegram · '+escape(source)+'</span><span class="post-meta">#'+escape(post.post_id||String(i+1))+'</span></div>'+
- '<div class="post-title">@'+escape(source)+'</div>'+
- (ref?'<div class="telegram-embed-slot" data-telegram-ref="'+escape(ref)+'"></div>':'<div class="post-summary">المنشور غير متاح للعرض</div>')+
- (servers.length?'<details class="indexed-details"><summary>عناوين السيرفرات المفهرسة ('+servers.length+')</summary><div class="post-hosts">'+servers.map(s=>'<div class="post-host">'+escape(s)+'</div>').join('')+'</div></details>':'')+
- '<div class="post-bottom">'+escape(dateLabel(post.date))+'</div></article>';
+ '<div class="post-title">@'+escape(source)+' <span class="date">'+escape(dateLabel(post.date))+'</span></div>'+
+ (ref?'<div class="post-records" data-trial-ref="'+escape(ref)+'"><div class="trial-note">جاري ترتيب السيرفرات ومعلوماتها…</div></div>':'<div class="trial-note">المنشور غير متوفر</div>')+
+ '</article>';
 }
 function render(){
  const isMessages=filter==='messages';
@@ -406,7 +485,7 @@ function render(){
    const list=messages.filter(x=>(messageSource==='all'||x.source===messageSource)&&(!query||(x.summary+' '+x.source+' '+x.servers.join(' ')).toLowerCase().includes(query)));
    $('count').textContent=list.length+' منشور';
    $('grid').innerHTML=list.length?list.slice(0,shown).map(messageCard).join(''):'<div class="empty"><strong>ماكو منشورات متاحة من هالقناة حالياً</strong>القناة ممكن ما تسمح بعرض المنشورات للعامة.</div>';
-   mountVisibleTelegramWidgets();
+   prepareTrialSlots();
    $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
    return;
  }
@@ -416,6 +495,7 @@ function render(){
  $('count').textContent=list.length+' نتيجة';
  $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>ماكو نتائج حالياً</strong>جرّب تبدّل الفلتر أو سوّي تحديث.</div>';
  $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
+ prepareTrialSlots();
 }
 async function load(){
  $('refresh').disabled=true;$('refresh').textContent='↻ جاري التحديث';
@@ -445,22 +525,6 @@ $('message-source').addEventListener('change',e=>{messageSource=e.target.value;s
 $('pagination').addEventListener('click',e=>{if(e.target.id==='show-more'){shown+=filter==='messages'?8:72;render()}});
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;shown=filter==='messages'?8:72;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
 $('grid').addEventListener('click',async e=>{
- const embed=e.target.closest('[data-embed]');
- if(embed){
-  const ref=embed.dataset.embed;
-  const parts=String(ref||'').split('/');
-  if(parts.length===2&&telegramRef(parts[0],parts[1])===ref){
-   const slot=embed.parentElement.querySelector('.telegram-server-slot');
-   if(slot){
-    slot.classList.add('telegram-embed-slot');
-    slot.dataset.telegramRef=ref;
-    mountTelegramWidget(slot);
-    embed.remove();
-   }
-  }
-  return;
- }
-
  const copy=e.target.closest('[data-copy]');if(copy&&!copy.disabled){
   try{await navigator.clipboard.writeText(copy.dataset.copy);const o=copy.textContent;copy.textContent='تم ✓';setTimeout(()=>copy.textContent=o,1300)}catch(err){}
  }
