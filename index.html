@@ -66,6 +66,8 @@
     .modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:22px}
     dialog#bulk-dialog{max-width:min(620px,calc(100% - 32px))}
     .bulk-label{display:block;font-size:12px;margin:0 0 7px;color:#9ba9be}
+    #bulk-file{width:100%;padding:11px;margin:0 0 16px;border:1px dashed #48516b;border-radius:10px;background:#111a2b;color:#bec9db}
+    #bulk-file::file-selector-button{border:0;border-radius:8px;background:#24344d;color:#e2f0ff;padding:7px 11px;margin-inline-end:12px}
     #bulk-input{display:block;width:100%;min-height:230px;padding:14px;border:1px solid #34415a;border-radius:12px;background:#080f1e;color:#e7f1fe;font:13px/1.65 ui-monospace,Consolas,monospace;resize:vertical}
     #bulk-input:focus{outline:2px solid var(--cyan)}
     .bulk-note{font-size:12px;margin:12px 0!important;color:#a5bad2}
@@ -92,6 +94,7 @@
         <button class="tab" aria-pressed="true" data-filter="all">الكل</button>
         <button class="tab" aria-pressed="false" data-filter="xtream">Xtream</button>
         <button class="tab" aria-pressed="false" data-filter="mac">Stalker</button>
+        <button class="tab" aria-pressed="false" data-filter="saved">اشتراكاتي</button>
       </div>
     </div>
     <div class="toolbar-right"><span class="count" id="count"></span><span class="updated" id="updated">جاري جلب آخر تحديث…</span></div>
@@ -116,7 +119,9 @@
  <div class="modal">
   <h2 id="bulk-title">استيراد اشتراكاتك دفعة وحدة</h2>
   <p>الصق معلومات الاشتراكات اللي تملكها أو مخوّل باستخدامها. يتعرف على Server / Username / Password وPortal / MAC، وحتى القيمتين المتتاليتين. المعالجة تتم بجهازك فقط، والبيانات تبقى بهالجلسة بدون إرسال إلى GitHub أو السيرفر.</p>
-  <label for="bulk-input" class="bulk-label">قائمة الاشتراكات</label>
+  <label for="bulk-file" class="bulk-label">ملف اشتراكاتك (M3U / TXT / CSV / JSON)</label>
+  <input id="bulk-file" type="file" accept=".m3u,.m3u8,.txt,.csv,.json,.jsonl,text/plain,application/json" />
+  <label for="bulk-input" class="bulk-label">أو الصق بيانات اشتراكاتك</label>
   <textarea id="bulk-input" rows="10" dir="ltr" spellcheck="false" placeholder="Server: http://example.test:8080
 Username: myuser
 Password: mypassword
@@ -125,6 +130,7 @@ Portal: http://example.test:8080/c/
 MAC: 00:11:22:33:44:55"></textarea>
   <p class="bulk-note" id="bulk-result" role="status" aria-live="polite">يطابق الاستيراد السيرفرات الموجودة بالموقع، وما ينشئ حسابات وهمية.</p>
   <div class="modal-actions">
+   <button class="btn" type="button" id="bulk-clear">مسح البيانات المحفوظة</button>
    <button class="btn" type="button" id="bulk-cancel">إلغاء</button>
    <button class="btn btn-primary" type="button" id="bulk-submit">استيراد البيانات</button>
   </div>
@@ -158,70 +164,123 @@ function card(x,i){
  * Parses only user-supplied authorized subscription records locally.
  * No Telegram fetching; no credential data is uploaded.
  */
-function parseBulk(text) {
- const lines=String(text||'').replace(/\r/g,'').split('\n').map(s=>s.trim()).filter(Boolean);
- const urlRegex=/https?:\/\/[^\s<>"'،]+/ig;
+function normalizeEndpoint(raw){
+ try{
+  const url=new URL(String(raw||'').trim());
+  if(url.protocol!=='http:'&&url.protocol!=='https:')return null;
+  const server=url.hostname.toLowerCase()+(url.port?':'+url.port:'');
+  return {server,url};
+ }catch{return null}
+}
+function normalizeMac(mac){
+ const val=String(mac||'').trim().replace(/-/g,':').toUpperCase();
+ return /^(?:[0-9A-F]{2}:){5}[0-9A-F]{2}$/.test(val)?val:'';
+}
+function makeRecord(raw,type,user,pass,mac){
+ const endpoint=normalizeEndpoint(raw);
+ if(!endpoint)return null;
+ const validMac=normalizeMac(mac);
+ const typeResolved=type==='mac'||validMac||/\/c\/?$|\/stalker_portal\//i.test(endpoint.url.pathname)?'mac':'xtream';
+ const username=String(user||endpoint.url.searchParams.get('username')||endpoint.url.searchParams.get('user')||'').trim();
+ const password=String(pass||endpoint.url.searchParams.get('password')||endpoint.url.searchParams.get('pass')||'').trim();
+ if(typeResolved==='mac')return validMac?{server:endpoint.server,type:'mac',username:'',password:'',mac:validMac}:null;
+ return username&&password?{server:endpoint.server,type:'xtream',username,password,mac:''}:null;
+}
+function csvCells(row){
+ const cells=[],regex=/"((?:[^"]|"")*)"|([^,;\t]+)/g;
+ for(const match of row.matchAll(regex))cells.push((match[1]!==undefined?match[1].replace(/""/g,'"'):match[2]).trim());
+ return cells;
+}
+function parseStructured(text){
+ const trimmed=text.trim();
+ if(trimmed.startsWith('[')||trimmed.startsWith('{')){
+  try{
+   const obj=JSON.parse(trimmed);
+   const arr=Array.isArray(obj)?obj:Array.isArray(obj.items)?obj.items:Array.isArray(obj.subscriptions)?obj.subscriptions:[obj];
+   return arr.map(x=>{
+    if(!x||typeof x!=='object')return null;
+    return makeRecord(x.server||x.portal||x.url||x.host,x.type||'',x.username||x.user||x.login,x.password||x.pass||x.pwd,x.mac||x.mac_address);
+   }).filter(Boolean);
+  }catch{}
+ }
+ const lines=trimmed.split(/\r?\n/).filter(Boolean);
+ if(lines.length<2)return [];
+ const header=csvCells(lines[0]).map(x=>x.toLowerCase().replace(/[\s_-]+/g,''));
+ const idx=names=>header.findIndex(h=>names.includes(h));
+ const address=idx(['server','portal','url','host','link']);
+ if(address<0)return [];
+ const ui=idx(['user','username','login']),pi=idx(['pass','password','pwd']),mi=idx(['mac','macaddress']),ti=idx(['type','protocol']);
+ const records=[];
+ for(const line of lines.slice(1)){
+  const fields=csvCells(line);
+  const get=i=>i>=0?fields[i]||'':'';
+  const rec=makeRecord(get(address),get(ti),get(ui),get(pi),get(mi));
+  if(rec)records.push(rec);
+ }
+ return records;
+}
+function parseBulk(text){
+ const raw=String(text||'').replace(/\r/g,'');
+ const structured=parseStructured(raw);
+ if(structured.length)return structured;
+ const lines=raw.split('\n').map(x=>x.trim()).filter(Boolean);
+ const urlPattern=/https?:\/\/[^\s<>"'،]+/i;
  const chunks=[];
  let active=null;
  for(const line of lines){
-  urlRegex.lastIndex=0;
-  const match=urlRegex.exec(line);
-  if(match){
+  const found=line.match(urlPattern);
+  if(found){
    if(active)chunks.push(active);
-   active={rawUrl:match[0].replace(/[),.;]+$/,''),lines:[],heading:line};
+   active={url:found[0].replace(/[),.;]+$/,''),lines:[]};
   }else if(active)active.lines.push(line);
  }
  if(active)chunks.push(active);
- const candidates=[];
+ const records=[];
  for(const chunk of chunks){
-  let url;
-  try{url=new URL(chunk.rawUrl)}catch{continue}
-  const host=url.hostname.toLowerCase()+ (url.port?':'+url.port:'');
-  const macMatch=chunk.lines.join(' ').match(/(?:[0-9A-F]{2}:){5}[0-9A-F]{2}/i);
-  const guessMac=/\/c\/?$|\/stalker_portal\//i.test(url.pathname)||Boolean(macMatch);
-  const type=guessMac?'mac':'xtream';
-  const data={server:host,type,username:'',password:'',mac:''};
-  if(macMatch)data.mac=macMatch[0].toUpperCase();
-  const queryUser=url.searchParams.get('username')||url.searchParams.get('user')||'';
-  const queryPass=url.searchParams.get('password')||url.searchParams.get('pass')||'';
-  if(queryUser)data.username=queryUser;
-  if(queryPass)data.password=queryPass;
-  const extras=[];
-  for(let i=0;i<chunk.lines.length;i++){
-   const line=chunk.lines[i];
-   const keyed=line.match(/^\s*(username|user|login|password|pass|pwd|mac(?:\s*address)?)\s*[:=：-]\s*(.*?)\s*$/i);
-   if(keyed){
-    const key=keyed[1].toLowerCase().replace(/\s/g,'');
-    const val=keyed[2]||(chunk.lines[i+1]&&!/[:=]/.test(chunk.lines[i+1])?chunk.lines[++i]:'');
-    if(/^(username|user|login)$/.test(key))data.username=val;
-    else if(/^(password|pass|pwd)$/.test(key))data.password=val;
-    else if(key.startsWith('mac')&&/^(?:[0-9a-f]{2}:){5}[0-9a-f]{2}$/i.test(val))data.mac=val.toUpperCase();
-   }else if(!/[:=]|https?:|\s{2,}/i.test(line)&&line.length<160&&!/^\W+$/.test(line))extras.push(line);
+  const endpoint=normalizeEndpoint(chunk.url);
+  if(!endpoint)continue;
+  const data={user:'',pass:'',mac:''},unlabeled=[];
+  const lines=chunk.lines;
+  const query=endpoint.url.searchParams;
+  data.user=query.get('username')||query.get('user')||'';
+  data.pass=query.get('password')||query.get('pass')||'';
+  for(let i=0;i<lines.length;i++){
+   const line=lines[i];
+   // Labels can use English/Arabic variants, colons, equals, or arrow glyphs.
+   const labelled=line.match(/^(username|user|login|password|pass|pwd|mac(?:\s*address)?|مستخدم|اسم المستخدم|كلمة المرور|باسورد|ماك)\s*[:=：\-→👉]+\s*(.*)$/i);
+   if(labelled){
+    const label=labelled[1].toLowerCase(),rest=labelled[2].trim();
+    const next=lines[i+1];
+    const value=rest||((next&&!/[:=]|https?:\/\/|^\s*(?:username|user|login|password|pass|mac)\b/i.test(next))?lines[++i]:'');
+    if(/^(username|user|login|مستخدم|اسم المستخدم)$/.test(label))data.user=value;
+    else if(/^(password|pass|pwd|كلمة المرور|باسورد)$/.test(label))data.pass=value;
+    else if(/^(mac|macaddress|ماك)$/.test(label.replace(/\s/g,'')))data.mac=value;
+   }else{
+    const macHit=line.match(/(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}/i);
+    if(macHit)data.mac=macHit[0];
+    else if(!/^#|https?:|^[^\w]*$/i.test(line)&&!/[:=→👉]/.test(line)&&line.length<200)unlabeled.push(line);
+   }
   }
-  // Accept exactly two unlabeled adjacent values after a URL as username/password.
-  if(type==='xtream'&&extras.length===2){
-   if(!data.username)data.username=extras[0];
-   if(!data.password)data.password=extras[1];
+  if(!data.user&&!data.pass&&unlabeled.length===2){
+   data.user=unlabeled[0];data.pass=unlabeled[1];
   }
-  if(type==='mac'&&!data.mac)continue;
-  if(type==='xtream'&&!(data.username&&data.password))continue;
-  candidates.push(data);
+  const kind=data.mac||/\/c\/?$|\/stalker_portal\//i.test(endpoint.url.pathname)?'mac':'xtream';
+  const record=makeRecord(chunk.url,kind,data.user,data.pass,data.mac);
+  if(record)records.push(record);
  }
- return candidates;
+ return records;
 }
 function applyBulk(records){
- let matched=0, unmatched=0, duplicates=0;
+ let matched=0,unmatched=0,duplicates=0;
  const byHost=new Map();
  for(const x of items){
-  try{
-   const u=new URL(x.server);
-   const key=u.hostname.toLowerCase()+(u.port?':'+u.port:'');
-   const list=byHost.get(key)||[];
-   list.push(x);byHost.set(key,list);
-  }catch{}
+  const endpoint=normalizeEndpoint(x.server);if(!endpoint)continue;
+  const key=endpoint.server+'|'+x.type;
+  const list=byHost.get(key)||[];
+  list.push(x);byHost.set(key,list);
  }
  for(const record of records){
-  const possible=(byHost.get(record.server)||[]).filter(x=>x.type===record.type);
+  const possible=byHost.get(record.server+'|'+record.type)||[];
   if(!possible.length){unmatched++;continue}
   for(const x of possible){
    const old=local(x.id);
@@ -231,28 +290,47 @@ function applyBulk(records){
   }
  }
  try{sessionStorage.setItem('mxgetserver-local',JSON.stringify(stored))}catch{}
- render();
- return {matched,unmatched,duplicates};
+ render();return {matched,unmatched,duplicates};
 }
 $('bulk-open').addEventListener('click',()=>{
- $('bulk-result').textContent='ألصق بيانات اشتراكاتك، بعدين اضغط استيراد.';
+ $('bulk-result').textContent='اختار ملف من جهازك، أو الصق قائمة اشتراكاتك.';
  $('bulk-input').value='';
+ $('bulk-file').value='';
  $('bulk-dialog').showModal();
 });
 $('bulk-cancel').addEventListener('click',()=>$('bulk-dialog').close());
-$('bulk-submit').addEventListener('click',()=>{
- const records=parseBulk($('bulk-input').value);
- if(!records.length){
-  $('bulk-result').textContent='ما لكيت اشتراكات مكتملة. كل سجل يحتاج عنوان السيرفر وبيانات الدخول التابعة إله.';
-  return;
- }
- const report=applyBulk(records);
- $('bulk-result').textContent='تمت المطابقة: '+report.matched+' · بدون تطابق: '+report.unmatched+' · مكررة: '+report.duplicates+'. البيانات محفوظة بهالجلسة فقط.';
+$('bulk-clear').addEventListener('click',()=>{
+ if(!confirm('تمسح بيانات اشتراكاتك المحفوظة بهالجلسة؟'))return;
+ for(const key of Object.keys(stored))delete stored[key];
+ sessionStorage.removeItem('mxgetserver-local');
+ $('bulk-result').textContent='تم مسح بيانات الاشتراكات من هاي الجلسة.';
+ render();
+});
+$('bulk-submit').addEventListener('click',async()=>{
+ const btn=$('bulk-submit');if(btn.disabled)return;
+ btn.disabled=true;
+ try{
+  let text=$('bulk-input').value;
+  const file=$('bulk-file').files[0];
+  if(file){
+   if(file.size>2_000_000){$('bulk-result').textContent='حجم الملف لازم أقل من 2 ميگابايت.';return}
+   text=await file.text();
+  }
+  const records=parseBulk(text);
+  if(!records.length){
+   $('bulk-result').textContent='ما لكيت اشتراكات مكتملة. تأكد من وجود السيرفر ويا اليوزر والباسورد، أو السيرفر والماك.';
+   return;
+  }
+  const report=applyBulk(records);
+  $('bulk-result').textContent='انقرت '+records.length+' اشتراك · تمت مطابقة '+report.matched+' · بلا تطابق '+report.unmatched+' · مكرر '+report.duplicates+'. البيانات تبقى بهالجلسة فقط.';
+ }catch{
+  $('bulk-result').textContent='تعذّرت قراءة الملف، جرب ملف TXT أو M3U أو CSV أو JSON.';
+ }finally{btn.disabled=false}
 });
 
 function render(){
  const text=$('search').value.toLowerCase().trim();
- const list=items.filter(x=>(filter==='all'||x.type===filter)&&(!text||(x.server+' '+x.source+' '+x.type).toLowerCase().includes(text)));
+ const list=items.filter(x=>(filter==='all'||(filter==='saved'?Boolean(local(x.id).username||local(x.id).password||local(x.id).mac):x.type===filter))&&(!text||(x.server+' '+x.source+' '+x.type+' '+(local(x.id).username||'')).toLowerCase().includes(text)));
  $('count').textContent=list.length+' نتيجة';
  $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>ماكو نتائج حالياً</strong>جرّب تبدّل الفلتر أو سوّي تحديث.</div>';
  $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
