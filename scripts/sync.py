@@ -8,6 +8,7 @@ usernames, M3U auth querystrings, or device MAC addresses.
 from __future__ import annotations
 
 import hashlib
+import os
 import json
 import re
 import sys
@@ -23,8 +24,9 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "servers.json"
 CHANNELS = ("IPTVXtremeFlix", "AisosElho")
-PAGES_PER_CHANNEL = 4
-MAX_PER_CHANNEL = 200
+RECENT_PAGES = 8
+BACKFILL_PAGES = 55
+MAX_PER_CHANNEL = 2500
 URL_RX = re.compile(r"https?://[^\s<>\[\]\"'،،]+", re.IGNORECASE)
 MAC_RX = re.compile(r"(?<![0-9a-f])(?:[0-9a-f]{2}[:-]){5}[0-9a-f]{2}(?![0-9a-f])", re.I)
 USERNAME_RX = re.compile(r"\b(?:user(?:name)?|login)\s*[:=👉–-]\s*\S+", re.I)
@@ -60,14 +62,15 @@ def clean_url(raw: str) -> str | None:
             # Do not ingest URLs containing basic-auth credentials.
             return None
         port = (":" + str(u.port)) if u.port else ""
-        path = "/c/" if u.path.lower().rstrip("/") == "/c" else ""
+        p = u.path.lower().strip("/")
+        path = "/c/" if p == "c" else "/stalker_portal/c/" if p == "stalker_portal/c" else ""
         # HTTPS/HTTP scheme comes from the post, not a connectivity test.
         return urlunsplit((u.scheme, host + port, path, "", ""))
     except ValueError:
         return None
 
 
-def candidates(text: str, channel: str, postid: str, date: str) -> list[dict]:
+def candidates(text: str, channel: str, postid: str, date: str, actual_channel: str = "") -> list[dict]:
     text = unicodedata.normalize("NFKC", text).replace("\u200b", "")
     full_urls = [m.group(0) for m in URL_RX.finditer(text)]
     if not full_urls:
@@ -109,7 +112,7 @@ def candidates(text: str, channel: str, postid: str, date: str) -> list[dict]:
             "type": kind,
             "server": server,
             "source": channel,
-            "post_url": "https://t.me/" + channel + "/" + postid,
+            "post_url": "https://t.me/" + (actual_channel or channel) + "/" + postid,
             "date": date,
         })
     return candidates
@@ -122,9 +125,11 @@ def parse_page(html: str, channel: str) -> tuple[list[dict], int | None]:
     numbers = []
     for el in messages:
         data_post = el.get("data-post", "")
-        if not data_post.startswith(channel + "/"):
+        if "/" not in data_post:
             continue
-        postid = data_post.rsplit("/", 1)[-1]
+        actual_channel, postid = data_post.rsplit("/", 1)
+        if not re.fullmatch(r"[a-zA-Z0-9_]{4,64}", actual_channel):
+            continue
         if not postid.isdigit():
             continue
         numbers.append(int(postid))
@@ -135,18 +140,24 @@ def parse_page(html: str, channel: str) -> tuple[list[dict], int | None]:
         text = message.get_text(" ", strip=True)
         time_el = el.select_one("time[datetime]")
         posted_at = time_el.get("datetime", "") if time_el else ""
-        results.extend(candidates(text, channel, postid, posted_at))
+        results.extend(candidates(text, channel, postid, posted_at, actual_channel))
     return results, min(numbers) if numbers else None
 
 
-def fetch(channel: str) -> list[dict]:
+def fetch(channel: str, page_limit: int) -> list[dict]:
     collected, seen_ids = [], set()
     before = None
-    for page in range(PAGES_PER_CHANNEL):
+    for page in range(page_limit):
         url = "https://t.me/s/" + channel
         params = {"before": before} if before else {}
-        response = S.get(url, params=params, timeout=25)
-        response.raise_for_status()
+        try:
+            response = S.get(url, params=params, timeout=20)
+            response.raise_for_status()
+        except requests.RequestException:
+            if page == 0:
+                raise
+            print(channel + ": reached connection limit after " + str(page) + " pages", file=sys.stderr)
+            break
         posts, oldest = parse_page(response.text, channel)
         if oldest is None:
             if page == 0:
@@ -169,43 +180,84 @@ def main() -> int:
     except (OSError, ValueError):
         previous = {}
     old_items = previous.get("items", []) if isinstance(previous.get("items"), list) else []
+    archive_path = ROOT / "data" / "archive.json"
+    try:
+        archive = json.loads(archive_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        archive = []
+    if not isinstance(archive, list):
+        archive = []
+
+    today = datetime.now(timezone.utc).date().isoformat()
+    is_sunday_deep = datetime.now(timezone.utc).weekday() == 6 and previous.get("last_deep_scan", "")[:10] != today
+    deep_scan = os.environ.get("MX_DEEP_SCAN") == "1" or not previous.get("deep_scan_completed") or is_sunday_deep
+    pages = BACKFILL_PAGES if deep_scan else RECENT_PAGES
+    print("Scan mode:", "historical backfill" if deep_scan else "recent", "- pages/channel:", pages)
     updated = []
     statuses = {}
     all_ok = True
     for channel in CHANNELS:
         try:
-            channel_items = fetch(channel)
-            # A valid public channel with zero matching messages remains empty.
+            channel_items = fetch(channel, pages)
             statuses[channel] = {"status": "ok", "found": len(channel_items)}
             updated.extend(channel_items)
-            print(channel + ": " + str(len(channel_items)) + " public server links indexed")
-        except (requests.RequestException, RuntimeError) as e:
+            print(channel + ": " + str(len(channel_items)) + " public server endpoints indexed")
+        except (requests.RequestException, RuntimeError) as err:
             all_ok = False
             statuses[channel] = {"status": "unavailable", "found": 0}
-            updated.extend(x for x in old_items if x.get("source") == channel)
-            print(channel + ": unable to fetch public feed (" + type(e).__name__ + ")", file=sys.stderr)
-    # Unique IDs; no usernames, passwords, MACs or original raw post text.
-    unique = {}
-    for x in updated:
-        if x.get("id") and x.get("source") in CHANNELS:
-            unique[x["id"]] = {k: x.get(k, "") for k in ("id", "type", "server", "source", "post_url", "date")}
-    result = sorted(unique.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
+            print(channel + ": public preview unavailable (" + type(err).__name__ + ")", file=sys.stderr)
+
+    # Preserve historical entries across scans and service interruptions.
+    # Seed archive is limited to independently observed public hostnames.
+    by_server = {}
+    for x in archive + old_items + updated:
+        if not isinstance(x, dict) or x.get("source") not in CHANNELS:
+            continue
+        if x.get("type") not in ("xtream", "mac"):
+            continue
+        sanitized = clean_url(str(x.get("server", "")))
+        if not sanitized or not str(x.get("id", "")):
+            continue
+        source = x["source"]
+        kind = x["type"]
+        key = (source, kind, sanitized)
+        post_url = str(x.get("post_url", ""))
+        if not re.fullmatch(r"https://t[.]me/[A-Za-z0-9_]+(?:/[0-9]+)?", post_url):
+            post_url = "https://t.me/" + source
+        item = {
+            "id": str(x["id"]),
+            "type": kind,
+            "server": sanitized,
+            "source": source,
+            "post_url": post_url,
+            "date": str(x.get("date") or ""),
+        }
+        existing = by_server.get(key)
+        # Prefer entries with an actual Telegram post and a known date.
+        rank = (bool(re.search(r"/[0-9]+$", post_url)), item["date"])
+        existing_url = existing.get("post_url", "") if existing else ""
+        existing_rank = (bool(re.search(r"/[0-9]+$", existing_url)), existing.get("date", "")) if existing else (False, "")
+        if existing is None or rank > existing_rank:
+            by_server[key] = item
+
+    result = sorted(by_server.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
     result = [x for c in CHANNELS for x in [z for z in result if z["source"] == c][:MAX_PER_CHANNEL]]
     result.sort(key=lambda x: (x["date"], x["id"]), reverse=True)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     payload = {
         "updated_at": now,
+        "last_deep_scan": now if deep_scan and all_ok else previous.get("last_deep_scan"),
+        "deep_scan_completed": bool(previous.get("deep_scan_completed")) or (deep_scan and all_ok),
         "sources": statuses,
         "items": result,
-        "note": "Public server endpoints only. No third-party account credentials or MACs are collected.",
+        "note": "Historical public server endpoints only. No third-party account credentials or MACs are collected.",
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    # Avoid emptying the index if both feeds become inaccessible.
     if not all_ok and not result and old_items:
         print("Keeping last saved dataset due to inaccessible feeds.", file=sys.stderr)
         return 0
     OUTPUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Total indexed:", len(result))
+    print("Total historical + recent endpoints:", len(result))
     return 0
 
 
