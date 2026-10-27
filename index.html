@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,66 +112,69 @@
     /* Completed cards are selected by the application, not display:none. */
     .card{min-height:0}
     .toolbar{margin-top:20px}
+    header.top{justify-content:flex-end}
+    .brand{gap:0}
+    .placeholder{direction:ltr}
   </style>
 </head>
 <body>
 <div class="shell">
   <header class="top">
-    <div class="brand"><div class="mark">MX</div><div><div class="brand-name">MX <b>GetServer</b></div></div></div>
-    <div class="top-right"><div class="badge"><span class="dot"></span> Telegram Feed</div><button class="btn" id="bulk-open" type="button">＋ استيراد اشتراكاتي</button><button class="btn" id="refresh">↻ تحديث</button></div>
+    <div class="brand"><div class="brand-name">MX <b>GetServer</b></div></div>
+    <div class="top-right"><div class="badge"><span class="dot"></span> Telegram Feed</div><button class="btn" id="bulk-open" type="button">＋ Import Subscriptions</button><button class="btn" id="refresh">↻ Refresh</button></div>
   </header>
   <section class="stats" aria-label="Statistics">
-    <div class="stat"><span class="stat-label">السيرفرات</span><strong id="stat-all">—</strong></div>
+    <div class="stat"><span class="stat-label">Servers</span><strong id="stat-all">—</strong></div>
     <div class="stat"><span class="stat-label">Xtream</span><strong id="stat-xtream">—</strong></div>
     <div class="stat"><span class="stat-label">Stalker / MAC</span><strong id="stat-mac">—</strong></div>
   </section>
   <section class="toolbar">
     <div class="toolbar-left">
-      <div class="search"><span>⌕</span><input id="search" placeholder="ابحث عن سيرفر أو قناة..." type="search" aria-label="بحث"></div>
+      <div class="search"><span>⌕</span><input id="search" placeholder="Search servers or accounts..." type="search" aria-label="Search"></div>
       <div class="tabs" aria-label="Filters">
-        <button class="tab" aria-pressed="true" data-filter="all">الكل</button>
+        <button class="tab" aria-pressed="true" data-filter="all">All</button>
         <button class="tab" aria-pressed="false" data-filter="xtream">Xtream</button>
         <button class="tab" aria-pressed="false" data-filter="mac">Stalker</button>
-        <button class="tab" aria-pressed="false" data-filter="saved">اشتراكاتي</button>
-        <button class="tab" aria-pressed="false" data-filter="messages">رسائل التليگرام</button>
+        <button class="tab" aria-pressed="false" data-filter="saved">My Subscriptions</button>
+        <button class="tab" aria-pressed="false" data-filter="messages">Telegram Posts</button>
       </div>
     </div>
-    <div class="toolbar-right"><select id="message-source" class="hide" aria-label="فلترة القنوات"><option value="all">كل القنوات</option><option value="IPTVXtremeFlix">@IPTVXtremeFlix</option><option value="AisosElho">@AisosElho</option></select><span class="count" id="count"></span><span class="updated" id="updated">جاري جلب آخر تحديث…</span></div>
+    <div class="toolbar-right"><select id="message-source" class="hide" aria-label="Filter channels"><option value="all">All Channels</option><option value="IPTVXtremeFlix">@IPTVXtremeFlix</option><option value="AisosElho">@AisosElho</option></select><span class="count" id="count"></span><span class="updated" id="updated">Checking for updates…</span></div>
   </section>
   <main class="grid" id="grid" aria-live="polite">
-    <div class="empty"><strong>جاري التحميل…</strong>نجلب آخر السيرفرات المفهرسة.</div>
+    <div class="empty"><strong>Loading…</strong>Retrieving indexed servers.</div>
   </main>
   <div id="pagination" style="display:flex;justify-content:center;padding-top:22px"></div>
   
 </div>
 <dialog id="editor" aria-labelledby="editor-title">
  <form class="modal" id="credentials-form">
-  <h2 id="editor-title">إضافة بيانات اشتراكك</h2>
-  <p>تنحفظ البيانات فقط بهالجلسة داخل المتصفح، ما تنرسل للسيرفر ولا لـ GitHub.</p>
+  <h2 id="editor-title">Add Subscription Details</h2>
+  <p>Your subscription details are stored only for this browser session. They are not sent to the server or GitHub.</p>
   <div class="form-row"><label for="user">Username</label><input autocomplete="off" id="user" placeholder="Username"></div>
   <div class="form-row"><label for="pass">Password</label><input autocomplete="off" id="pass" placeholder="Password" type="password"></div>
   <div class="form-row"><label for="mac">MAC address</label><input autocomplete="off" id="mac" placeholder="00:1A:79:XX:XX:XX"></div>
-  <div class="modal-actions"><button class="btn" type="button" id="cancel">إلغاء</button><button class="btn btn-primary" type="submit">حفظ بهالجلسة</button></div>
+  <div class="modal-actions"><button class="btn" type="button" id="cancel">Cancel</button><button class="btn btn-primary" type="submit">Save for This Session</button></div>
  </form>
 </dialog>
 <dialog id="bulk-dialog" aria-labelledby="bulk-title">
  <div class="modal">
-  <h2 id="bulk-title">استيراد اشتراكاتك دفعة وحدة</h2>
-  <p>الصق معلومات الاشتراكات اللي تملكها أو مخوّل باستخدامها. يتعرف على Server / Username / Password وPortal / MAC، وحتى القيمتين المتتاليتين. المعالجة تتم بجهازك فقط، والبيانات تبقى بهالجلسة بدون إرسال إلى GitHub أو السيرفر.</p>
-  <label for="bulk-file" class="bulk-label">ملف اشتراكاتك (M3U / TXT / CSV / JSON)</label>
+  <h2 id="bulk-title">Bulk Import Subscriptions</h2>
+  <p>Paste subscription details you own or are authorized to use. Supports Server / Username / Password and Portal / MAC, including consecutive unlabeled values. Data is processed locally and remains in this browser session.</p>
+  <label for="bulk-file" class="bulk-label">Your Subscription File (M3U / TXT / CSV / JSON)</label>
   <input id="bulk-file" type="file" accept=".m3u,.m3u8,.txt,.csv,.json,.jsonl,text/plain,application/json" />
-  <label for="bulk-input" class="bulk-label">أو الصق بيانات اشتراكاتك</label>
+  <label for="bulk-input" class="bulk-label">Or Paste Subscription Details</label>
   <textarea id="bulk-input" rows="10" dir="ltr" spellcheck="false" placeholder="Server: http://example.test:8080
 Username: myuser
 Password: mypassword
 
 Portal: http://example.test:8080/c/
 MAC: 00:11:22:33:44:55"></textarea>
-  <p class="bulk-note" id="bulk-result" role="status" aria-live="polite">يطابق الاستيراد السيرفرات الموجودة بالموقع، وما ينشئ حسابات وهمية.</p>
+  <p class="bulk-note" id="bulk-result" role="status" aria-live="polite">Imports are matched to existing servers. No accounts are fabricated.</p>
   <div class="modal-actions">
-   <button class="btn" type="button" id="bulk-clear">مسح البيانات المحفوظة</button>
-   <button class="btn" type="button" id="bulk-cancel">إلغاء</button>
-   <button class="btn btn-primary" type="button" id="bulk-submit">استيراد البيانات</button>
+   <button class="btn" type="button" id="bulk-clear">Clear Saved Details</button>
+   <button class="btn" type="button" id="bulk-cancel">Cancel</button>
+   <button class="btn btn-primary" type="button" id="bulk-submit">Import Details</button>
   </div>
  </div>
 </dialog>
@@ -183,11 +186,11 @@ let items=[], messages=[], messageSource='all', filter='all', editing='', shown=
 const stored = {};
 try{Object.assign(stored,JSON.parse(sessionStorage.getItem('mxgetserver-local')||'{}'))}catch(e){}
 const escape = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const dateLabel = s => {if(!s)return 'بدون تاريخ'; const d=new Date(s);return isNaN(d)?'بدون تاريخ':new Intl.DateTimeFormat('ar-IQ',{dateStyle:'medium',timeStyle:'short'}).format(d)};
+const dateLabel = s => {if(!s)return 'Unknown date'; const d=new Date(s);return isNaN(d)?'Unknown date':new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short'}).format(d)};
 const local = id => stored[id]||{};
 function row(label,value){
  const available=Boolean(value);
- return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!available?'placeholder':'')+'">'+(available?escape(value):'غير متوفر')+'</span><button class="copy" type="button" '+(!available?'disabled':'')+' data-copy="'+escape(value||'')+'">نسخ</button></div></div>';
+ return '<div class="field"><div class="field-head">'+escape(label)+'</div><div class="field-value"><span class="value '+(!available?'placeholder':'')+'">'+(available?escape(value):'Not available')+'</span><button class="copy" type="button" '+(!available?'disabled':'')+' data-copy="'+escape(value||'')+'">Copy</button></div></div>';
 }
 function telegramRef(source,postId){
  if(!['IPTVXtremeFlix','AisosElho'].includes(source))return '';
@@ -205,9 +208,9 @@ const trialData=new Map(),trialQueue=[],trialQueued=new Set();
 let trialRunning=0,trialObserver;
 const TRIAL_CACHE_MS=5*60*1000;
 function trialRows(records,isMac) {
- if(!records.length)return '<div class="trial-note">ماكو بيانات دخول قابلة للقراءة لهذا السيرفر.</div>';
+ if(!records.length)return '<div class="trial-note">No readable login details for this server.</div>';
  return records.map((r,i)=>{
-  const title=records.length>1?'<div class="trial-entry-label">حساب '+(i+1)+'</div>':'';
+  const title=records.length>1?'<div class="trial-entry-label">Account '+(i+1)+'</div>':'';
   return '<div class="trial-entry">'+title+(isMac?row('MAC ADDRESS',r.mac):row('USERNAME',r.username)+row('PASSWORD',r.password))+'</div>';
  }).join('');
 }
@@ -215,7 +218,7 @@ function hostKey(raw){
  try{const x=new URL(raw);return x.host.toLowerCase()}catch{return ''}
 }
 function groupedRecordCard(records){
- if(!records.length)return '<div class="trial-note">المنشور ما يحتوي على سيرفر وبيانات دخول يمكن استخراجها بشكل موثوق.</div>';
+ if(!records.length)return '<div class="trial-note">No reliably extractable server and login details in this post.</div>';
  const byHost=new Map();
  for(const rec of records){
   const key=rec.type+'|'+hostKey(rec.server);
@@ -240,13 +243,13 @@ function fillTrialSections(ref){
  document.querySelectorAll('[data-trial-ref]').forEach(slot=>{
   if(slot.dataset.trialRef!==ref)return;
   if(slot.classList.contains('post-records')){
-   slot.innerHTML=result.error?'<div class="trial-note">تعذّر قراءة هالمنشور حالياً.</div>':groupedRecordCard(records);
+   slot.innerHTML=result.error?'<div class="trial-note">Unable to read this post right now.</div>':groupedRecordCard(records);
    return;
   }
   if(slot.classList.contains('credentials-live')){
    const host=slot.dataset.trialHost,type=slot.dataset.trialType;
    const matching=records.filter(r=>r.type===type&&hostKey(r.server)===host);
-   slot.innerHTML=result.error?'<div class="trial-note">تعذّر جلب البيانات التجريبية حالياً.</div>':trialRows(matching,type==='mac');
+   slot.innerHTML=result.error?'<div class="trial-note">Unable to retrieve trial details right now.</div>':trialRows(matching,type==='mac');
   }
  });
 }
@@ -444,17 +447,17 @@ function applyBulk(records){
  render();return {matched,unmatched,duplicates};
 }
 $('bulk-open').addEventListener('click',()=>{
- $('bulk-result').textContent='اختار ملف من جهازك، أو الصق قائمة اشتراكاتك.';
+ $('bulk-result').textContent='Choose a file or paste your subscription list.';
  $('bulk-input').value='';
  $('bulk-file').value='';
  $('bulk-dialog').showModal();
 });
 $('bulk-cancel').addEventListener('click',()=>$('bulk-dialog').close());
 $('bulk-clear').addEventListener('click',()=>{
- if(!confirm('تمسح بيانات اشتراكاتك المحفوظة بهالجلسة؟'))return;
+ if(!confirm('Clear saved subscription details for this session?'))return;
  for(const key of Object.keys(stored))delete stored[key];
  sessionStorage.removeItem('mxgetserver-local');
- $('bulk-result').textContent='تم مسح بيانات الاشتراكات من هاي الجلسة.';
+ $('bulk-result').textContent='Saved subscription details cleared for this session.';
  render();
 });
 $('bulk-submit').addEventListener('click',async()=>{
@@ -464,18 +467,18 @@ $('bulk-submit').addEventListener('click',async()=>{
   let text=$('bulk-input').value;
   const file=$('bulk-file').files[0];
   if(file){
-   if(file.size>2_000_000){$('bulk-result').textContent='حجم الملف لازم أقل من 2 ميگابايت.';return}
+   if(file.size>2_000_000){$('bulk-result').textContent='File size must be under 2 MB.';return}
    text=await file.text();
   }
   const records=parseBulk(text);
   if(!records.length){
-   $('bulk-result').textContent='ما لكيت اشتراكات مكتملة. تأكد من وجود السيرفر ويا اليوزر والباسورد، أو السيرفر والماك.';
+   $('bulk-result').textContent='No complete subscriptions found. Include a server with username and password, or a portal with MAC address.';
    return;
   }
   const report=applyBulk(records);
-  $('bulk-result').textContent='انقرت '+records.length+' اشتراك · تمت مطابقة '+report.matched+' · بلا تطابق '+report.unmatched+' · مكرر '+report.duplicates+'. البيانات تبقى بهالجلسة فقط.';
+  $('bulk-result').textContent='Parsed '+records.length+' subscriptions · Matched: '+report.matched+' · Unmatched: '+report.unmatched+' · Duplicates: '+report.duplicates+'. Details are saved only for this session.';
  }catch{
-  $('bulk-result').textContent='تعذّرت قراءة الملف، جرب ملف TXT أو M3U أو CSV أو JSON.';
+  $('bulk-result').textContent='Unable to read the file. Try TXT, M3U, CSV, or JSON.';
  }finally{btn.disabled=false}
 });
 
@@ -484,7 +487,7 @@ function messageCard(post,i){
  const ref=telegramRef(source,post.post_id);
  return '<article class="card post-card"><div class="post-top"><span class="post-preview-type">Telegram · '+escape(source)+'</span><span class="post-meta">#'+escape(post.post_id||String(i+1))+'</span></div>'+
  '<div class="post-title">@'+escape(source)+' <span class="date">'+escape(dateLabel(post.date))+'</span></div>'+
- (ref?'<div class="post-records" data-trial-ref="'+escape(ref)+'"><div class="trial-note">جاري ترتيب السيرفرات ومعلوماتها…</div></div>':'<div class="trial-note">المنشور غير متوفر</div>')+
+ (ref?'<div class="post-records" data-trial-ref="'+escape(ref)+'"><div class="trial-note">Organizing server details…</div></div>':'<div class="trial-note">Post unavailable</div>')+
  '</article>';
 }
 function render(){
@@ -494,10 +497,10 @@ function render(){
  if(isMessages){
    const query=$('search').value.toLowerCase().trim();
    const list=messages.filter(x=>(messageSource==='all'||x.source===messageSource)&&(!query||(x.summary+' '+x.source+' '+x.servers.join(' ')).toLowerCase().includes(query)));
-   $('count').textContent=list.length+' منشور';
-   $('grid').innerHTML=list.length?list.slice(0,shown).map(messageCard).join(''):'<div class="empty"><strong>ماكو منشورات متاحة من هالقناة حالياً</strong>القناة ممكن ما تسمح بعرض المنشورات للعامة.</div>';
+   $('count').textContent=list.length+' posts';
+   $('grid').innerHTML=list.length?list.slice(0,shown).map(messageCard).join(''):'<div class="empty"><strong>No posts available from this channel.</strong>Public access to this channel may be restricted.</div>';
    prepareTrialSlots();
-   $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
+   $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">Show More ('+(list.length-shown)+')</button>':'';
    return;
  }
 
@@ -507,12 +510,12 @@ function render(){
  $('stat-xtream').textContent=completed.filter(x=>x.type==='xtream').length;
  $('stat-mac').textContent=completed.filter(x=>x.type==='mac').length;
  const list=completed.filter(x=>!text||(x.server+' '+x.type+' '+(local(x.id).username||'')+' '+matchingRecords(x).map(y=>y.username).join(' ')).toLowerCase().includes(text));
- $('count').textContent=list.length+' نتيجة';
- $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>جاري البحث عن سيرفرات ببيانات دخول مكتملة</strong>ما راح نعرض سيرفر ناقص.</div>';
- $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
+ $('count').textContent=list.length+' results';
+ $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>Checking for complete server details…</strong>Incomplete entries are hidden.</div>';
+ $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">Show More ('+(list.length-shown)+')</button>':'';
 }
 async function load(){
- $('refresh').disabled=true;$('refresh').textContent='↻ جاري التحديث';
+ $('refresh').disabled=true;$('refresh').textContent='↻ Refreshing';
  try{
   const r=await fetch('./data/servers.json?t='+Date.now(),{cache:'no-store'});
   if(!r.ok)throw Error('HTTP '+r.status);
@@ -520,7 +523,7 @@ async function load(){
   items=Array.isArray(d.items)?d.items.filter(x=>x&&typeof x.id==='string'&&typeof x.server==='string'&&/^https?:\/\//.test(x.server)&&['mac','xtream'].includes(x.type)):[];
   items.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
   $('stat-all').textContent=items.length;$('stat-xtream').textContent=items.filter(x=>x.type==='xtream').length;$('stat-mac').textContent=items.filter(x=>x.type==='mac').length;
-  $('updated').textContent=d.updated_at?'آخر مزامنة: '+dateLabel(d.updated_at):'ماكو مزامنة ناجحة بعد';
+  $('updated').textContent=d.updated_at?'Last synced: '+dateLabel(d.updated_at):'No successful sync yet';
   try{
    const mr=await fetch('./data/messages.json?t='+Date.now(),{cache:'no-store'});
    if(mr.ok){
@@ -533,8 +536,8 @@ async function load(){
   // Fetch account details proactively. Hidden or absent cards must not block the fetch.
   const refs=new Set(items.map(refForServer).filter(Boolean));
   for(const ref of refs)requestTrial(ref);
- }catch(e){$('updated').textContent='تعذّر جلب التحديث';$('grid').innerHTML='<div class="empty"><strong>تعذّر تحميل البيانات</strong>تأكد من تشغيل مزامنة GitHub Actions ونشر الصفحة.</div>'}
- finally{$('refresh').disabled=false;$('refresh').textContent='↻ تحديث'}
+ }catch(e){$('updated').textContent='Unable to fetch updates';$('grid').innerHTML='<div class="empty"><strong>Unable to load data.</strong>Check GitHub Actions sync and site deployment.</div>'}
+ finally{$('refresh').disabled=false;$('refresh').textContent='↻ Refresh'}
 }
 $('refresh').addEventListener('click',load);
 $('search').addEventListener('input',()=>{shown=filter==='messages'?8:72;render()});
@@ -543,7 +546,7 @@ $('pagination').addEventListener('click',e=>{if(e.target.id==='show-more'){shown
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;shown=filter==='messages'?8:72;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
 $('grid').addEventListener('click',async e=>{
  const copy=e.target.closest('[data-copy]');if(copy&&!copy.disabled){
-  try{await navigator.clipboard.writeText(copy.dataset.copy);const o=copy.textContent;copy.textContent='تم ✓';setTimeout(()=>copy.textContent=o,1300)}catch(err){}
+  try{await navigator.clipboard.writeText(copy.dataset.copy);const o=copy.textContent;copy.textContent='Copied ✓';setTimeout(()=>copy.textContent=o,1300)}catch(err){}
  }
  const edit=e.target.closest('[data-edit]');if(edit){
   editing=edit.dataset.edit;const data=local(editing);
@@ -560,7 +563,7 @@ $('credentials-form').addEventListener('submit',e=>{
  e.preventDefault();if(!editing)return;
  const type=items.find(x=>x.id===editing)?.type;
  const mac=$('mac').value.trim();
- if(type==='mac' && mac&&!/^(?:[a-fA-F0-9]{2}:){5}[a-fA-F0-9]{2}$/.test(mac)){$('mac').setCustomValidity('صيغة MAC لازم XX:XX:XX:XX:XX:XX');$('mac').reportValidity();return}
+ if(type==='mac' && mac&&!/^(?:[a-fA-F0-9]{2}:){5}[a-fA-F0-9]{2}$/.test(mac)){$('mac').setCustomValidity('MAC format must be XX:XX:XX:XX:XX:XX');$('mac').reportValidity();return}
  $('mac').setCustomValidity('');
  stored[editing]={username:$('user').value.trim(),password:$('pass').value,mac};
  try{sessionStorage.setItem('mxgetserver-local',JSON.stringify(stored))}catch(e){}
