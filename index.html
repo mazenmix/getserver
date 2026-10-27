@@ -16,16 +16,19 @@
     .top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
     .brand{display:flex;align-items:center;gap:14px;direction:ltr}
     .mark{display:grid;place-items:center;width:54px;height:54px;border:1px solid #fd4c6880;border-radius:17px;background:linear-gradient(145deg,#ed395a,#611a3d);font-size:23px;font-weight:900;box-shadow:0 12px 44px #fc39524a}
-    .brand-name{font-size:24px;font-weight:850;letter-spacing:-.9px;line-height:1.2}.brand-name b{color:var(--accent)}
+    /* Metallic typography with a subtle passing ruby sheen. */
+    .brand-name{display:inline-flex;align-items:baseline;white-space:nowrap;font-family:"Segoe UI",Tahoma,Arial,sans-serif;font-size:clamp(26px,2.6vw,33px);font-weight:900;letter-spacing:-1.2px;line-height:1.2;filter:drop-shadow(0 2px 7px #e3e7ff25)}
+    .brand-name .brand-mx,.brand-name b{display:inline-block;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:230% 100%;animation:brand-polish 7s ease-in-out infinite}
+    .brand-name .brand-mx{background-image:linear-gradient(110deg,#a4aec2 0%,#f8fbff 16%,#bac2d1 31%,#fff 43%,#8593aa 59%,#e9efff 77%,#a4aec2 100%)}
+    .brand-name b{font-weight:900;background-image:linear-gradient(110deg,#b52950 0%,#ff5b7e 14%,#ffd9df 31%,#ff537a 45%,#ca2454 66%,#ffb4c5 80%,#ad234c 100%);filter:drop-shadow(0 0 7px #ff477448)}
+    @keyframes brand-polish{0%,12%{background-position:100% center}52%,80%{background-position:0% center}100%{background-position:100% center}}
+    @media(prefers-reduced-motion:reduce){.brand-name .brand-mx,.brand-name b{animation:none;background-position:center}}
     .brand-caption{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
     .top-right{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     .badge{border:1px solid var(--line);background:#111a27c9;border-radius:999px;padding:8px 13px;font-size:12px;color:var(--muted)}
     .dot{display:inline-block;width:8px;height:8px;margin-left:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #67e2aa16}
     .btn{border:1px solid #404a61;border-radius:11px;background:#1a2537;color:var(--text);padding:10px 14px;transition:.18s}
     .btn:hover{border-color:var(--cyan);background:#203044;transform:translateY(-1px)}.btn-primary{border-color:#fe6582;background:linear-gradient(135deg,#fd4c68,#b52e58);font-weight:700}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:32px 0 28px}
-    .stat{padding:19px 22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,#182034,#101522);box-shadow:0 10px 35px #0002}
-    .stat-label{font-size:13px;color:var(--muted)}.stat strong{display:block;font-size:30px;letter-spacing:-1px;line-height:1.4}
     .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:17px 0 19px;border-top:1px solid var(--line)}
     .toolbar-left,.toolbar-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
     .search{display:flex;align-items:center;gap:8px;min-width:min(320px,85vw);border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:0 13px}
@@ -104,7 +107,7 @@
     .bulk-note{font-size:12px;margin:12px 0!important;color:#a5bad2}
     .hide{display:none!important}
     @media(max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:650px){.shell{padding:20px 15px 40px}.hero{padding-top:38px}.grid{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:25px}.toolbar-left,.search{width:100%}.search{min-width:0}.brand-name{font-size:21px}.badge{display:none}}
+    @media(max-width:650px){.shell{padding:20px 15px 40px}.hero{padding-top:38px}.grid{grid-template-columns:1fr}.toolbar-left,.search{width:100%}.search{min-width:0}.brand-name{font-size:21px}.badge{display:none}}
 
     /* Keep all result cards equal in height, with account details scrollable inside. */
     .grid:not(.messages-view){grid-auto-rows:390px;align-items:stretch}
@@ -132,14 +135,9 @@
 <body>
 <div class="shell">
   <header class="top">
-    <div class="brand"><div class="brand-name">MX <b>GetServer</b></div></div>
+    <div class="brand"><div class="brand-name" aria-label="MX GetServer"><span class="brand-mx">MX&nbsp;</span><b>GetServer</b></div></div>
     <div class="top-right"><div class="badge"><span class="dot"></span> Telegram Feed</div><button class="btn" id="bulk-open" type="button">＋ Import Subscriptions</button><button class="btn" id="refresh">↻ Refresh</button></div>
   </header>
-  <section class="stats" aria-label="Statistics">
-    <div class="stat"><span class="stat-label">Servers</span><strong id="stat-all">—</strong></div>
-    <div class="stat"><span class="stat-label">Xtream</span><strong id="stat-xtream">—</strong></div>
-    <div class="stat"><span class="stat-label">Stalker / MAC</span><strong id="stat-mac">—</strong></div>
-  </section>
   <section class="toolbar">
     <div class="toolbar-left">
       <div class="search"><span>⌕</span><input id="search" placeholder="Search servers or accounts..." type="search" aria-label="Search"></div>
@@ -522,9 +520,6 @@ function render(){
 
  const text=$('search').value.toLowerCase().trim();
  const completed=items.filter(isComplete);
- $('stat-all').textContent=completed.length;
- $('stat-xtream').textContent=completed.filter(x=>x.type==='xtream').length;
- $('stat-mac').textContent=completed.filter(x=>x.type==='mac').length;
  const list=completed.filter(x=>!text||(x.server+' '+x.type+' '+(local(x.id).username||'')+' '+matchingRecords(x).map(y=>y.username).join(' ')).toLowerCase().includes(text));
  $('count').textContent=list.length+' results';
  $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>Checking for complete server details…</strong>Incomplete entries are hidden.</div>';
@@ -538,7 +533,6 @@ async function load(){
   const d=await r.json();
   items=Array.isArray(d.items)?d.items.filter(x=>x&&typeof x.id==='string'&&typeof x.server==='string'&&/^https?:\/\//.test(x.server)&&['mac','xtream'].includes(x.type)):[];
   items.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
-  $('stat-all').textContent=items.length;$('stat-xtream').textContent=items.filter(x=>x.type==='xtream').length;$('stat-mac').textContent=items.filter(x=>x.type==='mac').length;
   $('updated').textContent=d.updated_at?'Last synced: '+dateLabel(d.updated_at):'No successful sync yet';
   try{
    const mr=await fetch('./data/messages.json?t='+Date.now(),{cache:'no-store'});
