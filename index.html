@@ -23,13 +23,7 @@
     .dot{display:inline-block;width:8px;height:8px;margin-left:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #67e2aa16}
     .btn{border:1px solid #404a61;border-radius:11px;background:#1a2537;color:var(--text);padding:10px 14px;transition:.18s}
     .btn:hover{border-color:var(--cyan);background:#203044;transform:translateY(-1px)}.btn-primary{border-color:#fe6582;background:linear-gradient(135deg,#fd4c68,#b52e58);font-weight:700}
-    .hero{padding:65px 0 28px;max-width:820px}.eyebrow{text-transform:uppercase;letter-spacing:2.4px;font-size:12px;font-weight:850;color:var(--cyan)}
-    h1{font-size:clamp(33px,5vw,60px);letter-spacing:-1.6px;line-height:1.13;margin:13px 0 18px}h1 span{color:var(--accent)}
-    .hero p{max-width:630px;font-size:16px;color:#a6aec3;line-height:1.9;margin:0}
-    .sources{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0 27px}
-    .source{display:inline-flex;align-items:center;gap:9px;background:#151e2e;border:1px solid #293249;padding:10px 13px;border-radius:12px;text-decoration:none;font-size:13px;direction:ltr}
-    .source:hover{border-color:var(--cyan)}.source-icon{background:#229ed9;border-radius:8px;padding:4px 8px;color:white;font-weight:900}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:12px 0 28px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:32px 0 28px}
     .stat{padding:19px 22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,#182034,#101522);box-shadow:0 10px 35px #0002}
     .stat-label{font-size:13px;color:var(--muted)}.stat strong{display:block;font-size:30px;letter-spacing:-1px;line-height:1.4}
     .toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:17px 0 19px;border-top:1px solid var(--line)}
@@ -79,15 +73,6 @@
     <div class="brand"><div class="mark">MX</div><div><div class="brand-name">MX <b>GetServer</b></div><div class="brand-caption">Telegram server monitor</div></div></div>
     <div class="top-right"><div class="badge"><span class="dot"></span> Telegram Feed</div><button class="btn" id="refresh">↻ تحديث</button></div>
   </header>
-  <section class="hero">
-    <div class="eyebrow">SERVER DISCOVERY · TWO CHANNELS</div>
-    <h1>السيرفرات، <span>بمكان واحد.</span></h1>
-    <p>تجميع تلقائي لروابط السيرفرات المنشورة بالقناتين، مرتبة حسب أحدث منشور. تفاصيل الحسابات الخاصة تگدر تضيفها مؤقتاً من جهازك، بدون نشرها على GitHub.</p>
-    <div class="sources">
-      <a class="source" target="_blank" rel="noopener noreferrer" href="https://t.me/IPTVXtremeFlix"><span class="source-icon">➤</span>@IPTVXtremeFlix ↗</a>
-      <a class="source" target="_blank" rel="noopener noreferrer" href="https://t.me/AisosElho"><span class="source-icon">➤</span>@AisosElho ↗</a>
-    </div>
-  </section>
   <section class="stats" aria-label="Statistics">
     <div class="stat"><span class="stat-label">السيرفرات</span><strong id="stat-all">—</strong></div>
     <div class="stat"><span class="stat-label">Xtream</span><strong id="stat-xtream">—</strong></div>
@@ -107,6 +92,7 @@
   <main class="grid" id="grid" aria-live="polite">
     <div class="empty"><strong>جاري التحميل…</strong>نجلب آخر السيرفرات المفهرسة.</div>
   </main>
+  <div id="pagination" style="display:flex;justify-content:center;padding-top:22px"></div>
   <footer class="foot"><span>MX GetServer · Server links indexed from public Telegram previews</span><span>المزامنة الدورية تعتمد على إتاحة منشورات تيليگرام العلنية.</span></footer>
 </div>
 <dialog id="editor" aria-labelledby="editor-title">
@@ -123,7 +109,7 @@
 (function(){
 'use strict';
 const $ = id => document.getElementById(id);
-let items=[], filter='all', editing='';
+let items=[], filter='all', editing='', shown=72;
 const stored = {};
 try{Object.assign(stored,JSON.parse(sessionStorage.getItem('mxgetserver-local')||'{}'))}catch(e){}
 const escape = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -145,7 +131,8 @@ function render(){
  const text=$('search').value.toLowerCase().trim();
  const list=items.filter(x=>(filter==='all'||x.type===filter)&&(!text||(x.server+' '+x.source+' '+x.type).toLowerCase().includes(text)));
  $('count').textContent=list.length+' نتيجة';
- $('grid').innerHTML=list.length?list.map(card).join(''):'<div class="empty"><strong>ماكو نتائج حالياً</strong>جرّب تبدّل الفلتر، أو افتح القناتين للتأكد من وجود منشورات عامة.</div>';
+ $('grid').innerHTML=list.length?list.slice(0,shown).map(card).join(''):'<div class="empty"><strong>ماكو نتائج حالياً</strong>جرّب تبدّل الفلتر أو سوّي تحديث.</div>';
+ $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
 }
 async function load(){
  $('refresh').disabled=true;$('refresh').textContent='↻ جاري التحديث';
@@ -153,17 +140,18 @@ async function load(){
   const r=await fetch('./data/servers.json?t='+Date.now(),{cache:'no-store'});
   if(!r.ok)throw Error('HTTP '+r.status);
   const d=await r.json();
-  items=Array.isArray(d.items)?d.items.filter(x=>x&&typeof x.id==='string'&&typeof x.server==='string'&&/^https?:\/\//.test(x.server)&&['mac','xtream'].includes(x.type)).slice(0,500):[];
+  items=Array.isArray(d.items)?d.items.filter(x=>x&&typeof x.id==='string'&&typeof x.server==='string'&&/^https?:\/\//.test(x.server)&&['mac','xtream'].includes(x.type)):[];
   items.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
   $('stat-all').textContent=items.length;$('stat-xtream').textContent=items.filter(x=>x.type==='xtream').length;$('stat-mac').textContent=items.filter(x=>x.type==='mac').length;
   $('updated').textContent=d.updated_at?'آخر مزامنة: '+dateLabel(d.updated_at):'ماكو مزامنة ناجحة بعد';
-  render();
+  shown=72; render();
  }catch(e){$('updated').textContent='تعذّر جلب التحديث';$('grid').innerHTML='<div class="empty"><strong>تعذّر تحميل البيانات</strong>تأكد من تشغيل مزامنة GitHub Actions ونشر الصفحة.</div>'}
  finally{$('refresh').disabled=false;$('refresh').textContent='↻ تحديث'}
 }
 $('refresh').addEventListener('click',load);
-$('search').addEventListener('input',render);
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
+$('search').addEventListener('input',()=>{shown=72;render()});
+$('pagination').addEventListener('click',e=>{if(e.target.id==='show-more'){shown+=72;render()}});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;shown=72;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
 $('grid').addEventListener('click',async e=>{
  const copy=e.target.closest('[data-copy]');if(copy&&!copy.disabled){
   try{await navigator.clipboard.writeText(copy.dataset.copy);const o=copy.textContent;copy.textContent='تم ✓';setTimeout(()=>copy.textContent=o,1300)}catch(err){}
