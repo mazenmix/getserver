@@ -1,0 +1,43 @@
+name: Telegram feed sync
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+  push:
+    paths:
+      - "scripts/sync.py"
+      - ".github/workflows/telegram-sync.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-feed-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Fetch public posts and sanitize endpoints
+        run: python scripts/sync.py
+      - name: Save data only if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/servers.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update public Telegram server index"
+            git push
+          else
+            echo "No new feed data."
+          fi
