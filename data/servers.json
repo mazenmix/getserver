@@ -1,0 +1,15 @@
+{
+  "updated_at": null,
+  "sources": {
+    "IPTVXtremeFlix": {
+      "status": "pending",
+      "found": 0
+    },
+    "AisosElho": {
+      "status": "pending",
+      "found": 0
+    }
+  },
+  "items": [],
+  "note": "Only public endpoint URLs; usernames, passwords and MACs are not collected."
+}
