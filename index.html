@@ -57,6 +57,18 @@
     .post-link:hover{text-decoration:underline}.date{font-size:11px;color:#8692ac}.local-button{width:100%;margin-top:13px}
     .empty{text-align:center;border:1px dashed #3b4764;border-radius:17px;background:#141c2b;grid-column:1/-1;padding:55px 18px;color:#a5b1c9}.empty strong{display:block;font-size:20px;color:#f3f6ff;margin-bottom:6px}
     .source-name{font-size:11px;color:#8395ad;direction:ltr}
+    #message-source{background:#151d2e;border:1px solid #334158;border-radius:10px;padding:9px 13px;color:#e9effd;max-width:190px}
+    .post-card{min-height:240px}
+    .post-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .post-title{margin:15px 0 9px;font-size:16px;font-weight:800;direction:ltr;text-align:left;color:#edf6ff}
+    .post-summary{font-size:14px;color:#c0ccde;line-height:1.8;overflow-wrap:anywhere;white-space:pre-wrap;margin:10px 0 18px}
+    .post-meta{font-size:11px;color:#8495ad}
+    .post-preview-type{font-size:11px;color:var(--cyan);border:1px solid #2b7777;border-radius:8px;padding:5px 8px}
+    .post-hosts{display:flex;flex-direction:column;gap:7px}
+    .post-host{direction:ltr;text-align:left;color:#d9e7f5;background:#0b1423;border:1px solid #2b3850;border-radius:9px;padding:9px 11px;font:12px/1.5 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+    .post-bottom{border-top:1px solid #2a3648;padding-top:12px;margin-top:17px;color:#8291a5;font-size:11px}
+    .note-message{color:#9eacc2;font-size:12px;padding:10px 12px;border:1px solid #30405b;border-radius:11px;margin:0 0 15px;background:#131c2d}
+
     .foot{margin-top:35px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:12px}
     dialog{max-width:min(480px,calc(100% - 32px));width:100%;padding:0;border:1px solid #35435d;border-radius:19px;background:#151c2c;color:var(--text);box-shadow:0 40px 120px #0009}
     dialog::backdrop{background:#030813d4;backdrop-filter:blur(5px)}
@@ -95,9 +107,10 @@
         <button class="tab" aria-pressed="false" data-filter="xtream">Xtream</button>
         <button class="tab" aria-pressed="false" data-filter="mac">Stalker</button>
         <button class="tab" aria-pressed="false" data-filter="saved">اشتراكاتي</button>
+        <button class="tab" aria-pressed="false" data-filter="messages">رسائل التليگرام</button>
       </div>
     </div>
-    <div class="toolbar-right"><span class="count" id="count"></span><span class="updated" id="updated">جاري جلب آخر تحديث…</span></div>
+    <div class="toolbar-right"><select id="message-source" class="hide" aria-label="فلترة القنوات"><option value="all">كل القنوات</option><option value="IPTVXtremeFlix">@IPTVXtremeFlix</option><option value="AisosElho">@AisosElho</option></select><span class="count" id="count"></span><span class="updated" id="updated">جاري جلب آخر تحديث…</span></div>
   </section>
   <main class="grid" id="grid" aria-live="polite">
     <div class="empty"><strong>جاري التحميل…</strong>نجلب آخر السيرفرات المفهرسة.</div>
@@ -140,7 +153,7 @@ MAC: 00:11:22:33:44:55"></textarea>
 (function(){
 'use strict';
 const $ = id => document.getElementById(id);
-let items=[], filter='all', editing='', shown=72;
+let items=[], messages=[], messageSource='all', filter='all', editing='', shown=72;
 const stored = {};
 try{Object.assign(stored,JSON.parse(sessionStorage.getItem('mxgetserver-local')||'{}'))}catch(e){}
 const escape = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -328,7 +341,28 @@ $('bulk-submit').addEventListener('click',async()=>{
  }finally{btn.disabled=false}
 });
 
+function messageCard(post, i){
+ const source=post.source==='AisosElho'?'AisosElho':'IPTVXtremeFlix';
+ const servers=Array.isArray(post.servers)?post.servers.filter(s=>/^https?:\/\//.test(s)).slice(0,8):[];
+ const summary=typeof post.summary==='string'?post.summary:'ملخص منشور عام';
+ return '<article class="card post-card"><div class="post-top"><span class="post-preview-type">Telegram · '+escape(source)+'</span><span class="post-meta">#'+escape(post.post_id||String(i+1))+'</span></div>'+
+ '<div class="post-title">@'+escape(source)+'</div>'+
+ '<div class="post-summary">'+escape(summary)+'</div>'+
+ (servers.length?'<div class="post-hosts">'+servers.map(s=>'<div class="post-host">'+escape(s)+'</div>').join('')+'</div>':'')+
+ '<div class="post-bottom">'+escape(dateLabel(post.date))+' · '+(post.excerpt?'مقتطف مختصر بدون بيانات دخول':'ملخص من الفهرس السابق؛ النص الأصلي غير متاح')+'</div></article>';
+}
 function render(){
+ const isMessages=filter==='messages';
+ $('message-source').classList.toggle('hide',!isMessages);
+ if(isMessages){
+   const query=$('search').value.toLowerCase().trim();
+   const list=messages.filter(x=>(messageSource==='all'||x.source===messageSource)&&(!query||(x.summary+' '+x.source+' '+x.servers.join(' ')).toLowerCase().includes(query)));
+   $('count').textContent=list.length+' منشور';
+   $('grid').innerHTML=list.length?list.slice(0,shown).map(messageCard).join(''):'<div class="empty"><strong>ماكو رسائل متاحة من هالقناة حالياً</strong>القناة ممكن تكون خاصة أو ما تعرض منشوراتها بشكل عام. الملخصات الحالية تظهر للقنوات المتاحة فقط.</div>';
+   $('pagination').innerHTML=list.length>shown?'<button class="btn" type="button" id="show-more">عرض المزيد ('+(list.length-shown)+')</button>':'';
+   return;
+ }
+
  const text=$('search').value.toLowerCase().trim();
  const list=items.filter(x=>(filter==='all'||(filter==='saved'?Boolean(local(x.id).username||local(x.id).password||local(x.id).mac):x.type===filter))&&(!text||(x.server+' '+x.source+' '+x.type+' '+(local(x.id).username||'')).toLowerCase().includes(text)));
  $('count').textContent=list.length+' نتيجة';
@@ -345,12 +379,21 @@ async function load(){
   items.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
   $('stat-all').textContent=items.length;$('stat-xtream').textContent=items.filter(x=>x.type==='xtream').length;$('stat-mac').textContent=items.filter(x=>x.type==='mac').length;
   $('updated').textContent=d.updated_at?'آخر مزامنة: '+dateLabel(d.updated_at):'ماكو مزامنة ناجحة بعد';
+  try{
+   const mr=await fetch('./data/messages.json?t='+Date.now(),{cache:'no-store'});
+   if(mr.ok){
+    const md=await mr.json();
+    messages=Array.isArray(md.items)?md.items.filter(x=>x&&typeof x.id==='string'&&typeof x.summary==='string'&&['IPTVXtremeFlix','AisosElho'].includes(x.source)).map(x=>({...x,servers:Array.isArray(x.servers)?x.servers:[]})):[];
+    messages.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+   }
+  }catch(err){/* Preserve server feed when message feed is unavailable. */}
   shown=72; render();
  }catch(e){$('updated').textContent='تعذّر جلب التحديث';$('grid').innerHTML='<div class="empty"><strong>تعذّر تحميل البيانات</strong>تأكد من تشغيل مزامنة GitHub Actions ونشر الصفحة.</div>'}
  finally{$('refresh').disabled=false;$('refresh').textContent='↻ تحديث'}
 }
 $('refresh').addEventListener('click',load);
 $('search').addEventListener('input',()=>{shown=72;render()});
+$('message-source').addEventListener('change',e=>{messageSource=e.target.value;shown=72;render()});
 $('pagination').addEventListener('click',e=>{if(e.target.id==='show-more'){shown+=72;render()}});
 document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;shown=72;document.querySelectorAll('[data-filter]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));render()}));
 $('grid').addEventListener('click',async e=>{
