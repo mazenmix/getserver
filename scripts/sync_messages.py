@@ -140,7 +140,10 @@ def main():
     old = previous.get("items", [])
     if not isinstance(old, list):
         old = []
-    depth = 55 if not previous.get("deep_scan_completed") else 7
+    today = datetime.now(timezone.utc).date().isoformat()
+    weekly = datetime.now(timezone.utc).weekday() == 6 and str(previous.get("last_deep_scan") or "")[:10] != today
+    deep = not previous.get("last_deep_scan") or weekly
+    depth = 55 if deep else 7
     merged = {}
     for item in fallback() + old:
         if isinstance(item, dict) and item.get("source") in CHANNELS:
@@ -182,9 +185,11 @@ def main():
             "servers": hosts[:8], "excerpt": excerpt,
         })
     cleaned.sort(key=lambda x: (x["date"], int(x["post_id"])), reverse=True)
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     output = {
-        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
-        "deep_scan_completed": bool(previous.get("deep_scan_completed")) or (depth == 55 and successes == len(CHANNELS)),
+        "updated_at": now,
+        "last_deep_scan": now if deep and successes > 0 else previous.get("last_deep_scan"),
+        "deep_scan_completed": bool(previous.get("deep_scan_completed")) or (deep and successes > 0),
         "sources": sources, "items": cleaned[:3000],
         "note": "Safe excerpts of public messages and historical summaries only. No authentication data.",
     }
