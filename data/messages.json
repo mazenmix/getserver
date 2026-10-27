@@ -1,0 +1,875 @@
+{
+  "updated_at": null,
+  "deep_scan_completed": false,
+  "sources": {
+    "IPTVXtremeFlix": {
+      "status": "pending",
+      "posts": 0
+    },
+    "AisosElho": {
+      "status": "pending",
+      "posts": 0
+    }
+  },
+  "items": [
+    {
+      "id": "AisosElho-194",
+      "source": "AisosElho",
+      "post_id": "194",
+      "date": "2026-10-24T15:04:39+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://line.fener75.de:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-193",
+      "source": "AisosElho",
+      "post_id": "193",
+      "date": "2026-10-18T17:29:17+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://falcon-sa.xyz:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-192",
+      "source": "AisosElho",
+      "post_id": "192",
+      "date": "2026-10-17T23:02:37+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://12072672.vipsinotv.com:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-190",
+      "source": "AisosElho",
+      "post_id": "190",
+      "date": "2026-10-17T18:59:37+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://azertytv.xyz:2103",
+        "http://qwerty365.live:2103"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-189",
+      "source": "AisosElho",
+      "post_id": "189",
+      "date": "2026-10-16T23:20:19+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://mbctv.sbs:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-188",
+      "source": "AisosElho",
+      "post_id": "188",
+      "date": "2026-10-16T12:53:16+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://pazbj.top:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-187",
+      "source": "AisosElho",
+      "post_id": "187",
+      "date": "2026-10-09T08:01:11+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sxstreem.net"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-186",
+      "source": "AisosElho",
+      "post_id": "186",
+      "date": "2026-10-05T07:53:37+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://tomixe.in:80",
+        "http://vivagott.com:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-185",
+      "source": "AisosElho",
+      "post_id": "185",
+      "date": "2026-10-02T09:40:37+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://xtremeott.site:80",
+        "http://ottcdn.site"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-184",
+      "source": "AisosElho",
+      "post_id": "184",
+      "date": "2026-09-27T10:55:34+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://magic-tv.live:2095",
+        "http://crystal.ottc.pro:80",
+        "http://vivapro.ddno.us:80",
+        "http://cname1.elg-26.com:8080",
+        "http://eurofinal.life:80",
+        "http://vlue.vip",
+        "http://line.dndnscloud.ru:80",
+        "http://alasadino.com:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-183",
+      "source": "AisosElho",
+      "post_id": "183",
+      "date": "2026-09-23T06:29:02+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://firetvcb.net"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-181",
+      "source": "AisosElho",
+      "post_id": "181",
+      "date": "2026-09-19T21:14:51+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://marveltv.info:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-180",
+      "source": "AisosElho",
+      "post_id": "180",
+      "date": "2026-09-18T13:39:18+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://live.8kultra.org"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-178",
+      "source": "AisosElho",
+      "post_id": "178",
+      "date": "2026-09-15T20:51:33+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://gcdn.zip"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-176",
+      "source": "AisosElho",
+      "post_id": "176",
+      "date": "2026-09-10T07:31:40+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://dreamlandfx.com:8080/c/",
+        "http://tfx1.com:8080/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-175",
+      "source": "AisosElho",
+      "post_id": "175",
+      "date": "2026-09-08T09:24:21+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://cf.vpnpremium.xyz",
+        "http://cheapdigii.com",
+        "http://charmes.uk",
+        "http://cf.tvservice-8k.com"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-174",
+      "source": "AisosElho",
+      "post_id": "174",
+      "date": "2026-09-05T16:38:17+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://gamingtuga.xyz:80",
+        "http://galaxy.blcplay.com",
+        "http://fvpb16fr.fans",
+        "http://gabriele2018.xsho3solutions.com"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-173",
+      "source": "AisosElho",
+      "post_id": "173",
+      "date": "2026-09-02T21:54:22+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://fltv.xyz:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-170",
+      "source": "AisosElho",
+      "post_id": "170",
+      "date": "2026-09-01T22:04:16+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://game.boss-lion.xyz:80",
+        "http://g2026.sbs",
+        "http://g4m1ng.uk",
+        "http://fvh21.com",
+        "http://gcdn.mov"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-169",
+      "source": "AisosElho",
+      "post_id": "169",
+      "date": "2026-09-01T16:33:18+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://r365.city:2103",
+        "http://tv.gold-pro.xyz:80",
+        "http://qwerty65.xyz:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-168",
+      "source": "AisosElho",
+      "post_id": "168",
+      "date": "2026-08-31T23:04:43+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://bitnew.site:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-166",
+      "source": "AisosElho",
+      "post_id": "166",
+      "date": "2026-08-30T14:39:54+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sansat.life:25461",
+        "http://sansat.cc:88"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-165",
+      "source": "AisosElho",
+      "post_id": "165",
+      "date": "2026-08-29T22:57:34+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://fx16.vxdphfk.top:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-163",
+      "source": "AisosElho",
+      "post_id": "163",
+      "date": "2026-08-26T21:21:33+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://fx0101.com:8080",
+        "http://game.indians-lion.xyz"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-162",
+      "source": "AisosElho",
+      "post_id": "162",
+      "date": "2026-08-25T22:00:57+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://falcon-sa.xyz"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-161",
+      "source": "AisosElho",
+      "post_id": "161",
+      "date": "2026-08-24T15:35:06+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://dramatv4k.xyz:8080",
+        "http://bayfall.vip:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-159",
+      "source": "AisosElho",
+      "post_id": "159",
+      "date": "2026-08-22T23:23:19+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://smartsat9326.vip:80",
+        "http://alinador.it.com:80",
+        "http://julsnake22.xyz:2052",
+        "http://tvportal4k.xyz:8080",
+        "http://www.bobeag.com:80",
+        "http://ts.trustplay.win:2052"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-153",
+      "source": "AisosElho",
+      "post_id": "153",
+      "date": "2026-08-17T23:29:40+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://gftv.club"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-150",
+      "source": "AisosElho",
+      "post_id": "150",
+      "date": "2026-07-28T13:35:51+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://crystalott.net",
+        "http://line.ottcst.com:80",
+        "http://line.crystalott.net:80",
+        "http://max.rksuper.com:80",
+        "http://max.rksuper.cc:80",
+        "http://line.ottcst.net:80",
+        "http://es.otttv.co:2052"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-149",
+      "source": "AisosElho",
+      "post_id": "149",
+      "date": "2026-07-19T13:06:56+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sans7.org:88"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-148",
+      "source": "AisosElho",
+      "post_id": "148",
+      "date": "2026-07-19T11:42:37+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://darhome.xyz:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-147",
+      "source": "AisosElho",
+      "post_id": "147",
+      "date": "2026-07-18T16:56:23+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://live.tvpython.net:2052"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-146",
+      "source": "AisosElho",
+      "post_id": "146",
+      "date": "2026-07-15T11:41:59+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://spidertv.info:80",
+        "http://16386-incest.tx-4kott.com:80",
+        "http://5f6.drnexon.net:80",
+        "http://iota.cloudf-nexon.xyz:80",
+        "http://line.trxdnscloud.ru:80",
+        "http://tr.4kbest.one:80",
+        "http://nexon-tv.org:8000",
+        "http://magicshow.online:2052"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-145",
+      "source": "AisosElho",
+      "post_id": "145",
+      "date": "2026-06-22T20:47:42+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://luna4k.eu:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-144",
+      "source": "AisosElho",
+      "post_id": "144",
+      "date": "2026-06-20T22:07:15+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://ottsansat.org:88"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-143",
+      "source": "AisosElho",
+      "post_id": "143",
+      "date": "2026-06-20T13:06:30+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://prmax.life:80",
+        "http://wiki-ott.org:80",
+        "http://satpower.shop:80",
+        "http://atlasprotv.eu:80",
+        "http://on.g6ip.us:8080",
+        "http://myott.co:80",
+        "http://mgot.xyz:80",
+        "http://best-8k.org:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-141",
+      "source": "AisosElho",
+      "post_id": "141",
+      "date": "2026-04-14T18:42:53+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://tigeriptv.co:25461"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-140",
+      "source": "AisosElho",
+      "post_id": "140",
+      "date": "2026-04-12T19:35:42+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://11293-tour.ott-cdn.me:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-139",
+      "source": "AisosElho",
+      "post_id": "139",
+      "date": "2026-04-11T19:05:46+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://pro2.premium-tv.org:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-138",
+      "source": "AisosElho",
+      "post_id": "138",
+      "date": "2026-04-09T19:45:48+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://tvcrown.website:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-137",
+      "source": "AisosElho",
+      "post_id": "137",
+      "date": "2026-04-08T20:35:35+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://m3u.drm-26.com:80",
+        "http://line.france-ott.net:80",
+        "http://v3tv.live:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-135",
+      "source": "AisosElho",
+      "post_id": "135",
+      "date": "2026-02-07T08:07:58+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://mair360.com",
+        "http://mair360.com:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-134",
+      "source": "AisosElho",
+      "post_id": "134",
+      "date": "2026-02-07T07:58:06+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sky-glass.live",
+        "http://sky-glass.live:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-133",
+      "source": "AisosElho",
+      "post_id": "133",
+      "date": "2026-02-07T07:54:26+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://4k.ahmadtv.live:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-131",
+      "source": "AisosElho",
+      "post_id": "131",
+      "date": "2026-02-05T21:42:01+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://live.lynxiptv.xyz:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-130",
+      "source": "AisosElho",
+      "post_id": "130",
+      "date": "2026-02-05T21:37:22+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://vipkendrake.top:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-129",
+      "source": "AisosElho",
+      "post_id": "129",
+      "date": "2026-01-08T22:26:30+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://globaltv1.net:8080/c/",
+        "http://mag.premiumplus.tv:80/c/",
+        "http://dedetv.pro:8080/c/",
+        "http://magonlyx.abcott.me:80/c/",
+        "http://tv.premiumplus.tv:80/c/",
+        "http://chaotic-streams.cc:80/c/",
+        "http://tv.proturk.xyz:8080/c/",
+        "http://epg.protv.cc:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-126",
+      "source": "AisosElho",
+      "post_id": "126",
+      "date": "2025-07-14T11:55:17+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sup-4k.org:80/c/"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-125",
+      "source": "AisosElho",
+      "post_id": "125",
+      "date": "2024-11-02T22:04:32+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://teratv4k.com:8880"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-124",
+      "source": "AisosElho",
+      "post_id": "124",
+      "date": "2024-09-21T10:43:44+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sv.irserv.biz:8080",
+        "http://line.4k-beast.co",
+        "http://mydroon.com:80",
+        "http://line.pakufitv.com:80",
+        "http://maiolve.club:8080",
+        "http://www.pandar.tv:88",
+        "http://www.pandar.xyz:88",
+        "http://4kplusmini.com"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-123",
+      "source": "AisosElho",
+      "post_id": "123",
+      "date": "2024-07-29T22:47:45+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://4kgoott.com:8880",
+        "http://scorpionlive.com:2052/c/",
+        "http://mutant.arrox.top:80",
+        "http://ip.king-cobra.eu:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-120",
+      "source": "AisosElho",
+      "post_id": "120",
+      "date": "2024-07-28T19:41:28+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://new-pro.tv:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-119",
+      "source": "AisosElho",
+      "post_id": "119",
+      "date": "2024-07-27T12:30:36+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://vodkom.net:88"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-118",
+      "source": "AisosElho",
+      "post_id": "118",
+      "date": "2024-07-27T12:30:07+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://faster4k.line.pm:25461"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-117",
+      "source": "AisosElho",
+      "post_id": "117",
+      "date": "2024-07-27T12:29:38+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://m3u.tz-m3u.live"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-116",
+      "source": "AisosElho",
+      "post_id": "116",
+      "date": "2024-07-27T12:28:54+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://o99.link:2082"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-115",
+      "source": "AisosElho",
+      "post_id": "115",
+      "date": "2024-07-27T12:28:22+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://zenlink.link"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-113",
+      "source": "AisosElho",
+      "post_id": "113",
+      "date": "2024-06-07T09:52:39+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://dreamtvonline.co:8000"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-112",
+      "source": "AisosElho",
+      "post_id": "112",
+      "date": "2024-06-07T09:44:33+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://x.tvprovip.com:25443"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-111",
+      "source": "AisosElho",
+      "post_id": "111",
+      "date": "2023-07-15T16:51:05+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://vip.smartbizde.com:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-108",
+      "source": "AisosElho",
+      "post_id": "108",
+      "date": "2023-06-24T15:57:31+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://ch.bosstv.live:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-104",
+      "source": "AisosElho",
+      "post_id": "104",
+      "date": "2023-05-20T15:21:54+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://xmquhxv.mhubery.xyz:80",
+        "http://xmquhxv.mhubery.xyz"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-99",
+      "source": "AisosElho",
+      "post_id": "99",
+      "date": "2023-04-26T19:56:21+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://planet208.com:7000"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-98",
+      "source": "AisosElho",
+      "post_id": "98",
+      "date": "2023-04-26T19:50:56+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://1.tvdiptv.com:2082"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-83",
+      "source": "AisosElho",
+      "post_id": "83",
+      "date": "2023-04-13T16:54:48+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sawaiptv.vip:80",
+        "http://iptvregular.com:25461",
+        "http://fireott.biz:2052",
+        "http://xtra.fireottplus.com:2052",
+        "http://lionboxiptv.xyz:80"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-82",
+      "source": "AisosElho",
+      "post_id": "82",
+      "date": "2023-04-07T09:20:29+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://psmtv.site:8080"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-80",
+      "source": "AisosElho",
+      "post_id": "80",
+      "date": "2023-03-29T23:45:44+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://legendtvs.com"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-78",
+      "source": "AisosElho",
+      "post_id": "78",
+      "date": "2023-03-22T08:22:48+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://playhispano.org:25461"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-68",
+      "source": "AisosElho",
+      "post_id": "68",
+      "date": "2023-03-19T13:24:44+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://db222.ga:569"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-58",
+      "source": "AisosElho",
+      "post_id": "58",
+      "date": "2023-03-17T23:15:06+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://sansat.net:25461"
+      ],
+      "excerpt": false
+    },
+    {
+      "id": "AisosElho-50",
+      "source": "AisosElho",
+      "post_id": "50",
+      "date": "2023-03-17T15:25:33+00:00",
+      "summary": "ملخص مفهرس: منشور عن سيرفرات IPTV",
+      "servers": [
+        "http://hidra.live:80"
+      ],
+      "excerpt": false
+    }
+  ],
+  "note": "Historical summaries reconstructed from existing indexed posts; no credentials."
+}
