@@ -266,7 +266,7 @@ async function runTrialQueue(){
  }catch{
   trialData.set(ref,{records:[],time:Date.now(),error:true});
  }finally{
-  trialRunning--;fillTrialSections(ref);runTrialQueue();
+  trialRunning--;fillTrialSections(ref);render();runTrialQueue();
  }
 }
 function requestTrial(ref){
@@ -529,7 +529,10 @@ async function load(){
     messages.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
    }
   }catch(err){/* Preserve server feed when message feed is unavailable. */}
-  shown=filter==='messages'?8:72; render();
+  shown=72; render();
+  // Fetch account details proactively. Hidden or absent cards must not block the fetch.
+  const refs=new Set(items.map(refForServer).filter(Boolean));
+  for(const ref of refs)requestTrial(ref);
  }catch(e){$('updated').textContent='تعذّر جلب التحديث';$('grid').innerHTML='<div class="empty"><strong>تعذّر تحميل البيانات</strong>تأكد من تشغيل مزامنة GitHub Actions ونشر الصفحة.</div>'}
  finally{$('refresh').disabled=false;$('refresh').textContent='↻ تحديث'}
 }
