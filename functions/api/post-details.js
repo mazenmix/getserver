@@ -1,7 +1,7 @@
 // Extract only explicitly published public trial codes on demand.
 // Route is protected by the existing Cloudflare Pages password middleware.
 // Never store the credentials in GitHub, KV, logs, or caches.
-const CHANNELS=new Set(["AisosElho","IPTVXtremeFlix"]);
+const CHANNELS=new Set(["AisosElho","IPTVXtremeFlix","StbEmucodesStalkerPortal"]);
 const SMALL={"ʜ":"h","ᴏ":"o","ꜱ":"s","ᴛ":"t","ᴜ":"u","ᴇ":"e","ʀ":"r","ᴘ":"p","ᴀ":"a","ᴍ":"m","ɴ":"n","ʟ":"l","ᴅ":"d","ɪ":"i","ᴄ":"c","ꜰ":"f","ɢ":"g","ᴠ":"v","ʏ":"y","ᴋ":"k","ʙ":"b","ᴎ":"n"};
 function normal(s){return String(s||"").normalize("NFKC").replace(/[ʜᴏꜱᴛᴜᴇʀᴘᴀᴍɴʟᴅɪᴄꜰɢᴠʏᴋʙᴎ]/g,c=>SMALL[c]||c).replace(/[\u200B-\u200D\uFEFF]/g,"")}
 function urlOf(raw){
