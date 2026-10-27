@@ -1,9 +1,10 @@
 # MX GetServer
 
-Responsive IPTV server endpoint index for the two public Telegram channels:
+Responsive IPTV server endpoint index for these public Telegram channels:
 
 - https://t.me/IPTVXtremeFlix
 - https://t.me/AisosElho
+- https://t.me/StbEmucodesStalkerPortal
 
 ## Automatic updates
 
