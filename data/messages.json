@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T22:58:53Z",
+  "updated_at": "2026-10-30T02:23:47Z",
   "last_deep_scan": "2026-10-27T10:33:18Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "posts": 102
+      "posts": 103
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,15 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-200",
+      "source": "AisosElho",
+      "post_id": "200",
+      "date": "2026-10-30T00:03:43+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
     {
       "id": "AisosElho-195",
       "source": "AisosElho",
