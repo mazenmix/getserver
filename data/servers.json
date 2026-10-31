@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T02:35:15Z",
+  "updated_at": "2026-10-31T08:51:30Z",
   "last_deep_scan": "2026-10-27T10:33:11Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "found": 189
+      "found": 204
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,126 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-201-f80d96e3d36ba9",
+      "type": "xtream",
+      "server": "http://123tv.pro:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-f144878af41bff",
+      "type": "xtream",
+      "server": "http://0000001100.shop:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-ce4793265ebd01",
+      "type": "xtream",
+      "server": "http://mirag.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-c467d63143fa3b",
+      "type": "xtream",
+      "server": "http://stream.ghosttv.co",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-bd16478520583d",
+      "type": "xtream",
+      "server": "http://clicktv1.live:2082",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-abce02846111bf",
+      "type": "xtream",
+      "server": "http://cdnten.com:8080",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-7a93eb81c96d7c",
+      "type": "xtream",
+      "server": "http://fr.smarterpro.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-63fbbf8d4c91db",
+      "type": "xtream",
+      "server": "http://octopustv.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-4e7d24dc3d5afb",
+      "type": "xtream",
+      "server": "http://stap2025.me:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-462204d79794e0",
+      "type": "xtream",
+      "server": "http://megastar213.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-264d6462e933e2",
+      "type": "xtream",
+      "server": "http://flour-visiongggg.net:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-255c2e4f4ed99b",
+      "type": "xtream",
+      "server": "http://ts.trustplay.win:2052",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-1e778ab1951596",
+      "type": "xtream",
+      "server": "http://pcdwh.xentoryx.com:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-1607c54f099ea7",
+      "type": "xtream",
+      "server": "http://mytop2020.life:2095",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
+    {
+      "id": "AisosElho-201-0605a830258d94",
+      "type": "xtream",
+      "server": "http://my.atrupo4k.com:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/201",
+      "date": "2026-10-31T04:44:50+00:00"
+    },
     {
       "id": "AisosElho-194-8dce7e11249c42",
       "type": "xtream",
@@ -589,14 +709,6 @@
       "id": "AisosElho-159-1b0e40337fc786",
       "type": "xtream",
       "server": "http://www.bobeag.com:80",
-      "source": "AisosElho",
-      "post_url": "https://t.me/AisosElho/159",
-      "date": "2026-08-22T23:23:19+00:00"
-    },
-    {
-      "id": "AisosElho-159-0d9aca4826512b",
-      "type": "xtream",
-      "server": "http://ts.trustplay.win:2052",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/159",
       "date": "2026-08-22T23:23:19+00:00"
