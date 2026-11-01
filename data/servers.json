@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31T21:58:54Z",
-  "last_deep_scan": "2026-10-27T10:33:11Z",
+  "updated_at": "2026-11-01T00:40:38Z",
+  "last_deep_scan": "2026-11-01T00:40:38Z",
   "deep_scan_completed": true,
   "sources": {
     "IPTVXtremeFlix": {
@@ -13,7 +13,7 @@
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
-      "found": 144
+      "found": 216
     }
   },
   "items": [
@@ -1722,6 +1722,70 @@
       "date": "2026-06-20T22:07:15+00:00"
     },
     {
+      "id": "StbEmucodesStalkerPortal-5262-ea3ec7742b4928",
+      "type": "mac",
+      "server": "http://103.176.90.24/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5262",
+      "date": "2026-06-20T20:42:04+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5261-c5716b20201a67",
+      "type": "mac",
+      "server": "http://tv.umcast.ru:88/stalker_portal/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5261",
+      "date": "2026-06-20T20:42:02+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5259-050ae54faaee08",
+      "type": "mac",
+      "server": "http://ipro.premium-ott3.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5259",
+      "date": "2026-06-20T20:41:58+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5258-9fe896c7ab0df9",
+      "type": "mac",
+      "server": "http://3tv.pro:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5258",
+      "date": "2026-06-20T20:41:56+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5257-1637d998a8ac44",
+      "type": "mac",
+      "server": "http://151524.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5257",
+      "date": "2026-06-20T20:41:55+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5256-5c24ee53b32e8a",
+      "type": "mac",
+      "server": "http://prm.worldip.nl/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5256",
+      "date": "2026-06-20T20:41:52+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5255-fa6f0d2fddbef9",
+      "type": "mac",
+      "server": "http://wave-tv.nz/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5255",
+      "date": "2026-06-20T20:41:51+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5252-084a12e1992496",
+      "type": "mac",
+      "server": "http://me.mdmfista.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5252",
+      "date": "2026-06-20T20:41:45+00:00"
+    },
+    {
       "id": "AisosElho-143-b10c4e8f9a9967",
       "type": "xtream",
       "server": "http://prmax.life:80",
@@ -1784,6 +1848,278 @@
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/143",
       "date": "2026-06-20T13:06:30+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5248-40cf8cff9e08a9",
+      "type": "mac",
+      "server": "http://103.176.90.27/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5248",
+      "date": "2026-06-18T23:33:26+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5247-92efaba9c133b7",
+      "type": "mac",
+      "server": "http://forever.tvott.net/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5247",
+      "date": "2026-06-18T23:33:24+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5245-fe4ed693b84f96",
+      "type": "mac",
+      "server": "http://line.glantv.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5245",
+      "date": "2026-06-18T23:33:21+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5244-08148dfb571064",
+      "type": "mac",
+      "server": "http://klaratv.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5244",
+      "date": "2026-06-18T23:33:18+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5243-33b25af87bf149",
+      "type": "mac",
+      "server": "http://troublesupport.my.to/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5243",
+      "date": "2026-06-18T23:33:16+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5242-0052ba87ba60af",
+      "type": "mac",
+      "server": "http://line.mag7070.eu:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5242",
+      "date": "2026-06-18T23:33:15+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5240-5870e6651e7090",
+      "type": "mac",
+      "server": "http://m.smartip-tv.net:88/stalker_portal/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5240",
+      "date": "2026-06-18T23:33:10+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5237-21cdda542b2440",
+      "type": "mac",
+      "server": "http://atk97.online/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5237",
+      "date": "2026-06-14T21:53:47+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5235-ae6c332928cd4b",
+      "type": "mac",
+      "server": "http://izzantv.webhop.me/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5235",
+      "date": "2026-06-14T21:53:42+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5231-1e9a252662e4a2",
+      "type": "mac",
+      "server": "http://oktay-can-mdiya-hack.streamtv.to:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5231",
+      "date": "2026-06-14T21:53:34+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5228-2eb7403062b5b1",
+      "type": "mac",
+      "server": "http://exclusifott.pro/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5228",
+      "date": "2026-06-12T18:16:30+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5226-ab60bba0a3901b",
+      "type": "mac",
+      "server": "http://esogalaxiusnext.tech/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5226",
+      "date": "2026-06-12T18:16:27+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5225-287049d4d3c306",
+      "type": "mac",
+      "server": "http://iptv.darktv.in/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5225",
+      "date": "2026-06-12T18:16:24+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5224-fe42383f0dca4c",
+      "type": "mac",
+      "server": "http://nour.homes/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5224",
+      "date": "2026-06-12T18:16:22+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5223-a15386b3f86331",
+      "type": "mac",
+      "server": "http://iptv.jinbox.nl/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5223",
+      "date": "2026-06-12T18:16:21+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5222-2b8dde68278b67",
+      "type": "mac",
+      "server": "http://dragoniptv.de/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5222",
+      "date": "2026-06-12T18:16:18+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5221-499a81e78fb078",
+      "type": "mac",
+      "server": "http://backup.xp1.tv/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5221",
+      "date": "2026-06-12T18:16:17+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5220-21fd696c67efb7",
+      "type": "mac",
+      "server": "http://wyveep.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5220",
+      "date": "2026-06-12T18:16:15+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5218-c4edc8d192e60c",
+      "type": "mac",
+      "server": "http://fastopen.live:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5218",
+      "date": "2026-06-12T18:16:11+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5216-eb0bd3105e490c",
+      "type": "mac",
+      "server": "http://expat-tv.xyz/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5216",
+      "date": "2026-06-12T18:16:06+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5215-d5b32b9c4e86a7",
+      "type": "mac",
+      "server": "http://ss.2665.ninja:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5215",
+      "date": "2026-06-12T18:16:05+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5214-0052d9f1f7af27",
+      "type": "mac",
+      "server": "http://vpn.smartpremium2.com/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5214",
+      "date": "2026-06-12T18:16:04+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5206-fb7439f14d5f2a",
+      "type": "mac",
+      "server": "http://play-plus.net/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5206",
+      "date": "2026-06-09T08:48:41+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5203-87cd88205f36e7",
+      "type": "mac",
+      "server": "http://bigda.xyz:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5203",
+      "date": "2026-06-09T08:48:35+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5202-071a1918d4d86c",
+      "type": "mac",
+      "server": "http://exm3u.123tv.to:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5202",
+      "date": "2026-06-09T08:48:32+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5201-b1967bb175a9cc",
+      "type": "mac",
+      "server": "http://one4alltech.net:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5201",
+      "date": "2026-06-09T08:48:30+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5199-7a7a5090bb1edf",
+      "type": "mac",
+      "server": "http://vpn.line-activation.xyz:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5199",
+      "date": "2026-06-09T08:48:26+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5198-b5ea7b137e7956",
+      "type": "mac",
+      "server": "http://185.243.7.194:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5198",
+      "date": "2026-06-09T08:48:25+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5196-f88edfab4b4484",
+      "type": "mac",
+      "server": "http://line.hostytv.store:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5196",
+      "date": "2026-06-06T05:53:01+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5195-e5ec2bb0a5fbb5",
+      "type": "mac",
+      "server": "http://iptvnow.nl:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5195",
+      "date": "2026-06-06T05:52:59+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5194-ee3e72b03df8ec",
+      "type": "mac",
+      "server": "http://80.97.124.235:8080/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5194",
+      "date": "2026-06-06T05:52:57+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5188-339652a6ff1e1e",
+      "type": "mac",
+      "server": "http://4kpro2.com:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5188",
+      "date": "2026-06-06T05:52:38+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5187-68017eaa327aba",
+      "type": "mac",
+      "server": "http://esogalaxiusnext.tech:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5187",
+      "date": "2026-06-06T05:52:36+00:00"
+    },
+    {
+      "id": "StbEmucodesStalkerPortal-5184-9c144a6cf1832d",
+      "type": "mac",
+      "server": "http://tlmr.online:80/c/",
+      "source": "StbEmucodesStalkerPortal",
+      "post_url": "https://t.me/StbEmucodesStalkerPortal/5184",
+      "date": "2026-06-03T14:09:05+00:00"
     },
     {
       "id": "AisosElho-141-ff75e8c89f9ac2",
