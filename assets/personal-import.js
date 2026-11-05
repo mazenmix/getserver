@@ -103,8 +103,7 @@ function renderXtream(){
       '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
       field('SERVER',row.server,row.id,'server')+
       field('USERNAME',row.username,row.id,'username')+
-      field('PASSWORD',row.password,row.id,'password')+
-      (row.original?field('FULL LINK',row.original,row.id,'original'):'')+'</article>'
+      field('PASSWORD',row.password,row.id,'password')+'</article>'
     ).join('')+'</div>':'';
   section.hidden=!items.length;
 }
