@@ -1,7 +1,7 @@
 // Public Telegram M3U links, returned only through the existing password-protected site.
 // This endpoint never fetches playlists or stores post data in the public GitHub repository.
 const SOURCES = ["IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal"];
-const PLAYLIST_RE = /https?:\\?\/\\?\/[^\\s<>"']+?\\.m3u8?(?:\\?[^\\s<>"']*)?/gi;
+const PLAYLIST_RE = /https?:\/\/[^\s<>"']+?\.m3u8?(?:\?[^\s<>"']*)?/gi;
 const POST_RE = /data-post=["']([A-Za-z0-9_]+)\/(\d+)["']/g;
 
 function decodeEntities(value) {
@@ -12,7 +12,7 @@ function validatePlaylist(candidate) {
   try {
     const url = new URL(decodeEntities(candidate).replace(/\\\//g, "/"));
     if (!["http:", "https:"].includes(url.protocol)) return null;
-    if (url.username || url.password || !/\\.m3u8?$/i.test(url.pathname)) return null;
+    if (url.username || url.password || !/\.m3u8?$/i.test(url.pathname)) return null;
     if (["t.me", "telegram.me", "youtube.com"].includes(url.hostname.toLowerCase())) return null;
     // Do not publish account/password query parameters in this feed.
     if (Array.from(url.searchParams.keys()).some(k => /user|pass|token|key|auth|session/i.test(k))) return null;
