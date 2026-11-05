@@ -96,10 +96,23 @@ function copyButton(id,field,label){
 function field(label,value,id,fieldKey){
   return '<div class="mx-import-field"><span>'+ESC(label)+'</span><code dir="ltr">'+ESC(value)+'</code>'+copyButton(id,fieldKey,'Copy')+'</div>';
 }
+function updateAllCount(){
+  // Count every All card, including the paginated native server cards.
+  // The packed dashboard's hidden #count contains the complete result count
+  // (not merely the first page's rendered DOM nodes).
+  const badge=document.querySelector('#mx-all-count');
+  if(!badge)return;
+  const personalCards=section?.querySelectorAll('.mx-import-card').length||0;
+  const nativeText=document.querySelector('#count')?.textContent||'';
+  const nativeMatch=nativeText.match(/^\s*(\d+)\s+results\b/i);
+  const nativeCards=nativeMatch?Number(nativeMatch[1]):document.querySelectorAll('#grid > article.card:not(.post-card)').length;
+  const total=personalCards+nativeCards;
+  badge.textContent=total+' cards';
+}
 function renderXtream(){
   if(!section)return;
   const items=readAll().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
-  section.innerHTML=items.length?'<div class="mx-import-heading"><h2>Xtream Updates</h2><span class="mx-m3u-count">'+items.length+' accounts</span></div>'+
+  section.innerHTML=items.length?'<div class="mx-import-heading"><h2>Xtream Updates</h2><span class="mx-m3u-count" id="mx-all-count">0 cards</span></div>'+
     '<div class="mx-import-grid">'+items.map((row,i)=>
       '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
       field('SERVER',row.server,row.id,'server')+
@@ -107,6 +120,7 @@ function renderXtream(){
       field('PASSWORD',row.password,row.id,'password')+'</article>'
     ).join('')+'</div>':'';
   section.hidden=!items.length;
+  updateAllCount();
 }
 function updateDialog(){
   modal=document.createElement('div');modal.className='mx-import-backdrop';modal.hidden=true;
@@ -154,6 +168,12 @@ function mount(){
     catch{target.textContent='Copy failed'}
   });
   window.addEventListener('mx-personal-updates',renderXtream);
+  // The original site resolves account details asynchronously and updates #count.
+  // Observe that count, so the All badge always includes every original card.
+  const nativeCount=document.querySelector('#count');
+  if(nativeCount&&typeof MutationObserver!=='undefined'){
+    new MutationObserver(updateAllCount).observe(nativeCount,{childList:true,subtree:true,characterData:true});
+  }
   renderXtream();
   loadPublished();
   setInterval(loadPublished,60000);
