@@ -168,7 +168,6 @@ function updateDialog(){
   '<div class="mx-import-modes" role="group" aria-label="Import type">'+
     '<button type="button" class="mx-import-mode is-active" data-import-mode="update" aria-pressed="true">Xtream</button>'+
     '<button type="button" class="mx-import-mode" data-import-mode="playlist" aria-pressed="false">M3U Playlist</button></div>'+
-  '<p id="mx-import-help">Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.</p>'+
   '<textarea rows="12" id="mx-import-text" dir="ltr" spellcheck="false"></textarea>'+
   '<p id="mx-import-result" role="status"></p>'+
   '<div class="mx-import-controls"><button id="mx-import-cancel" type="button">Cancel</button>'+
@@ -177,15 +176,11 @@ function updateDialog(){
   const input=modal.querySelector('#mx-import-text');
   const status=modal.querySelector('#mx-import-result');
   const heading=modal.querySelector('#mx-import-title');
-  const help=modal.querySelector('#mx-import-help');
   const save=modal.querySelector('#mx-import-save');
   let mode='update';
   const setMode=next=>{
     mode=next;
     heading.textContent=mode==='playlist'?'M3U Playlist':'Xtream';
-    help.textContent=mode==='playlist'
-      ?'Paste complete .m3u/.m3u8 links (username optional), or get.php playlists with username. They appear in M3U Playlist.'
-      :'Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.';
     input.placeholder='';
     save.textContent=mode==='playlist'?'Save Playlists':'Import & Save';
     status.textContent='';
