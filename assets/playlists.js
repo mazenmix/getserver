@@ -23,7 +23,11 @@ function allPlaylists(){
  });
  const dedup=new Map();
  for(const row of [...state.items,...personal]){
-   if(!row||typeof row.server!=='string'||!hasUsername(row.server))continue;
+   if(!row||typeof row.server!=='string')continue;
+   // Telegram feed stays username-only; only explicitly manual playlist imports
+   // may be displayed without an embedded username.
+   const isManual=personal.includes(row)&&row.type==='playlist'&&row.manualImport===true;
+   if(!isManual&&!hasUsername(row.server))continue;
    const previous=dedup.get(row.server);
    if(!previous||(Date.parse(row.date)||0)>(Date.parse(previous.date)||0))dedup.set(row.server,row);
  }
