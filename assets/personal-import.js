@@ -39,7 +39,7 @@ function importBatch(raw){
     const extractedPassword=after.match(/\b(?:password|pass|pwd)\s*[:=]\s*([^\s\\]+)/i)?.[1]||'';
     const user=url.searchParams.get('username')||url.searchParams.get('user')||extractedUsername;
     const pass=url.searchParams.get('password')||url.searchParams.get('pass')||extractedPassword;
-    const endpoint=url.origin;
+    const endpoint=original.match(/^https?:\/\/[^\/?#|]+/i)?.[0]||url.origin;
     const xtream=user&&pass;
     const playlist=isPlaylist(url);
     if(xtream){
