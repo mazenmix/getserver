@@ -42,7 +42,7 @@ async function readSource(source) {
         const postHtml = html.slice(match.index, next ? next.index : html.length);
         const dt = postHtml.match(/<time[^>]*datetime=["']([^"']+)/i);
         const date = dt ? dt[1] : "";
-        for (const raw of decodeEntities(postHtml).match(PLAYLIST_RE) || []) {
+        for (const raw of postHtml.match(PLAYLIST_RE) || []) {
           const playlist = validatePlaylist(raw);
           if (playlist) items.push({
             id: source + "-" + match[2] + "-" + items.length,
