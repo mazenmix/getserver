@@ -8,21 +8,25 @@ function card(item,i){
  const url=String(item.server||''),source=String(item.source||'');
  const time=Date.parse(item.date||'');
  const date=Number.isFinite(time)?new Date(time).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'}):'';
- let hostname='Playlist';try{hostname=new URL(url).host}catch{}
+ let hostname='Playlist';try{hostname=new URL(url.split('|')[0]).host}catch{}
+ const post=String(item.post_url||'');
+ const validPost=/^https:\/\/t\.me\/[A-Za-z0-9_]+\/\d+$/.test(post);
  return '<article class="mx-m3u-card"><div class="mx-m3u-meta"><span class="mx-m3u-type">♡ M3U Playlist</span><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
  '<div class="mx-m3u-domain">'+esc(hostname)+'</div>'+
- '<div class="mx-m3u-url" title="'+esc(url)+'">'+esc(url)+'</div>'+
+ '<div class="mx-m3u-url" dir="ltr">'+esc(url)+'</div>'+
  '<div class="mx-m3u-actions"><button type="button" class="mx-m3u-copy" data-playlist-id="'+esc(item.id)+'">Copy Playlist</button>'+
+ (validPost?'<a class="mx-m3u-source-link" href="'+esc(post)+'" target="_blank" rel="noopener noreferrer">Telegram post</a>':'')+
  '<span class="mx-m3u-from">@'+esc(source)+(date?' · '+esc(date):'')+'</span></div></article>';
 }
 function render(){
  if(!panel)return;
  const q=(document.querySelector('#search')?.value||'').trim().toLowerCase();
  const items=state.items.filter(x=>(x.server+' '+x.source).toLowerCase().includes(q));
- const status=Object.entries(state.sources).map(([name,s])=>'@'+name+': '+(s.status==='ok'?String(s.found)+' found':'unavailable')).join(' · ');
+ const status=Object.entries(state.sources).map(([name,source])=>'@'+name+': '+(source.status==='ok'?String(source.found)+' links':'not accessible')).join(' · ');
  const heading='<div class="mx-m3u-heading"><div><h2>M3U Playlist</h2><p>Direct playlist links · newest first</p></div><span class="mx-m3u-count">'+items.length+' playlists</span></div>';
  const empty=state.loading?'<p class="mx-m3u-state">Checking public Telegram sources…</p>':(!items.length?'<p class="mx-m3u-state">No accessible M3U links found in recent public posts.</p>':'');
- panel.innerHTML=heading+'<div class="mx-m3u-list">'+items.map(card).join('')+'</div>'+empty+'<p class="mx-m3u-sources">'+esc(status||'Waiting for source check')+'</p>';
+ panel.innerHTML=heading+'<div class="mx-m3u-source-status">'+esc(status||'Checking sources')+'</div>'+
+ '<div class="mx-m3u-list">'+items.map(card).join('')+'</div>'+empty;
 }
 async function load(){
  if(state.loading)return;
@@ -32,7 +36,16 @@ async function load(){
   if(!res.ok)throw Error('HTTP '+res.status);
   const data=await res.json();
   state.items=(Array.isArray(data.items)?data.items:[]).filter(x=>x&&x.type==='playlist'&&/^https?:\/\//.test(x.server)&&typeof x.source==='string')
-   .sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+   .sort((a,b)=>{
+     const diff=(Date.parse(b.date)||0)-(Date.parse(a.date)||0);
+     if(diff)return diff;
+     if(a.source===b.source){
+       const id=x=>Number(String(x.post_url||'').match(/\/(\d+)$/)?.[1]||0);
+       const num=id(b)-id(a);
+       if(num)return num;
+     }
+     return String(a.id).localeCompare(String(b.id));
+   });
   state.sources=data.sources||{};
  }catch{state.sources={Feed:{status:'unavailable',found:0}}}
  finally{state.loading=false;render()}
