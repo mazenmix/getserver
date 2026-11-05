@@ -1,6 +1,6 @@
 
-.tabs .tab.mx-m3u-tab:not([data-filter]){display:inline-flex!important;align-items:center;justify-content:center;background:#f14caf1a!important;border:1px solid #f14cafaa!important;color:#ff90d4!important;font-weight:800}
-.tabs .tab.mx-m3u-tab[aria-pressed="true"]{background:#f14caf!important;color:#220a1a!important}
+/* Mirror the Xtream tab's default colors and active state. Keep this tab visible. */
+.tabs .tab.mx-m3u-tab:not([data-filter]){display:inline-flex!important;align-items:center;justify-content:center}
 #mx-playlists{display:none;margin:12px 0 24px}
 body.mx-playlist-mode #mx-playlists{display:block}
 body.mx-playlist-mode #grid,body.mx-playlist-mode #pagination{display:none!important}
