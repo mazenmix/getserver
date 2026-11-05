@@ -236,7 +236,7 @@ function mount(){
   const allTab=tabs.querySelector('[data-filter="all"]');
   if(allTab)allTab.textContent='Xtream';
   const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261105-import-playlist';document.head.appendChild(sheet);
-  button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='♡ Import Update';
+  button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='Import';
   tabs.appendChild(button);
   section=document.createElement('section');section.className='mx-import-xtream';section.id='mx-import-xtream';
   toolbar.insertAdjacentElement('afterend',section);
