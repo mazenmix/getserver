@@ -26,3 +26,8 @@ body.mx-playlist-mode .mx-import-xtream{display:none!important}
 .mx-import-controls #mx-import-save{background:#ef4faf;color:#1b0916}
 @media(max-width:950px){.mx-import-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.mx-import-grid{grid-template-columns:1fr}.tabs{flex-wrap:wrap}.mx-import-dialog{padding:16px}}
+
+/* All section: match the M3U Playlist count pill exactly. */
+.mx-import-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:2px 0 14px}
+.mx-import-heading h2{margin:0}
+.mx-import-heading .mx-m3u-count{background:#ee51ad20;border:1px solid #ee51ad60;border-radius:99px;color:#ffc3e8;padding:6px 12px;font-weight:750;font-size:12px}
