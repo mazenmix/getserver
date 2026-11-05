@@ -24,6 +24,9 @@ function isM3U(raw) {
   try {
     const u = new URL(base);
     if (!["http:", "https:"].includes(u.protocol) || !u.hostname) return false;
+    // Ignore anonymous playlist addresses; require explicit username in query string.
+    if (![...u.searchParams.entries()].some(([key,value]) =>
+      key.toLowerCase() === "username" && value.trim().length > 0)) return false;
     if (/\.m3u8?$/i.test(u.pathname)) return true;
     if (/\/get\.php$/i.test(u.pathname) &&
         /^(m3u|m3u8|m3u_plus)$/i.test(u.searchParams.get("type") || "")) return true;
