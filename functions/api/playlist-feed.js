@@ -77,7 +77,11 @@ function postedLinks(postHtml) {
       }
     }
   }
-  return matched;
+  // If the same URL appears in an anchor without its visible header/query suffix,
+  // keep only the complete posted version. Never truncate either value.
+  return matched.filter(link => !matched.some(other =>
+    other !== link && other.startsWith(link) &&
+    /[?#|]/.test(other.charAt(link.length))));
 }
 async function readSource(source) {
   const items = [];
