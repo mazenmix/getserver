@@ -1,6 +1,6 @@
 // Public Telegram M3U links, returned only through the existing password-protected site.
 // This endpoint never fetches playlists or stores post data in the public GitHub repository.
-const SOURCES = ["IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal"];
+const SOURCES = ["IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal", "IPTVPlaylistZONE"];
 const PLAYLIST_RE = /https?:\/\/[^\s<>"']+?\.m3u8?(?:\?[^\s<>"']*)?/gi;
 const POST_RE = /data-post=["']([A-Za-z0-9_]+)\/(\d+)["']/g;
 
