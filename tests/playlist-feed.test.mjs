@@ -61,4 +61,36 @@ for(const [native,imported,expected] of [["237 results",14,"251 cards"],["0 resu
 }
 assert.match(importer,/MutationObserver\(updateAllCount\)/,"All badge updates on native async results");
 
+
+const memory=new Map();
+const browserWindow={dispatchEvent(){}};
+const browserDocument={readyState:"loading",addEventListener(){}};
+const browserStorage={
+  getItem:key=>memory.get(key)||null,
+  setItem:(key,value)=>memory.set(key,value)
+};
+class BrowserEvent{constructor(name){this.type=name}}
+new Function("window","document","localStorage","Event",importer)(
+  browserWindow,browserDocument,browserStorage,BrowserEvent);
+const rawLinks=[
+  "https://example.org/live.m3u8?username=trial&token=ABC%2FDEF&expires=999",
+  "https://example.org/get.php?username=user&password=pass&type=m3u_plus",
+  "https://example.org/anonymous.m3u8",
+  "https://example.org/live.m3u8?username=trial&token=ABC%2FDEF&expires=999",
+  "https://example.org/playlist.m3u?token=withoutUsername"
+];
+const parsedPlaylists=browserWindow.MXPersonalUpdates.importPlaylistBatch(rawLinks.join("\n"));
+assert.equal(parsedPlaylists.items.length,2,"Import Playlist must accept only unique, qualified URLs");
+assert.equal(parsedPlaylists.skipped,2,"Anonymous URLs are excluded");
+assert.ok(parsedPlaylists.items.every(item=>item.type==="playlist"),"No Xtream cards created in Playlist mode");
+assert.equal(parsedPlaylists.items[0].server,rawLinks[0],"Exact signed M3U copied");
+assert.equal(parsedPlaylists.items[1].server,rawLinks[1],"Exact get.php URL copied");
+const savedPlaylists=browserWindow.MXPersonalUpdates.savePlaylistBatch(rawLinks.join("\n"));
+assert.equal(savedPlaylists.items.length,2,"Playlist import saved");
+assert.equal(browserWindow.MXPersonalUpdates.get().filter(row=>row.type==="playlist").length,2,
+  "Saved Playlist entries appear in shared M3U source list");
+assert.match(importer,/data-import-mode="playlist"/,"Import Playlist option is present");
+assert.match(importer,/document\.querySelector\('\.mx-m3u-tab'\)\?\.click\(\)/,
+  "Successful Playlist import opens existing M3U tab");
+
 console.log("M3U username-only, full-link copy and Xtream card regression checks: PASS");
