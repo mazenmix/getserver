@@ -12,7 +12,7 @@ function card(item,i){
  return '<article class="mx-m3u-card"><div class="mx-m3u-meta"><span class="mx-m3u-type">♡ M3U Playlist</span><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
  '<div class="mx-m3u-domain">'+esc(hostname)+'</div>'+
  '<div class="mx-m3u-url" title="'+esc(url)+'">'+esc(url)+'</div>'+
- '<div class="mx-m3u-actions"><button type="button" class="mx-m3u-copy" data-playlist-copy="'+esc(url)+'">Copy Playlist</button>'+
+ '<div class="mx-m3u-actions"><button type="button" class="mx-m3u-copy" data-playlist-id="'+esc(item.id)+'">Copy Playlist</button>'+
  '<span class="mx-m3u-from">@'+esc(source)+(date?' · '+esc(date):'')+'</span></div></article>';
 }
 function render(){
@@ -54,9 +54,11 @@ function mount(){
  }));
  document.querySelector('#search')?.addEventListener('input',render);
  panel.addEventListener('click',async event=>{
-  const button=event.target.closest('[data-playlist-copy]');
+  const button=event.target.closest('[data-playlist-id]');
   if(!button)return;
-  try{await navigator.clipboard.writeText(button.dataset.playlistCopy);button.textContent='Copied ✓';setTimeout(()=>button.textContent='Copy Playlist',1250)}catch{button.textContent='Copy unavailable'}
+  const original=state.items.find(entry=>entry.id===button.dataset.playlistId);
+  if(!original)return;
+  try{await navigator.clipboard.writeText(original.server);button.textContent='Copied ✓';setTimeout(()=>button.textContent='Copy Playlist',1250)}catch{button.textContent='Copy unavailable'}
  });
  state.ready=true;render();load();setInterval(load,60000);
 }
