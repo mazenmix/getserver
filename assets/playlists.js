@@ -80,7 +80,8 @@ function mount(){
  const tabs=document.querySelector('.tabs'),toolbar=document.querySelector('.toolbar'),grid=document.querySelector('#grid');
  if(!tabs||!toolbar||!grid)return;
  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/playlists.css?v=20261105-clean';document.head.appendChild(sheet);
- tab=document.createElement('button');tab.type='button';tab.className='tab mx-m3u-tab';tab.textContent='♡ M3U Playlist';tab.setAttribute('aria-pressed','false');tabs.appendChild(tab);
+ tab=document.createElement('button');tab.type='button';tab.className='tab mx-m3u-tab';tab.textContent='M3U Playlist';tab.setAttribute('aria-pressed','false');// Put M3U in the previous Import Update slot, and Import Update in M3U's old slot.
+ tabs.insertBefore(tab,tabs.querySelector('.mx-import-trigger'));
  panel=document.createElement('section');panel.id='mx-playlists';panel.setAttribute('aria-live','polite');toolbar.insertAdjacentElement('afterend',panel);
  tab.addEventListener('click',()=>{
   document.body.classList.add('mx-playlist-mode');
