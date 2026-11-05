@@ -1,22 +1,83 @@
-// Public Telegram M3U links, returned only through the existing password-protected site.
-// This endpoint never fetches playlists or stores post data in the public GitHub repository.
+// Read public Telegram messages without rewriting posted M3U URLs.
+// Protected by the site's existing password middleware; never checked into public data JSON.
 const SOURCES = ["IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal", "IPTVPlaylistZONE"];
-const PLAYLIST_RE = /https?:\/\/[^\s<>"'`]+?\.m3u8?(?:[?#][^\s<>"'`]*)?/gi;
+const URL_RE = /https?:\/\/[^\s<>"'\x60]+/gi;
 const POST_RE = /data-post=["']([A-Za-z0-9_]+)\/(\d+)["']/g;
 
-function decodeEntities(value) {
-  return value.replace(/&amp;/gi, "&").replace(/&#x2f;/gi, "/")
-    .replace(/&#47;/g, "/").replace(/&quot;/gi, '"');
+// HTML character entities belong to Telegram's HTML representation, not to the posted link.
+// Decode once and NEVER serialize a link back with URL.href or remove its query/header suffix.
+function decodeHtml(value) {
+  return String(value)
+    .replace(/&amp;/gi, "&").replace(/&#(?:38|0*38);/gi, "&")
+    .replace(/&#x0*26;/gi, "&")
+    .replace(/&quot;/gi, '"').replace(/&#(?:34|0*34);/gi, '"')
+    .replace(/&#x0*22;/gi, '"')
+    .replace(/&#(?:47|0*47);/gi, "/").replace(/&#x0*2f;/gi, "/")
+    .replace(/&#(?:124|0*124);/gi, "|").replace(/&#x0*7c;/gi, "|")
+    .replace(/&vert;/gi, "|")
+    .replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
 }
-function validatePlaylist(candidate) {
+
+function isM3U(raw) {
+  // Only inspect the base URL. The exact raw string is returned unchanged.
+  const base = raw.split("|", 1)[0];
   try {
-    const url = new URL(decodeEntities(candidate).replace(/\\\//g, "/"));
-    if (!["http:", "https:"].includes(url.protocol)) return null;
-    if (!/\.m3u8?$/i.test(url.pathname)) return null;
-    if (["t.me", "telegram.me", "youtube.com"].includes(url.hostname.toLowerCase())) return null;
-    // Return the original published link, not URL.href: preserve the full path, query and fragment.
-    return decodeEntities(candidate).replace(/\\\//g, "/");
-  } catch { return null; }
+    const u = new URL(base);
+    if (!["http:", "https:"].includes(u.protocol) || !u.hostname) return false;
+    if (/\.m3u8?$/i.test(u.pathname)) return true;
+    if (/\/get\.php$/i.test(u.pathname) &&
+        /^(m3u|m3u8|m3u_plus)$/i.test(u.searchParams.get("type") || "")) return true;
+    return false;
+  } catch {
+    return false;
+  }
+}
+function extractElementBody(post, className) {
+  // Use only the actual message text; do not read unrelated Telegram page chrome.
+  const openRx = new RegExp('<div\\b[^>]*\\bclass=["\\x27][^"\\x27]*\\b' +
+    className + '\\b[^"\\x27]*["\\x27][^>]*>', 'i');
+  const found = openRx.exec(post);
+  if (!found) return "";
+  const start = found.index + found[0].length;
+  const tags = /<\/?div\b[^>]*>/gi;
+  tags.lastIndex = start;
+  let depth = 1, match;
+  while ((match = tags.exec(post))) {
+    depth += /^<\//.test(match[0]) ? -1 : 1;
+    if (depth === 0) return post.slice(start, match.index);
+  }
+  return post.slice(start);
+}
+function postedLinks(postHtml) {
+  const body = extractElementBody(postHtml, "tgme_widget_message_text");
+  if (!body) return [];
+  // Preserve text across Telegram auto-linked anchors. In particular:
+  // <a href="...main.m3u8">...main.m3u8</a>|referer=https://site/
+  // must become a SINGLE, exact, copyable link including "|referer=...".
+  const visible = decodeHtml(
+    body.replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<\/(?:p|blockquote|div)>/gi, "\n")
+        .replace(/<[^>]*>/g, "")
+  );
+  const originalHrefValues = [];
+  const hrefRx = /<a\b[^>]*\bhref\s*=\s*(["'])(.*?)\1/gi;
+  for (const match of body.matchAll(hrefRx)) {
+    originalHrefValues.push(decodeHtml(match[2]));
+  }
+  const matched = [];
+  const seen = new Set();
+  // Visible lines first: includes custom |referer / |User-Agent suffixes.
+  // href values second: includes full click targets with shortened link labels.
+  for (const rawSource of [visible, ...originalHrefValues]) {
+    for (const match of rawSource.matchAll(URL_RE)) {
+      const original = match[0];
+      if (isM3U(original) && !seen.has(original)) {
+        seen.add(original);
+        matched.push(original);
+      }
+    }
+  }
+  return matched;
 }
 async function readSource(source) {
   const items = [];
@@ -42,11 +103,11 @@ async function readSource(source) {
         const postHtml = html.slice(match.index, next ? next.index : html.length);
         const dt = postHtml.match(/<time[^>]*datetime=["']([^"']+)/i);
         const date = dt ? dt[1] : "";
-        for (const raw of postHtml.match(PLAYLIST_RE) || []) {
-          const playlist = validatePlaylist(raw);
-          if (playlist) items.push({
-            id: source + "-" + match[2] + "-" + items.length,
-            type: "playlist", server: playlist, source, date,
+        const links = postedLinks(postHtml);
+        for (let index = 0; index < links.length; index++) {
+          items.push({
+            id: source + "-" + match[2] + "-" + index,
+            type: "playlist", server: links[index], source, date,
             post_url: "https://t.me/" + match[1] + "/" + match[2]
           });
         }
@@ -54,23 +115,28 @@ async function readSource(source) {
       const oldest = Math.min(...starts.map(x => Number(x[2])).filter(Number.isFinite));
       if (!Number.isFinite(oldest) || oldest < 2 || oldest === before) break;
       before = oldest;
-    } catch { break; }
-    finally { clearTimeout(timer); }
+    } catch {
+      break;
+    } finally {
+      clearTimeout(timer);
+    }
   }
-  const byUrl = new Map();
+  const byExactLink = new Map();
   for (const item of items) {
-    const old = byUrl.get(item.server);
-    if (!old || item.date > old.date) byUrl.set(item.server, item);
+    const old = byExactLink.get(item.server);
+    if (!old || item.date > old.date) byExactLink.set(item.server, item);
   }
-  return { source, status: accessed ? "ok" : "unavailable", items: [...byUrl.values()] };
+  return { source, status: accessed ? "ok" : "unavailable", items: [...byExactLink.values()] };
 }
-
 export async function onRequestGet() {
   const sources = await Promise.all(SOURCES.map(readSource));
-  const items = sources.flatMap(s => s.items).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const items = sources.flatMap(s => s.items)
+    .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   return new Response(JSON.stringify({
     updated_at: new Date().toISOString(),
-    sources: Object.fromEntries(sources.map(s => [s.source, { status: s.status, found: s.items.length }])),
+    sources: Object.fromEntries(sources.map(s => [s.source,
+      { status: s.status, found: s.items.length }])),
     items
-  }), { headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "private, no-store", "X-Content-Type-Options": "nosniff" } });
+  }), { headers: { "Content-Type": "application/json; charset=utf-8",
+    "Cache-Control": "private, no-store", "X-Content-Type-Options": "nosniff" } });
 }
