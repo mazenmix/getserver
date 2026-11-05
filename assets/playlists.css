@@ -27,3 +27,8 @@ body.mx-playlist-mode #grid,body.mx-playlist-mode #pagination{display:none!impor
 .mx-m3u-source-status{color:#aeb4c7;font-size:12px;line-height:1.6;overflow-wrap:anywhere;padding:8px 0 14px}
 .mx-m3u-source-status strong{color:#ff97a1}
 .mx-m3u-url::selection{background:#f14caf75;color:#fff}
+
+/* Minimal UI: remove results/sync status and all source/channel metadata. */
+#count,#updated,.toolbar-right .count,.toolbar-right .updated,.mx-m3u-source-status,.mx-m3u-from,.mx-m3u-source-link{display:none!important}
+.mx-m3u-heading{justify-content:flex-end;margin:2px 0 14px}
+.mx-m3u-actions{justify-content:flex-start}
