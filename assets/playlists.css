@@ -1,0 +1,23 @@
+
+.tabs .mx-m3u-tab{display:inline-flex!important;align-items:center;justify-content:center;background:#f14caf1a!important;border:1px solid #f14cafaa!important;color:#ff90d4!important;font-weight:800}
+.tabs .mx-m3u-tab[aria-pressed="true"]{background:#f14caf!important;color:#220a1a!important}
+#mx-playlists{display:none;margin:12px 0 24px}
+body.mx-playlist-mode #mx-playlists{display:block}
+body.mx-playlist-mode #grid,body.mx-playlist-mode #pagination{display:none!important}
+.mx-m3u-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 16px;flex-wrap:wrap}
+.mx-m3u-heading h2{margin:0;font-size:19px;font-weight:850;color:#ffaddf}
+.mx-m3u-heading p,.mx-m3u-sources{font-size:12px;color:#aeb4c7}
+.mx-m3u-count{background:#ee51ad20;border:1px solid #ee51ad60;border-radius:99px;color:#ffc3e8;padding:6px 12px;font-weight:750;font-size:12px}
+.mx-m3u-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.mx-m3u-card{min-width:0;background:#141524;border:1px solid #b2488550;border-radius:16px;padding:16px;box-shadow:0 9px 28px #0003}
+.mx-m3u-meta,.mx-m3u-actions{display:flex;align-items:center;justify-content:space-between;gap:9px}
+.mx-m3u-meta{font-size:11px;color:#929bb0}
+.mx-m3u-type{background:#f14caf22;border:1px solid #ff7ac344;color:#ff9ed8;border-radius:8px;padding:5px 9px;font-weight:850}
+.mx-m3u-domain{margin-top:18px;font-size:17px;color:#fff;font-weight:800;overflow-wrap:anywhere}
+.mx-m3u-url{direction:ltr;text-align:left;color:#c4cce0;font:12px/1.55 ui-monospace,Consolas,monospace;background:#0a0c17;border:1px solid #44304d;border-radius:10px;padding:11px;margin:10px 0 16px;overflow-wrap:anywhere;min-height:65px}
+.mx-m3u-copy{background:#ef4dae;color:#210b1c;border:0;border-radius:9px;padding:10px 13px;font-size:12px;font-weight:850;white-space:nowrap}
+.mx-m3u-copy:hover{background:#ff77c7}
+.mx-m3u-from{color:#9ba5b8;font-size:10px;text-align:right}
+.mx-m3u-state{background:#1c1827;color:#d1afc6;padding:22px;border:1px solid #753f6655;border-radius:14px}
+@media(max-width:1000px){.mx-m3u-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.mx-m3u-list{grid-template-columns:1fr}.mx-m3u-actions{align-items:flex-start;flex-wrap:wrap}}
