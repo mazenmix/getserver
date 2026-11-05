@@ -146,12 +146,12 @@ function updateAllCount(){
   const nativeMatch=nativeText.match(/^\s*(\d+)\s+results\b/i);
   const nativeCards=nativeMatch?Number(nativeMatch[1]):document.querySelectorAll('#grid > article.card:not(.post-card)').length;
   const total=personalCards+nativeCards;
-  badge.textContent=total+' cards';
+  badge.textContent=total+' Servers';
 }
 function renderXtream(){
   if(!section)return;
   const items=readAll().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
-  section.innerHTML=items.length?'<div class="mx-import-heading"><h2>Xtream Updates</h2><span class="mx-m3u-count" id="mx-all-count">0 cards</span></div>'+
+  section.innerHTML=items.length?'<div class="mx-import-heading"><h2>Xtream Updates</h2><span class="mx-m3u-count" id="mx-all-count">0 Servers</span></div>'+
     '<div class="mx-import-grid">'+items.map((row,i)=>
       '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
       field('SERVER',row.server,row.id,'server')+
@@ -232,8 +232,11 @@ function updateDialog(){
 function mount(){
   const tabs=document.querySelector('.tabs'),grid=document.querySelector('#grid'),toolbar=document.querySelector('.toolbar');
   if(!tabs||!grid||!toolbar)return;
+  // Relabel the visible all-records filter without changing its data-filter behavior.
+  const allTab=tabs.querySelector('[data-filter="all"]');
+  if(allTab)allTab.textContent='Xtream';
   const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261105-import-playlist';document.head.appendChild(sheet);
-  button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='＋ Import Update';
+  button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='♡ Import Update';
   tabs.appendChild(button);
   section=document.createElement('section');section.className='mx-import-xtream';section.id='mx-import-xtream';
   toolbar.insertAdjacentElement('afterend',section);
