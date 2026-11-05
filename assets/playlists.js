@@ -4,11 +4,26 @@
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const state={items:[],sources:{},loading:false,ready:false};
 let tab,panel;
+function hasUsername(link){
+ // Keep only original M3U links with an explicit, nonempty username query parameter.
+ try{
+   const base=String(link||'').split('|',1)[0];
+   const u=new URL(base);
+   return [...u.searchParams.entries()].some(([key,value])=>key.toLowerCase()==='username'&&value.trim().length>0);
+ }catch{return false}
+}
 function allPlaylists(){
- const local=window.MXPersonalUpdates?.get?.().filter(x=>x.type==='playlist')||[];
+ const updates=window.MXPersonalUpdates?.get?.()||[];
+ const personal=updates.flatMap(row=>{
+   if(row.type==='playlist')return [row];
+   if(row.type==='xtream'&&typeof row.original==='string'&&hasUsername(row.original)){
+     return [{...row,id:'m3u-'+row.id,type:'playlist',server:row.original}];
+   }
+   return [];
+ });
  const dedup=new Map();
- for(const row of [...state.items,...local]){
-   if(!row||typeof row.server!=='string')continue;
+ for(const row of [...state.items,...personal]){
+   if(!row||typeof row.server!=='string'||!hasUsername(row.server))continue;
    const previous=dedup.get(row.server);
    if(!previous||(Date.parse(row.date)||0)>(Date.parse(previous.date)||0))dedup.set(row.server,row);
  }
