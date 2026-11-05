@@ -45,4 +45,20 @@ assert.doesNotMatch(importer,/field\('FULL LINK'/,"Full Link field removed from 
 assert.match(client,/Date\.parse\(b\.date\)/,"Newest M3U first");
 assert.match(api,/Date\.parse\(b\.date\)/,"Newest Telegram post first");
 assert.match(css,/max-height:none;height:auto/,"No link clipping");
+// All badge counts original native results plus the separate imported cards, not "accounts".
+const countSource=importer.match(/function updateAllCount\(\)\{[\s\S]*?\n\}/)?.[0];
+assert.ok(countSource,"All count calculation must exist");
+for(const [native,imported,expected] of [["237 results",14,"251 cards"],["0 results",14,"14 cards"],["5 posts",14,"20 cards"]]){
+ const badge={textContent:""};
+ const section={querySelectorAll:()=>Array(imported).fill({})};
+ const document={
+   querySelector:key=>key==="#mx-all-count"?badge:key==="#count"?{textContent:native}:null,
+   querySelectorAll:()=>Array(6).fill({})
+ };
+ const calculate=new Function("document","section",countSource+"\nreturn updateAllCount;")(document,section);
+ calculate();
+ assert.equal(badge.textContent,expected,"All should count native and imported cards");
+}
+assert.match(importer,/MutationObserver\(updateAllCount\)/,"All badge updates on native async results");
+
 console.log("M3U username-only, full-link copy and Xtream card regression checks: PASS");
