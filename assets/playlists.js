@@ -4,6 +4,20 @@
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const state={items:[],sources:{},loading:false,ready:false};
 let tab,panel;
+function allPlaylists(){
+ const local=window.MXPersonalUpdates?.get?.().filter(x=>x.type==='playlist')||[];
+ const dedup=new Map();
+ for(const row of [...state.items,...local]){
+   if(!row||typeof row.server!=='string')continue;
+   const previous=dedup.get(row.server);
+   if(!previous||(Date.parse(row.date)||0)>(Date.parse(previous.date)||0))dedup.set(row.server,row);
+ }
+ return [...dedup.values()].sort((a,b)=>{
+   const time=(Date.parse(b.date)||0)-(Date.parse(a.date)||0);
+   if(time)return time;
+   return String(a.id||'').localeCompare(String(b.id||''));
+ });
+}
 function card(item,i){
  const url=String(item.server||''),source=String(item.source||'');
  const time=Date.parse(item.date||'');
@@ -21,7 +35,7 @@ function card(item,i){
 function render(){
  if(!panel)return;
  const q=(document.querySelector('#search')?.value||'').trim().toLowerCase();
- const items=state.items.filter(x=>(x.server+' '+x.source).toLowerCase().includes(q));
+ const items=allPlaylists().filter(x=>(x.server+' '+x.source).toLowerCase().includes(q));
  const status=Object.entries(state.sources).map(([name,source])=>'@'+name+': '+(source.status==='ok'?String(source.found)+' links':'not accessible')).join(' · ');
  const heading='<div class="mx-m3u-heading"><div><h2>M3U Playlist</h2><p>Direct playlist links · newest first</p></div><span class="mx-m3u-count">'+items.length+' playlists</span></div>';
  const empty=state.loading?'<p class="mx-m3u-state">Checking public Telegram sources…</p>':(!items.length?'<p class="mx-m3u-state">No accessible M3U links found in recent public posts.</p>':'');
@@ -69,10 +83,11 @@ function mount(){
  panel.addEventListener('click',async event=>{
   const button=event.target.closest('[data-playlist-id]');
   if(!button)return;
-  const original=state.items.find(entry=>entry.id===button.dataset.playlistId);
+  const original=allPlaylists().find(entry=>entry.id===button.dataset.playlistId);
   if(!original)return;
   try{await navigator.clipboard.writeText(original.server);button.textContent='Copied ✓';setTimeout(()=>button.textContent='Copy Playlist',1250)}catch{button.textContent='Copy unavailable'}
  });
+ window.addEventListener('mx-personal-updates',render);
  state.ready=true;render();load();setInterval(load,60000);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
