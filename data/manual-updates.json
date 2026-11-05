@@ -1,0 +1,167 @@
+{
+  "updated_at": "2026-11-05T09:12:40Z",
+  "source": "Manual Update",
+  "items": [
+    {
+      "id": "manual-m3u-20261105-01",
+      "type": "playlist",
+      "server": "http://c95fa4d36807.faststreem.org/playlists/uplist/8d712d8a3de5a2766151e218dcde7c4e/playlist.m3u8",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-m3u-20261105-02",
+      "type": "playlist",
+      "server": "http://cb17feeb2753.goodstreem.org/playlists/uplist/efff32fdbfdf26750f5811478eb6c455/playlist.m3u8",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-m3u-20261105-03",
+      "type": "playlist",
+      "server": "http://eea716924b26.akciatv.org/playlists/uplist/7563ed2d7bb4abca5b700d57c2de2afe/playlist.m3u8",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-m3u-20261105-04",
+      "type": "playlist",
+      "server": "http://cc1189ace333.mylistbest.net/playlists/uplist/43563d87414cc212ba15ad5da897c1dc/playlist.m3u8",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-m3u-20261105-05",
+      "type": "playlist",
+      "server": "http://cc1189ace333.mylistbest.net/playlists/uplist/43563d87414cc212ba15ad5da897c1dc/playlist.m3u",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-01",
+      "type": "xtream",
+      "server": "http://mallorca.plus:80",
+      "username": "Edgarquito",
+      "password": "U3PzngFXPw",
+      "original": "http://mallorca.plus:80/get.php?username=Edgarquito&password=U3PzngFXPw&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-02",
+      "type": "xtream",
+      "server": "http://mallorca.plus:80",
+      "username": "DorianGamboa",
+      "password": "qXbTdt4WFR",
+      "original": "http://mallorca.plus:80/get.php?username=DorianGamboa&password=qXbTdt4WFR&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-03",
+      "type": "xtream",
+      "server": "http://mallorca.plus:80",
+      "username": "NegroVera.ESP",
+      "password": "TVuJ9MewvAA",
+      "original": "http://mallorca.plus:80/get.php?username=NegroVera.ESP&password=TVuJ9MewvAA&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-04",
+      "type": "xtream",
+      "server": "http://562886687741.elg-26.com:80",
+      "username": "101562835049264",
+      "password": "p6cp731p5t",
+      "original": "http://562886687741.elg-26.com:80/get.php?username=101562835049264&password=p6cp731p5t&type=m3u",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-05",
+      "type": "xtream",
+      "server": "http://showplustv.pro:80",
+      "username": "01223238263",
+      "password": "tarek763789",
+      "original": "http://showplustv.pro:80/get.php?username=01223238263&password=tarek763789&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-06",
+      "type": "xtream",
+      "server": "http://eaiptv.net:8080",
+      "username": "W436",
+      "password": "01222307169",
+      "original": "http://eaiptv.net:8080/get.php?username=W436&password=01222307169&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-07",
+      "type": "xtream",
+      "server": "http://stream.ghosttv.co:80",
+      "username": "gaofxxvu42",
+      "password": "wkadniywws",
+      "original": "http://stream.ghosttv.co:80/get.php?username=gaofxxvu42&password=wkadniywws&type=m3u",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-08",
+      "type": "xtream",
+      "server": "http://showplustv.pro:80",
+      "username": "karem123",
+      "password": "7017007ka",
+      "original": "http://showplustv.pro:80/get.php?username=karem123&password=7017007ka&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-09",
+      "type": "xtream",
+      "server": "http://sawa2026.vip:80",
+      "username": "334122",
+      "password": "Aa8200182hhh",
+      "original": "http://sawa2026.vip:80/get.php?username=334122&password=Aa8200182hhh&type=m3u_plus",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-10",
+      "type": "xtream",
+      "server": "http://tvigate.com:2095",
+      "username": "xahmedxali",
+      "password": "UEArndt2ed",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-11",
+      "type": "xtream",
+      "server": "http://tvigate.com:2095",
+      "username": "ayhamxnanaa",
+      "password": "1dEB4eaLKh",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-12",
+      "type": "xtream",
+      "server": "http://apk4k.org:80",
+      "username": "salama01159670700",
+      "password": "01159670700ssshhh",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    },
+    {
+      "id": "manual-xtream-20261105-13",
+      "type": "xtream",
+      "server": "http://igettv.xyz:80",
+      "username": "941409050617902",
+      "password": "9304385246",
+      "source": "Manual Update",
+      "date": "2026-11-05T09:12:40Z"
+    }
+  ]
+}
