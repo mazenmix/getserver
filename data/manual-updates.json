@@ -3,41 +3,6 @@
   "source": "Manual Update",
   "items": [
     {
-      "id": "manual-m3u-20261105-01",
-      "type": "playlist",
-      "server": "http://c95fa4d36807.faststreem.org/playlists/uplist/8d712d8a3de5a2766151e218dcde7c4e/playlist.m3u8",
-      "source": "Manual Update",
-      "date": "2026-11-05T09:12:40Z"
-    },
-    {
-      "id": "manual-m3u-20261105-02",
-      "type": "playlist",
-      "server": "http://cb17feeb2753.goodstreem.org/playlists/uplist/efff32fdbfdf26750f5811478eb6c455/playlist.m3u8",
-      "source": "Manual Update",
-      "date": "2026-11-05T09:12:40Z"
-    },
-    {
-      "id": "manual-m3u-20261105-03",
-      "type": "playlist",
-      "server": "http://eea716924b26.akciatv.org/playlists/uplist/7563ed2d7bb4abca5b700d57c2de2afe/playlist.m3u8",
-      "source": "Manual Update",
-      "date": "2026-11-05T09:12:40Z"
-    },
-    {
-      "id": "manual-m3u-20261105-04",
-      "type": "playlist",
-      "server": "http://cc1189ace333.mylistbest.net/playlists/uplist/43563d87414cc212ba15ad5da897c1dc/playlist.m3u8",
-      "source": "Manual Update",
-      "date": "2026-11-05T09:12:40Z"
-    },
-    {
-      "id": "manual-m3u-20261105-05",
-      "type": "playlist",
-      "server": "http://cc1189ace333.mylistbest.net/playlists/uplist/43563d87414cc212ba15ad5da897c1dc/playlist.m3u",
-      "source": "Manual Update",
-      "date": "2026-11-05T09:12:40Z"
-    },
-    {
       "id": "manual-xtream-20261105-01",
       "type": "xtream",
       "server": "http://mallorca.plus:80",
