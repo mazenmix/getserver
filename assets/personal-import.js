@@ -7,6 +7,30 @@ const URL_PATTERN=/https?:\/\/[^\s<>"'\x60\\]+/gi;
 const today=()=>new Date().toISOString();
 const copyText=async text=>navigator.clipboard.writeText(text);
 let modal,section,button;
+let published=[];
+function readAll(){
+  const all=new Map();
+  for(const row of [...published,...readSaved()]){
+    if(!row||!['playlist','xtream'].includes(row.type))continue;
+    all.set(keyOf(row),row);
+  }
+  return [...all.values()].sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+}
+async function loadPublished(){
+  try{
+    const r=await fetch('/data/manual-updates.json?t='+Date.now(),{cache:'no-store',credentials:'same-origin'});
+    if(!r.ok)throw Error('HTTP '+r.status);
+    const data=await r.json();
+    if(!Array.isArray(data.items))throw Error('Invalid update data');
+    published=data.items.filter(row=>row&&['xtream','playlist'].includes(row.type)&&
+      typeof row.server==='string'&&typeof row.id==='string');
+    renderXtream();
+    window.dispatchEvent(new Event('mx-personal-updates'));
+  }catch(e){
+    // Preserve already loaded updates during network interruptions.
+    console.warn('Personal published update feed unavailable:',e);
+  }
+}
 
 function normalizePostedText(raw){
   // Only reverse the extra backslashes inserted by message formatting.
@@ -73,7 +97,7 @@ function field(label,value,id,fieldKey){
 }
 function renderXtream(){
   if(!section)return;
-  const items=readSaved().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
+  const items=readAll().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
   section.innerHTML=items.length?'<h2>Xtream Updates <small>'+items.length+' accounts · newest first</small></h2>'+
     '<div class="mx-import-grid">'+items.map((row,i)=>
       '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
@@ -123,7 +147,7 @@ function mount(){
   document.addEventListener('click',async event=>{
     const target=event.target.closest('[data-personal-copy]');
     if(!target)return;
-    const row=readSaved().find(x=>x.id===target.dataset.personalCopy);
+    const row=readAll().find(x=>x.id===target.dataset.personalCopy);
     const text=row?.[target.dataset.field];
     if(typeof text!=='string')return;
     try{await copyText(text);target.textContent='Copied ✓';setTimeout(()=>target.textContent='Copy',1200)}
@@ -131,7 +155,9 @@ function mount(){
   });
   window.addEventListener('mx-personal-updates',renderXtream);
   renderXtream();
+  loadPublished();
+  setInterval(loadPublished,60000);
 }
-window.MXPersonalUpdates={get:readSaved,importBatch,saveBatch};
+window.MXPersonalUpdates={get:readAll,importBatch,saveBatch};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
