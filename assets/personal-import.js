@@ -138,7 +138,7 @@ function updateDialog(){
 function mount(){
   const tabs=document.querySelector('.tabs'),grid=document.querySelector('#grid'),toolbar=document.querySelector('.toolbar');
   if(!tabs||!grid||!toolbar)return;
-  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261105';document.head.appendChild(sheet);
+  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261105-all-count';document.head.appendChild(sheet);
   button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='＋ Import Update';
   tabs.appendChild(button);
   section=document.createElement('section');section.className='mx-import-xtream';section.id='mx-import-xtream';
