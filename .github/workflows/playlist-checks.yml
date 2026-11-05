@@ -1,0 +1,31 @@
+name: M3U exact-link regression checks
+on:
+  push:
+    paths:
+      - "functions/api/playlist-feed.js"
+      - "assets/playlists.js"
+      - "assets/playlists.css"
+      - "tests/playlist-feed.test.mjs"
+      - ".github/workflows/playlist-checks.yml"
+  pull_request:
+    paths:
+      - "functions/api/playlist-feed.js"
+      - "assets/playlists.js"
+      - "assets/playlists.css"
+      - "tests/playlist-feed.test.mjs"
+      - ".github/workflows/playlist-checks.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  exact-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Test original M3U URL extraction and full-size cards
+        run: node tests/playlist-feed.test.mjs
