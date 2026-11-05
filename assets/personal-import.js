@@ -78,8 +78,8 @@ function importBatch(raw){
   return {items:[...results.values()],rawCount:found.length,duplicateCount:found.length-results.size};
 }
 function importPlaylistBatch(raw){
-  // Manual Playlist mode accepts the entire posted URL, unchanged.
-  // Only links with an explicit username are eligible for the M3U list.
+  // Manual Playlist mode accepts full, direct .m3u/.m3u8 URLs even without
+  // username: the user explicitly supplied the link. get.php still needs username.
   const text=normalizePostedText(raw);
   const matches=[...text.matchAll(URL_PATTERN)];
   const accepted=new Map();
@@ -91,11 +91,12 @@ function importPlaylistBatch(raw){
       const url=new URL(base);
       const username=[...url.searchParams.entries()].some(([key,value])=>
         key.toLowerCase()==='username' && value.trim().length>0);
-      if(!['http:','https:'].includes(url.protocol)||!isPlaylist(url)||!username){
+      const directFile=/\.m3u8?$/i.test(url.pathname);
+      if(!['http:','https:'].includes(url.protocol)||!isPlaylist(url)||(!directFile&&!username)){
         skipped++;
         continue;
       }
-      const row={type:'playlist',server:original,source:'Manual Update',date:today()};
+      const row={type:'playlist',server:original,source:'Manual Update',manualImport:true,date:today()};
       accepted.set(keyOf(row),row);
     }catch{skipped++}
   }
@@ -183,7 +184,7 @@ function updateDialog(){
     mode=next;
     heading.textContent=mode==='playlist'?'Import Playlist':'Import Update';
     help.textContent=mode==='playlist'
-      ?'Paste one or more complete M3U Playlist URLs with username. They will appear under M3U Playlist.'
+      ?'Paste complete .m3u/.m3u8 links (username optional), or get.php playlists with username. They appear in M3U Playlist.'
       :'Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.';
     input.placeholder=mode==='playlist'
       ?'https://server.example/get.php?username=trial&password=pass&type=m3u_plus'
@@ -205,7 +206,7 @@ function updateDialog(){
     const batch=mode==='playlist'?importPlaylistBatch(input.value):importBatch(input.value);
     if(!batch.items.length){
       status.textContent=mode==='playlist'
-        ?'No eligible M3U Playlist links. Add URLs containing username and ending in .m3u/.m3u8 or get.php?type=m3u_plus.'
+        ?'No valid playlist URLs found. Paste a full .m3u/.m3u8 link or get.php link containing username.'
         :'No Xtream accounts or M3U Playlist links detected.';
       return;
     }
