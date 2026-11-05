@@ -68,7 +68,8 @@ function importBatch(raw){
     const playlist=isPlaylist(url);
     if(xtream){
       found.push({type:'xtream',server:endpoint,original,username:user,password:pass,date:today(),source:'Manual Update'});
-    } else if(playlist){
+    } else if(playlist && [...url.searchParams.entries()].some(([key,value])=>
+      key.toLowerCase()==='username'&&value.trim().length>0)){
       found.push({type:'playlist',server:original,date:today(),source:'Manual Update'});
     }
   }
