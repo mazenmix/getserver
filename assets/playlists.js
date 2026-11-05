@@ -19,28 +19,20 @@ function allPlaylists(){
  });
 }
 function card(item,i){
- const url=String(item.server||''),source=String(item.source||'');
- const time=Date.parse(item.date||'');
- const date=Number.isFinite(time)?new Date(time).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'}):'';
+ const url=String(item.server||'');
  let hostname='Playlist';try{hostname=new URL(url.split('|')[0]).host}catch{}
- const post=String(item.post_url||'');
- const validPost=/^https:\/\/t\.me\/[A-Za-z0-9_]+\/\d+$/.test(post);
  return '<article class="mx-m3u-card"><div class="mx-m3u-meta"><span class="mx-m3u-type">♡ M3U Playlist</span><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
  '<div class="mx-m3u-domain">'+esc(hostname)+'</div>'+
  '<div class="mx-m3u-url" dir="ltr">'+esc(url)+'</div>'+
- '<div class="mx-m3u-actions"><button type="button" class="mx-m3u-copy" data-playlist-id="'+esc(item.id)+'">Copy Playlist</button>'+
- (validPost?'<a class="mx-m3u-source-link" href="'+esc(post)+'" target="_blank" rel="noopener noreferrer">Telegram post</a>':'')+
- '<span class="mx-m3u-from">@'+esc(source)+(date?' · '+esc(date):'')+'</span></div></article>';
+ '<div class="mx-m3u-actions"><button type="button" class="mx-m3u-copy" data-playlist-id="'+esc(item.id)+'">Copy Playlist</button></div></article>';
 }
 function render(){
  if(!panel)return;
  const q=(document.querySelector('#search')?.value||'').trim().toLowerCase();
  const items=allPlaylists().filter(x=>(x.server+' '+x.source).toLowerCase().includes(q));
- const status=Object.entries(state.sources).map(([name,source])=>'@'+name+': '+(source.status==='ok'?String(source.found)+' links':'not accessible')).join(' · ');
- const heading='<div class="mx-m3u-heading"><div><h2>M3U Playlist</h2><p>Direct playlist links · newest first</p></div><span class="mx-m3u-count">'+items.length+' playlists</span></div>';
- const empty=state.loading?'<p class="mx-m3u-state">Checking public Telegram sources…</p>':(!items.length?'<p class="mx-m3u-state">No accessible M3U links found in recent public posts.</p>':'');
- panel.innerHTML=heading+'<div class="mx-m3u-source-status">'+esc(status||'Checking sources')+'</div>'+
- '<div class="mx-m3u-list">'+items.map(card).join('')+'</div>'+empty;
+ const heading='<div class="mx-m3u-heading"><span class="mx-m3u-count">'+items.length+' playlists</span></div>';
+ const empty=state.loading?'<p class="mx-m3u-state">Checking public Telegram sources…</p>':(!items.length?'<p class="mx-m3u-state">No M3U links available.</p>':'');
+ panel.innerHTML=heading+'<div class="mx-m3u-list">'+items.map(card).join('')+'</div>'+empty;
 }
 async function load(){
  if(state.loading)return;
@@ -68,7 +60,7 @@ function mount(){
  if(state.ready)return;
  const tabs=document.querySelector('.tabs'),toolbar=document.querySelector('.toolbar'),grid=document.querySelector('#grid');
  if(!tabs||!toolbar||!grid)return;
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/playlists.css?v=20261105-verified';document.head.appendChild(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/playlists.css?v=20261105-clean';document.head.appendChild(sheet);
  tab=document.createElement('button');tab.type='button';tab.className='tab mx-m3u-tab';tab.textContent='♡ M3U Playlist';tab.setAttribute('aria-pressed','false');tabs.appendChild(tab);
  panel=document.createElement('section');panel.id='mx-playlists';panel.setAttribute('aria-live','polite');toolbar.insertAdjacentElement('afterend',panel);
  tab.addEventListener('click',()=>{
