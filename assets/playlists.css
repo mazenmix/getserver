@@ -14,10 +14,16 @@ body.mx-playlist-mode #grid,body.mx-playlist-mode #pagination{display:none!impor
 .mx-m3u-meta{font-size:11px;color:#929bb0}
 .mx-m3u-type{background:#f14caf22;border:1px solid #ff7ac344;color:#ff9ed8;border-radius:8px;padding:5px 9px;font-weight:850}
 .mx-m3u-domain{margin-top:18px;font-size:17px;color:#fff;font-weight:800;overflow-wrap:anywhere}
-.mx-m3u-url{direction:ltr;text-align:left;color:#c4cce0;font:12px/1.55 ui-monospace,Consolas,monospace;background:#0a0c17;border:1px solid #44304d;border-radius:10px;padding:11px;margin:10px 0 16px;overflow-wrap:anywhere;min-height:65px}
+.mx-m3u-url{display:block;direction:ltr;text-align:left;white-space:pre-wrap;word-break:break-all;overflow-wrap:anywhere;overflow:visible;text-overflow:clip;max-height:none;height:auto;min-height:65px;color:#c4cce0;font:12px/1.6 ui-monospace,Consolas,monospace;background:#0a0c17;border:1px solid #44304d;border-radius:10px;padding:11px;margin:10px 0 16px}
 .mx-m3u-copy{background:#ef4dae;color:#210b1c;border:0;border-radius:9px;padding:10px 13px;font-size:12px;font-weight:850;white-space:nowrap}
 .mx-m3u-copy:hover{background:#ff77c7}
 .mx-m3u-from{color:#9ba5b8;font-size:10px;text-align:right}
 .mx-m3u-state{background:#1c1827;color:#d1afc6;padding:22px;border:1px solid #753f6655;border-radius:14px}
 @media(max-width:1000px){.mx-m3u-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.mx-m3u-list{grid-template-columns:1fr}.mx-m3u-actions{align-items:flex-start;flex-wrap:wrap}}
+
+.mx-m3u-source-link{color:#ffaadf;font-size:11px;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.mx-m3u-source-link:hover{color:#ffe1f2}
+.mx-m3u-source-status{color:#aeb4c7;font-size:12px;line-height:1.6;overflow-wrap:anywhere;padding:8px 0 14px}
+.mx-m3u-source-status strong{color:#ff97a1}
+.mx-m3u-url::selection{background:#f14caf75;color:#fff}
