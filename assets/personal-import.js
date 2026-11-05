@@ -99,7 +99,7 @@ function field(label,value,id,fieldKey){
 function renderXtream(){
   if(!section)return;
   const items=readAll().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
-  section.innerHTML=items.length?'<h2>Xtream Updates <small>'+items.length+' accounts · newest first</small></h2>'+
+  section.innerHTML=items.length?'<div class="mx-import-heading"><h2>Xtream Updates</h2><span class="mx-m3u-count">'+items.length+' accounts</span></div>'+
     '<div class="mx-import-grid">'+items.map((row,i)=>
       '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
       field('SERVER',row.server,row.id,'server')+
