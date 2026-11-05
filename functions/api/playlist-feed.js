@@ -56,6 +56,7 @@ function postedLinks(postHtml) {
   // must become a SINGLE, exact, copyable link including "|referer=...".
   const visible = decodeHtml(
     body.replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<\/a>(?=\s*<a\b)/gi, "</a>\n")
         .replace(/<\/(?:p|blockquote|div)>/gi, "\n")
         .replace(/<[^>]*>/g, "")
   );
@@ -135,7 +136,17 @@ async function readSource(source) {
 export async function onRequestGet() {
   const sources = await Promise.all(SOURCES.map(readSource));
   const items = sources.flatMap(s => s.items)
-    .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    .sort((a, b) => {
+      // UTC date comparison; newer Telegram posts must always appear first.
+      const time = (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0);
+      if (time) return time;
+      if (a.source === b.source) {
+        const id = item => Number(String(item.post_url || "").match(/\/(\d+)$/)?.[1] || 0);
+        const postOrder = id(b) - id(a);
+        if (postOrder) return postOrder;
+      }
+      return String(a.id).localeCompare(String(b.id));
+    });
   return new Response(JSON.stringify({
     updated_at: new Date().toISOString(),
     sources: Object.fromEntries(sources.map(s => [s.source,
