@@ -1,0 +1,28 @@
+
+/* Owner-only, browser-local update UI. No account data is delivered to GitHub. */
+.tabs .mx-import-trigger{display:inline-flex!important;align-items:center;justify-content:center;border-radius:9px;background:#252b3b;border:1px solid #48506b;color:#f2f4ff;padding:9px 13px;font-size:12px;font-weight:800;cursor:pointer}
+.tabs .mx-import-trigger:hover{border-color:#ff8ba6;background:#33223d}
+.mx-import-xtream{margin:12px 0 24px}
+.mx-import-xtream[hidden],.mx-import-backdrop[hidden]{display:none!important}
+body.mx-playlist-mode .mx-import-xtream{display:none!important}
+.mx-import-xtream h2{color:#ff879b;margin:12px 0 17px;font-size:19px}
+.mx-import-xtream h2 small{font-size:12px;font-weight:400;color:#aab2c8;margin-left:8px}
+.mx-import-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.mx-import-card{background:#121525;border:1px solid #aa496656;border-radius:16px;padding:17px;min-width:0;box-shadow:0 7px 30px #0004}
+.mx-import-card-title{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#a5abc0;font-size:11px;margin-bottom:14px}
+.mx-import-card-title b{color:#ff889e;background:#ed507221;border:1px solid #e9527659;border-radius:8px;padding:5px 9px;letter-spacing:.5px}
+.mx-import-field{display:flex;align-items:center;gap:7px;flex-wrap:wrap;background:#0a1020;border:1px solid #384054;padding:9px;border-radius:10px;margin-top:9px;min-width:0}
+.mx-import-field span{flex-basis:100%;font-size:10px;color:#a2abc0;letter-spacing:.5px}
+.mx-import-field code{display:block;flex:1 1 130px;min-width:0;color:#f4f5ff;font:12px/1.5 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-all}
+.mx-import-copy{border:1px solid #4c5064;border-radius:7px;background:#2a3040;color:#eceefa;font-size:11px;padding:5px 8px;cursor:pointer}
+.mx-import-copy:hover{background:#3d4458}
+.mx-import-backdrop{position:fixed;inset:0;z-index:99999;background:#030612dd;display:flex;align-items:center;justify-content:center;padding:15px}
+.mx-import-dialog{width:min(780px,100%);max-height:94vh;overflow:auto;background:#151b2d;border:1px solid #71415b;border-radius:18px;padding:22px;color:#e9ecfa;box-shadow:0 22px 100px #000a}
+.mx-import-dialog h2{font-size:21px;margin:0 0 6px;color:#ffabc9}
+.mx-import-dialog p{font-size:12px;color:#bbc0d1;line-height:1.6}
+.mx-import-dialog textarea{width:100%;display:block;box-sizing:border-box;margin-top:14px;min-height:260px;white-space:pre-wrap;overflow-wrap:anywhere;resize:vertical;border:1px solid #4c4257;border-radius:10px;padding:12px;background:#090e1a;color:#f0f2ff;font:12px/1.6 ui-monospace,Consolas,monospace}
+.mx-import-controls{display:flex;justify-content:flex-end;gap:10px;margin-top:15px}
+.mx-import-controls button{border:0;border-radius:9px;background:#31384e;color:#f7f7ff;padding:10px 17px;font-weight:750;cursor:pointer}
+.mx-import-controls #mx-import-save{background:#ef4faf;color:#1b0916}
+@media(max-width:950px){.mx-import-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.mx-import-grid{grid-template-columns:1fr}.tabs{flex-wrap:wrap}.mx-import-dialog{padding:16px}}
