@@ -77,6 +77,44 @@ function importBatch(raw){
   for(const row of found)results.set(keyOf(row),row);
   return {items:[...results.values()],rawCount:found.length,duplicateCount:found.length-results.size};
 }
+function importPlaylistBatch(raw){
+  // Manual Playlist mode accepts the entire posted URL, unchanged.
+  // Only links with an explicit username are eligible for the M3U list.
+  const text=normalizePostedText(raw);
+  const matches=[...text.matchAll(URL_PATTERN)];
+  const accepted=new Map();
+  let skipped=0;
+  for(const match of matches){
+    const original=match[0];
+    const base=original.split('|',1)[0];
+    try{
+      const url=new URL(base);
+      const username=[...url.searchParams.entries()].some(([key,value])=>
+        key.toLowerCase()==='username' && value.trim().length>0);
+      if(!['http:','https:'].includes(url.protocol)||!isPlaylist(url)||!username){
+        skipped++;
+        continue;
+      }
+      const row={type:'playlist',server:original,source:'Manual Update',date:today()};
+      accepted.set(keyOf(row),row);
+    }catch{skipped++}
+  }
+  return {items:[...accepted.values()],rawCount:matches.length,
+    duplicateCount:matches.length-skipped-accepted.size,skipped};
+}
+function savePlaylistBatch(raw){
+  const batch=importPlaylistBatch(raw);
+  if(!batch.items.length)return batch;
+  const combined=new Map(readSaved().map(row=>[keyOf(row),row]));
+  for(const row of batch.items){
+    combined.set(keyOf(row),{...row,
+      id:'personal-playlist-'+Date.now()+'-'+Math.round(Math.random()*1e9)});
+  }
+  // Persist in the current browser without publishing URL tokens to GitHub.
+  localStorage.setItem(KEY,JSON.stringify([...combined.values()]));
+  window.dispatchEvent(new Event('mx-personal-updates'));
+  return batch;
+}
 function saveBatch(raw){
   const batch=importBatch(raw);
   if(!batch.items.length)return batch;
@@ -124,30 +162,71 @@ function renderXtream(){
 }
 function updateDialog(){
   modal=document.createElement('div');modal.className='mx-import-backdrop';modal.hidden=true;
-  modal.innerHTML='<section class="mx-import-dialog" role="dialog" aria-modal="true" aria-label="Import Update">'+
-  '<h2>Import Update</h2><p>Paste a batch containing Xtream credentials and complete M3U URLs. Parsing happens inside this browser only; nothing is uploaded.</p>'+
+  modal.innerHTML='<section class="mx-import-dialog" role="dialog" aria-modal="true" aria-labelledby="mx-import-title">'+
+  '<h2 id="mx-import-title">Import Update</h2>'+
+  '<div class="mx-import-modes" role="group" aria-label="Import type">'+
+    '<button type="button" class="mx-import-mode is-active" data-import-mode="update" aria-pressed="true">Import Update</button>'+
+    '<button type="button" class="mx-import-mode" data-import-mode="playlist" aria-pressed="false">Import Playlist</button></div>'+
+  '<p id="mx-import-help">Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.</p>'+
   '<textarea rows="12" id="mx-import-text" dir="ltr" spellcheck="false" placeholder="Paste your Telegram update here..."></textarea>'+
   '<p id="mx-import-result" role="status"></p>'+
-  '<div class="mx-import-controls"><button id="mx-import-cancel" type="button">Cancel</button><button id="mx-import-save" type="button">Import & Save</button></div></section>';
+  '<div class="mx-import-controls"><button id="mx-import-cancel" type="button">Cancel</button>'+
+  '<button id="mx-import-save" type="button">Import & Save</button></div></section>';
   document.body.appendChild(modal);
-  const input=modal.querySelector('#mx-import-text'),status=modal.querySelector('#mx-import-result');
-  const close=()=>{modal.hidden=true;input.value='';status.textContent=''};
+  const input=modal.querySelector('#mx-import-text');
+  const status=modal.querySelector('#mx-import-result');
+  const heading=modal.querySelector('#mx-import-title');
+  const help=modal.querySelector('#mx-import-help');
+  const save=modal.querySelector('#mx-import-save');
+  let mode='update';
+  const setMode=next=>{
+    mode=next;
+    heading.textContent=mode==='playlist'?'Import Playlist':'Import Update';
+    help.textContent=mode==='playlist'
+      ?'Paste one or more complete M3U Playlist URLs with username. They will appear under M3U Playlist.'
+      :'Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.';
+    input.placeholder=mode==='playlist'
+      ?'https://server.example/get.php?username=trial&password=pass&type=m3u_plus'
+      :'Paste your Telegram update here...';
+    save.textContent=mode==='playlist'?'Save Playlists':'Import & Save';
+    status.textContent='';
+    modal.querySelectorAll('[data-import-mode]').forEach(button=>{
+      const active=button.dataset.importMode===mode;
+      button.classList.toggle('is-active',active);
+      button.setAttribute('aria-pressed',String(active));
+    });
+  };
+  modal.querySelectorAll('[data-import-mode]').forEach(button=>
+    button.addEventListener('click',()=>setMode(button.dataset.importMode)));
+  const close=()=>{modal.hidden=true;input.value='';status.textContent='';setMode('update')};
   modal.querySelector('#mx-import-cancel').addEventListener('click',close);
   modal.addEventListener('click',event=>{if(event.target===modal)close()});
-  modal.querySelector('#mx-import-save').addEventListener('click',()=>{
-    const batch=importBatch(input.value);
-    if(!batch.items.length){status.textContent='No Xtream accounts or M3U Playlist links detected.';return}
+  save.addEventListener('click',()=>{
+    const batch=mode==='playlist'?importPlaylistBatch(input.value):importBatch(input.value);
+    if(!batch.items.length){
+      status.textContent=mode==='playlist'
+        ?'No eligible M3U Playlist links. Add URLs containing username and ending in .m3u/.m3u8 or get.php?type=m3u_plus.'
+        :'No Xtream accounts or M3U Playlist links detected.';
+      return;
+    }
     try{
-      saveBatch(input.value);
-      status.textContent='Saved '+batch.items.filter(x=>x.type==='xtream').length+' Xtream accounts and '+
-        batch.items.filter(x=>x.type==='playlist').length+' M3U playlists. '+batch.duplicateCount+' duplicate entries ignored.';
-      renderXtream();
-      input.value='';
+      if(mode==='playlist'){
+        savePlaylistBatch(input.value);
+        renderXtream();
+        close();
+        // Show the saved cards in the existing pink M3U section immediately.
+        document.querySelector('.mx-m3u-tab')?.click();
+      }else{
+        saveBatch(input.value);
+        status.textContent='Saved '+batch.items.filter(x=>x.type==='xtream').length+' Xtream accounts and '+
+          batch.items.filter(x=>x.type==='playlist').length+' M3U playlists. '+batch.duplicateCount+' duplicate entries ignored.';
+        renderXtream();input.value='';
+      }
     }catch{
       status.textContent='Browser storage unavailable. No changes were saved.';
     }
   });
-  return {show:()=>{modal.hidden=false;input.focus()}};
+  return {show:()=>{modal.hidden=false;setMode('update');input.focus()}};
 }
 function mount(){
   const tabs=document.querySelector('.tabs'),grid=document.querySelector('#grid'),toolbar=document.querySelector('.toolbar');
@@ -178,6 +257,6 @@ function mount(){
   loadPublished();
   setInterval(loadPublished,60000);
 }
-window.MXPersonalUpdates={get:readAll,importBatch,saveBatch};
+window.MXPersonalUpdates={get:readAll,importBatch,saveBatch,importPlaylistBatch,savePlaylistBatch};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
