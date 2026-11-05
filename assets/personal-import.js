@@ -164,10 +164,10 @@ function renderXtream(){
 function updateDialog(){
   modal=document.createElement('div');modal.className='mx-import-backdrop';modal.hidden=true;
   modal.innerHTML='<section class="mx-import-dialog" role="dialog" aria-modal="true" aria-labelledby="mx-import-title">'+
-  '<h2 id="mx-import-title">Import Update</h2>'+
+  '<h2 id="mx-import-title">Xtream</h2>'+
   '<div class="mx-import-modes" role="group" aria-label="Import type">'+
-    '<button type="button" class="mx-import-mode is-active" data-import-mode="update" aria-pressed="true">Import Update</button>'+
-    '<button type="button" class="mx-import-mode" data-import-mode="playlist" aria-pressed="false">Import Playlist</button></div>'+
+    '<button type="button" class="mx-import-mode is-active" data-import-mode="update" aria-pressed="true">Xtream</button>'+
+    '<button type="button" class="mx-import-mode" data-import-mode="playlist" aria-pressed="false">M3U Playlist</button></div>'+
   '<p id="mx-import-help">Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.</p>'+
   '<textarea rows="12" id="mx-import-text" dir="ltr" spellcheck="false" placeholder="Paste your Telegram update here..."></textarea>'+
   '<p id="mx-import-result" role="status"></p>'+
@@ -182,7 +182,7 @@ function updateDialog(){
   let mode='update';
   const setMode=next=>{
     mode=next;
-    heading.textContent=mode==='playlist'?'Import Playlist':'Import Update';
+    heading.textContent=mode==='playlist'?'M3U Playlist':'Xtream';
     help.textContent=mode==='playlist'
       ?'Paste complete .m3u/.m3u8 links (username optional), or get.php playlists with username. They appear in M3U Playlist.'
       :'Paste Xtream credentials or complete M3U URLs. Entries are saved in this browser.';
