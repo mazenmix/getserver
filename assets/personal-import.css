@@ -31,3 +31,11 @@ body.mx-playlist-mode .mx-import-xtream{display:none!important}
 .mx-import-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:2px 0 14px}
 .mx-import-heading h2{margin:0}
 .mx-import-heading .mx-m3u-count{background:#ee51ad20;border:1px solid #ee51ad60;border-radius:99px;color:#ffc3e8;padding:6px 12px;font-weight:750;font-size:12px}
+
+/* Switch between credential updates and direct Playlist URL imports. */
+.mx-import-modes{display:flex;gap:7px;background:#0b1020;border:1px solid #333b51;border-radius:12px;padding:5px;margin:16px 0 13px}
+.mx-import-modes .mx-import-mode{flex:1 1 0;min-width:0;padding:11px 13px;border:1px solid transparent;border-radius:9px;background:transparent;color:#aeb7d0;font-size:13px;font-weight:800;cursor:pointer}
+.mx-import-modes .mx-import-mode.is-active{background:#ee51ad22;color:#ffc3e8;border-color:#ee51ad70}
+.mx-import-modes .mx-import-mode:hover{color:#fff;border-color:#ee51ad55}
+.mx-import-modes .mx-import-mode:focus-visible{outline:2px solid #f277c0;outline-offset:2px}
+#mx-import-result{min-height:18px}
