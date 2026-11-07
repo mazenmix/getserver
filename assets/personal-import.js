@@ -220,7 +220,23 @@ function updateDialog(){
       status.textContent='Browser storage unavailable. No changes were saved.';
     }
   });
-  return {show:()=>{modal.hidden=false;setMode('update');input.focus()}};
+  // iOS keyboard changes the visual viewport; keep the modal within its visible area.
+  const syncViewport=()=>{
+    if(modal.hidden)return;
+    const viewport=window.visualViewport;
+    if(!viewport)return;
+    modal.style.setProperty('--mx-import-viewport-height',viewport.height+'px');
+    modal.style.setProperty('--mx-import-viewport-top',viewport.offsetTop+'px');
+  };
+  window.visualViewport?.addEventListener('resize',syncViewport);
+  window.visualViewport?.addEventListener('scroll',syncViewport);
+  return {show:()=>{
+    modal.hidden=false;
+    setMode('update');
+    syncViewport();
+    // Avoid opening the keyboard and shrinking the visible area immediately on phones.
+    if(!window.matchMedia('(max-width:600px)').matches)input.focus();
+  }};
 }
 function mount(){
   const tabs=document.querySelector('.tabs'),grid=document.querySelector('#grid'),toolbar=document.querySelector('.toolbar');
@@ -228,7 +244,7 @@ function mount(){
   // Relabel the visible all-records filter without changing its data-filter behavior.
   const allTab=tabs.querySelector('[data-filter="all"]');
   if(allTab)allTab.textContent='Xtream';
-  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261105-import-playlist';document.head.appendChild(sheet);
+  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261107-mobile-fit';document.head.appendChild(sheet);
   button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='Import';
   tabs.appendChild(button);
   section=document.createElement('section');section.className='mx-import-xtream';section.id='mx-import-xtream';
