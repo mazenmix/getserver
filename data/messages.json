@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T07:57:21Z",
+  "updated_at": "2026-11-08T14:39:57Z",
   "last_deep_scan": "2026-11-08T01:37:05Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "posts": 104
+      "posts": 105
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,24 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-205",
+      "source": "AisosElho",
+      "post_id": "205",
+      "date": "2026-11-08T08:10:56+00:00",
+      "summary": "سيرفر 1 • سيرفر 2",
+      "servers": [
+        "http://u.goldeniptv.com:2052",
+        "http://live.lynxiptv.xyz:80",
+        "http://mh.smpy24.live:2082",
+        "http://tvalbari8k.xyz:80",
+        "http://speed4k.media:8089",
+        "http://eaiptv.net:8080",
+        "http://falcon-sa.xyz:80",
+        "http://76853644.jadottvip.xyz:80"
+      ],
+      "excerpt": true
+    },
     {
       "id": "AisosElho-204",
       "source": "AisosElho",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T07:57:04Z",
+  "updated_at": "2026-11-08T14:39:46Z",
   "last_deep_scan": "2026-11-08T01:36:12Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "found": 204
+      "found": 214
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,86 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-205-e403791d572a90",
+      "type": "xtream",
+      "server": "http://dino2.123sat.net",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-dcdbd2f3076300",
+      "type": "xtream",
+      "server": "http://76853644.jadottvip.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-d8cbf600ffdb8d",
+      "type": "xtream",
+      "server": "http://my.atrupo4k.com:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-cbb1c4552fb218",
+      "type": "xtream",
+      "server": "http://eaiptv.net:8080",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-b195b228c9620b",
+      "type": "xtream",
+      "server": "http://falcon-sa.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-797c78466baf4d",
+      "type": "xtream",
+      "server": "http://speed4k.media:8089",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-5fe15bed5e8226",
+      "type": "xtream",
+      "server": "http://live.lynxiptv.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-4b9372a5fa39f4",
+      "type": "xtream",
+      "server": "http://tvalbari8k.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-3fea8eabd0ad99",
+      "type": "xtream",
+      "server": "http://mh.smpy24.live:2082",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
+    {
+      "id": "AisosElho-205-1ecf8fd98d8977",
+      "type": "xtream",
+      "server": "http://u.goldeniptv.com:2052",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/205",
+      "date": "2026-11-08T08:10:56+00:00"
+    },
     {
       "id": "AisosElho-201-f80d96e3d36ba9",
       "type": "xtream",
@@ -130,28 +210,12 @@
       "date": "2026-10-31T04:44:50+00:00"
     },
     {
-      "id": "AisosElho-201-0605a830258d94",
-      "type": "xtream",
-      "server": "http://my.atrupo4k.com:80",
-      "source": "AisosElho",
-      "post_url": "https://t.me/AisosElho/201",
-      "date": "2026-10-31T04:44:50+00:00"
-    },
-    {
       "id": "AisosElho-194-8dce7e11249c42",
       "type": "xtream",
       "server": "http://line.fener75.de:80",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/194",
       "date": "2026-10-24T15:04:39+00:00"
-    },
-    {
-      "id": "AisosElho-193-4678ddd4048f61",
-      "type": "xtream",
-      "server": "http://falcon-sa.xyz:80",
-      "source": "AisosElho",
-      "post_url": "https://t.me/AisosElho/193",
-      "date": "2026-10-18T17:29:17+00:00"
     },
     {
       "id": "AisosElho-192-1ca1ce5da55792",
@@ -2216,14 +2280,6 @@
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/133",
       "date": "2026-02-07T07:54:26+00:00"
-    },
-    {
-      "id": "AisosElho-131-29cc5d79558510",
-      "type": "xtream",
-      "server": "http://live.lynxiptv.xyz:80",
-      "source": "AisosElho",
-      "post_url": "https://t.me/AisosElho/131",
-      "date": "2026-02-05T21:42:01+00:00"
     },
     {
       "id": "AisosElho-130-25100cc56a9622",
