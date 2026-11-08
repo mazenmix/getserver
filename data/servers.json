@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-07T22:24:14Z",
-  "last_deep_scan": "2026-11-01T00:40:38Z",
+  "updated_at": "2026-11-08T01:36:12Z",
+  "last_deep_scan": "2026-11-08T01:36:12Z",
   "deep_scan_completed": true,
   "sources": {
     "IPTVXtremeFlix": {
@@ -13,7 +13,7 @@
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
-      "found": 144
+      "found": 216
     }
   },
   "items": [

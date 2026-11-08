@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-07T22:24:26Z",
-  "last_deep_scan": "2026-11-01T00:41:32Z",
+  "updated_at": "2026-11-08T01:37:05Z",
+  "last_deep_scan": "2026-11-08T01:37:05Z",
   "deep_scan_completed": true,
   "sources": {
     "IPTVXtremeFlix": {
@@ -9,14 +9,23 @@
     },
     "AisosElho": {
       "status": "ok",
-      "posts": 103
+      "posts": 111
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
-      "posts": 140
+      "posts": 1081
     }
   },
   "items": [
+    {
+      "id": "AisosElho-204",
+      "source": "AisosElho",
+      "post_id": "204",
+      "date": "2026-11-07T22:41:55+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
     {
       "id": "AisosElho-201",
       "source": "AisosElho",
