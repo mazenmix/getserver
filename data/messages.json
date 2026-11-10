@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T02:42:43Z",
+  "updated_at": "2026-11-10T10:25:18Z",
   "last_deep_scan": "2026-11-08T01:37:05Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "posts": 105
+      "posts": 106
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,17 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-207",
+      "source": "AisosElho",
+      "post_id": "207",
+      "date": "2026-11-10T10:06:09+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://xtremeott.site"
+      ],
+      "excerpt": true
+    },
     {
       "id": "AisosElho-205",
       "source": "AisosElho",
