@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T20:25:36Z",
+  "updated_at": "2026-11-13T01:15:43Z",
   "last_deep_scan": "2026-11-08T01:36:12Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "found": 215
+      "found": 220
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,46 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-208-c8a849a8cac1d8",
+      "type": "xtream",
+      "server": "http://vividmedia.xyz:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/208",
+      "date": "2026-11-12T22:31:44+00:00"
+    },
+    {
+      "id": "AisosElho-208-924a1becb9366d",
+      "type": "xtream",
+      "server": "http://legendking.net:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/208",
+      "date": "2026-11-12T22:31:44+00:00"
+    },
+    {
+      "id": "AisosElho-208-13ff743b11e26a",
+      "type": "xtream",
+      "server": "http://live.8kultra.org:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/208",
+      "date": "2026-11-12T22:31:44+00:00"
+    },
+    {
+      "id": "AisosElho-208-0e4b29c52afc10",
+      "type": "xtream",
+      "server": "http://apk4k.org:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/208",
+      "date": "2026-11-12T22:31:44+00:00"
+    },
+    {
+      "id": "AisosElho-208-05f32402689d51",
+      "type": "xtream",
+      "server": "http://lordstreams.live:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/208",
+      "date": "2026-11-12T22:31:44+00:00"
+    },
     {
       "id": "AisosElho-207-1a488015b4588e",
       "type": "xtream",
