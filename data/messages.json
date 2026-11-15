@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-14T23:53:22Z",
-  "last_deep_scan": "2026-11-08T01:37:05Z",
+  "updated_at": "2026-11-15T03:24:36Z",
+  "last_deep_scan": "2026-11-15T03:24:36Z",
   "deep_scan_completed": true,
   "sources": {
     "IPTVXtremeFlix": {
@@ -9,11 +9,11 @@
     },
     "AisosElho": {
       "status": "ok",
-      "posts": 106
+      "posts": 114
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
-      "posts": 140
+      "posts": 1081
     }
   },
   "items": [
