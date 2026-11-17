@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T10:53:11Z",
+  "updated_at": "2026-11-17T19:27:30Z",
   "last_deep_scan": "2026-11-15T03:23:43Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "found": 221
+      "found": 225
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,38 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-210-f51b52312616c4",
+      "type": "xtream",
+      "server": "http://stv2030.com:2052",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/210",
+      "date": "2026-11-17T11:04:22+00:00"
+    },
+    {
+      "id": "AisosElho-210-ccf96ec686f565",
+      "type": "xtream",
+      "server": "http://moka-pro.com:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/210",
+      "date": "2026-11-17T11:04:22+00:00"
+    },
+    {
+      "id": "AisosElho-210-a8b366d4b2ec73",
+      "type": "xtream",
+      "server": "http://tv2ip.nl:2095",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/210",
+      "date": "2026-11-17T11:04:22+00:00"
+    },
+    {
+      "id": "AisosElho-210-59b875f2d5f12b",
+      "type": "xtream",
+      "server": "http://moka-pro.com",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/210",
+      "date": "2026-11-17T11:04:22+00:00"
+    },
     {
       "id": "AisosElho-209-c591e73404b0d9",
       "type": "xtream",
