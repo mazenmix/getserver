@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T18:59:08Z",
+  "updated_at": "2026-11-17T02:17:33Z",
   "last_deep_scan": "2026-11-15T03:23:43Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "found": 220
+      "found": 221
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -17,6 +17,14 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-209-c591e73404b0d9",
+      "type": "xtream",
+      "server": "http://sopa.top:80",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/209",
+      "date": "2026-11-16T20:44:02+00:00"
+    },
     {
       "id": "AisosElho-208-c8a849a8cac1d8",
       "type": "xtream",
