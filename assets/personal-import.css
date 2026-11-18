@@ -120,3 +120,59 @@ body.mx-playlist-mode .mx-import-xtream{display:none!important}
   .mx-import-backdrop{align-items:flex-start}
   .mx-import-dialog textarea{height:110px;min-height:100px}
 }
+
+/* Compact neon import dialog — shared by Xtream and M3U modes. */
+.mx-import-backdrop{
+  background:#030612b8;
+  -webkit-backdrop-filter:blur(5px);
+  backdrop-filter:blur(5px);
+}
+.mx-import-dialog{
+  flex:0 1 550px;
+  max-width:550px;
+  padding:18px;
+  border-radius:20px;
+  background:radial-gradient(ellipse at top left,#46213c70,transparent 52%),linear-gradient(150deg,#1a2031,#101625);
+  border:1px solid #ee70b590;
+  box-shadow:0 0 26px #ef4faf24,0 20px 65px #000a,inset 0 1px 0 #ffc0df20;
+}
+.mx-import-dialog h2{
+  font-size:19px;line-height:1.3;margin:0 0 5px;
+  color:#ffd3e9;text-shadow:0 0 14px #ef4faf69;
+}
+.mx-import-dialog .mx-import-modes{
+  margin:12px 0 10px;padding:4px;gap:6px;
+  background:#0a0e1bd9;border-color:#a057854d;
+}
+.mx-import-dialog .mx-import-mode{padding:9px 10px;border-radius:8px;transition:background .18s,border-color .18s,box-shadow .18s}
+.mx-import-dialog .mx-import-mode.is-active{
+  background:linear-gradient(145deg,#ee51ad35,#a8206630);
+  border-color:#ff78c99c;color:#ffe0f2;box-shadow:0 0 12px #ef4faf32;
+}
+.mx-import-dialog textarea{
+  height:150px;min-height:105px;max-height:45dvh;
+  margin-top:10px;padding:11px;
+  background:#090e19;border:1px solid #97517e70;border-radius:11px;outline:none;
+  transition:border-color .18s,box-shadow .18s;
+}
+.mx-import-dialog textarea:focus{
+  border-color:#f47bc3;box-shadow:0 0 0 2px #ef4faf22,0 0 14px #ef4faf25;
+}
+.mx-import-dialog #mx-import-result{min-height:0;margin:8px 0 0;overflow-wrap:anywhere}
+.mx-import-dialog #mx-import-result:empty{display:none}
+.mx-import-dialog .mx-import-controls{margin-top:12px;gap:8px}
+.mx-import-dialog .mx-import-controls button{border:1px solid #69738b45;background:#222b3d;border-radius:10px;padding:9px 14px}
+.mx-import-dialog .mx-import-controls #mx-import-save{
+  background:linear-gradient(135deg,#ff80b9,#e843a8);border-color:#ff9cd98c;
+  color:#210b1c;box-shadow:0 0 15px #ef4faf42,inset 0 1px 0 #ffd3e966;
+}
+.mx-import-dialog .mx-import-controls #mx-import-save:hover{box-shadow:0 0 21px #ef4faf73}
+.mx-import-dialog .mx-import-controls button:focus-visible{outline:2px solid #ff91cf;outline-offset:2px}
+@media(max-width:600px){
+  .mx-import-dialog{flex:0 1 auto;width:100%;max-width:100%;padding:14px;border-radius:16px}
+  .mx-import-dialog textarea{height:clamp(105px,25dvh,150px);min-height:90px;font-size:16px}
+  .mx-import-dialog .mx-import-controls button{min-height:44px;padding:9px 7px}
+}
+@media(max-width:600px) and (max-height:550px){
+  .mx-import-dialog textarea{height:100px;min-height:80px}
+}
