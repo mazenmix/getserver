@@ -39,9 +39,7 @@ function allPlaylists(){
 }
 function card(item){
  const url=String(item.server||'');
- let hostname='Playlist';try{hostname=new URL(url.split('|')[0]).host}catch{}
  return '<article class="mx-m3u-card"><div class="mx-m3u-meta"><span class="mx-m3u-type">♡ M3U Playlist</span></div>'+
- '<div class="mx-m3u-domain">'+esc(hostname)+'</div>'+
  '<div class="mx-m3u-url" dir="ltr">'+esc(url)+'</div>'+
  '<div class="mx-m3u-actions"><button type="button" class="mx-m3u-copy" data-playlist-id="'+esc(item.id)+'">Copy Playlist</button></div></article>';
 }
