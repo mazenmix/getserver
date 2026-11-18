@@ -256,7 +256,7 @@ function mount(){
   // Relabel the visible all-records filter without changing its data-filter behavior.
   const allTab=tabs.querySelector('[data-filter="all"]');
   if(allTab)allTab.textContent='Xtream';
-  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261118-clean-cards';document.head.appendChild(sheet);
+  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261118-neon-count';document.head.appendChild(sheet);
   button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='Import';
   tabs.appendChild(button);
   section=document.createElement('section');section.className='mx-import-xtream';section.id='mx-import-xtream';
