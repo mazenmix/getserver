@@ -47,7 +47,7 @@ function render(){
  if(!panel)return;
  const q=(document.querySelector('#search')?.value||'').trim().toLowerCase();
  const items=allPlaylists().filter(x=>(x.server+' '+x.source).toLowerCase().includes(q));
- const heading='<div class="mx-m3u-heading"><span class="mx-m3u-count">'+items.length+' playlists</span></div>';
+ const heading='<div class="mx-m3u-heading"><span class="mx-m3u-count">'+items.length+'</span></div>';
  const empty=state.loading?'<p class="mx-m3u-state">Checking public Telegram sources…</p>':(!items.length?'<p class="mx-m3u-state">No M3U links available.</p>':'');
  panel.innerHTML=heading+'<div class="mx-m3u-list">'+items.map(card).join('')+'</div>'+empty;
 }
