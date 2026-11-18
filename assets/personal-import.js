@@ -175,8 +175,7 @@ function renderXtream(){
 }
 function updateDialog(){
   modal=document.createElement('div');modal.className='mx-import-backdrop';modal.hidden=true;
-  modal.innerHTML='<section class="mx-import-dialog" role="dialog" aria-modal="true" aria-labelledby="mx-import-title">'+
-  '<h2 id="mx-import-title">Xtream</h2>'+
+  modal.innerHTML='<section class="mx-import-dialog" role="dialog" aria-modal="true" aria-label="Import">'+
   '<div class="mx-import-modes" role="group" aria-label="Import type">'+
     '<button type="button" class="mx-import-mode is-active" data-import-mode="update" aria-pressed="true">Xtream</button>'+
     '<button type="button" class="mx-import-mode" data-import-mode="playlist" aria-pressed="false">M3U Playlist</button></div>'+
@@ -187,12 +186,10 @@ function updateDialog(){
   document.body.appendChild(modal);
   const input=modal.querySelector('#mx-import-text');
   const status=modal.querySelector('#mx-import-result');
-  const heading=modal.querySelector('#mx-import-title');
   const save=modal.querySelector('#mx-import-save');
   let mode='update';
   const setMode=next=>{
     mode=next;
-    heading.textContent=mode==='playlist'?'M3U Playlist':'Xtream';
     input.placeholder='';
     save.textContent='Save';
     status.textContent='';
