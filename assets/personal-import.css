@@ -29,7 +29,7 @@ body.mx-playlist-mode .mx-import-xtream{display:none!important}
 
 /* All section: match the M3U Playlist count pill exactly. */
 .mx-import-heading{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;margin:2px 0 14px}
-.mx-import-heading .mx-m3u-count{background:#ee51ad20;border:1px solid #ee51ad60;border-radius:99px;color:#ffc3e8;padding:6px 12px;font-weight:750;font-size:12px}
+.mx-import-heading .mx-m3u-count{background:linear-gradient(145deg,#ee51ad30,#a8206630 55%,#ee51ad18);border:1px solid #ff78c99c;border-radius:99px;color:#ffe1f2;padding:6px 12px;font-weight:750;font-size:12px;font-variant-numeric:tabular-nums;box-shadow:0 0 12px #f14caf45,inset 0 1px 0 #ffc3e830,inset 0 0 8px #ee51ad18;text-shadow:0 0 7px #ff88ce80}
 
 /* Switch between credential updates and direct Playlist URL imports. */
 .mx-import-modes{display:flex;gap:7px;background:#0b1020;border:1px solid #333b51;border-radius:12px;padding:5px;margin:16px 0 13px}
