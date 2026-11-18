@@ -158,12 +158,12 @@ function updateAllCount(){
   const nativeMatch=nativeText.match(/^\s*(\d+)\s+results\b/i);
   const nativeCards=nativeMatch?Number(nativeMatch[1]):document.querySelectorAll('#grid > article.card:not(.post-card)').length;
   const total=personalCards+nativeCards;
-  badge.textContent=total+' Servers';
+  badge.textContent=String(total);
 }
 function renderXtream(){
   if(!section)return;
   const items=readAll().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
-  section.innerHTML=items.length?'<div class="mx-import-heading"><span class="mx-m3u-count" id="mx-all-count">0 Servers</span></div>'+
+  section.innerHTML=items.length?'<div class="mx-import-heading"><span class="mx-m3u-count" id="mx-all-count">0</span></div>'+
     '<div class="mx-import-grid">'+items.map(row=>
       '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b></div>'+
       field('SERVER',row.server,row.id,'server')+
