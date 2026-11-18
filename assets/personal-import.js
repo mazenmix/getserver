@@ -163,9 +163,9 @@ function updateAllCount(){
 function renderXtream(){
   if(!section)return;
   const items=readAll().filter(x=>x.type==='xtream').sort((a,b)=>(Date.parse(b.date)||0)-(Date.parse(a.date)||0));
-  section.innerHTML=items.length?'<div class="mx-import-heading"><h2>Xtream Updates</h2><span class="mx-m3u-count" id="mx-all-count">0 Servers</span></div>'+
-    '<div class="mx-import-grid">'+items.map((row,i)=>
-      '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b><span>#'+String(i+1).padStart(3,'0')+'</span></div>'+
+  section.innerHTML=items.length?'<div class="mx-import-heading"><span class="mx-m3u-count" id="mx-all-count">0 Servers</span></div>'+
+    '<div class="mx-import-grid">'+items.map(row=>
+      '<article class="mx-import-card"><div class="mx-import-card-title"><b>◈ XTREAM CODES</b></div>'+
       field('SERVER',row.server,row.id,'server')+
       field('USERNAME',row.username,row.id,'username')+
       field('PASSWORD',row.password,row.id,'password')+'</article>'
@@ -256,7 +256,7 @@ function mount(){
   // Relabel the visible all-records filter without changing its data-filter behavior.
   const allTab=tabs.querySelector('[data-filter="all"]');
   if(allTab)allTab.textContent='Xtream';
-  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261107-mobile-fit';document.head.appendChild(sheet);
+  const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href='/assets/personal-import.css?v=20261118-clean-cards';document.head.appendChild(sheet);
   button=document.createElement('button');button.type='button';button.className='mx-import-trigger';button.textContent='Import';
   tabs.appendChild(button);
   section=document.createElement('section');section.className='mx-import-xtream';section.id='mx-import-xtream';
