@@ -183,7 +183,7 @@ function updateDialog(){
   '<textarea rows="12" id="mx-import-text" dir="ltr" spellcheck="false"></textarea>'+
   '<p id="mx-import-result" role="status"></p>'+
   '<div class="mx-import-controls"><button id="mx-import-cancel" type="button">Cancel</button>'+
-  '<button id="mx-import-save" type="button">Import & Save</button></div></section>';
+  '<button id="mx-import-save" type="button">Save</button></div></section>';
   document.body.appendChild(modal);
   const input=modal.querySelector('#mx-import-text');
   const status=modal.querySelector('#mx-import-result');
@@ -194,7 +194,7 @@ function updateDialog(){
     mode=next;
     heading.textContent=mode==='playlist'?'M3U Playlist':'Xtream';
     input.placeholder='';
-    save.textContent=mode==='playlist'?'Save Playlists':'Import & Save';
+    save.textContent='Save';
     status.textContent='';
     modal.querySelectorAll('[data-import-mode]').forEach(button=>{
       const active=button.dataset.importMode===mode;
