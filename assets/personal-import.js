@@ -61,8 +61,20 @@ function importBatch(raw){
     const after=text.slice(match.index+original.length,urls[i+1]?.index??text.length);
     const extractedUsername=after.match(/\b(?:username|user|login)\s*[:=]\s*([^\s\\]+)/i)?.[1]||'';
     const extractedPassword=after.match(/\b(?:password|pass|pwd)\s*[:=]\s*([^\s\\]+)/i)?.[1]||'';
-    const user=url.searchParams.get('username')||url.searchParams.get('user')||extractedUsername;
-    const pass=url.searchParams.get('password')||url.searchParams.get('pass')||extractedPassword;
+    let user=url.searchParams.get('username')||url.searchParams.get('user')||extractedUsername;
+    let pass=url.searchParams.get('password')||url.searchParams.get('pass')||extractedPassword;
+    // Also accept an explicit three-line block: endpoint / username / password.
+    // Keep this fallback separate from labeled credentials and playlist URLs.
+    if(!user&&!pass&&!isPlaylist(url)&&!url.search&&!url.hash&&!url.username&&!url.password){
+      const beforeLine=text.slice(0,match.index).split(/\r\n|\n|\r/).pop();
+      const following=after.split(/\r\n|\n|\r/);
+      const sameLine=following.shift();
+      const fields=following.map(line=>line.trim()).filter(Boolean);
+      if(!beforeLine.trim()&&!sameLine.trim()&&fields.length===2&&
+        fields.every(value=>/^\S+$/.test(value)&&!/(?:^https?:\/\/|^(?:username|user|login|password|pass|pwd)[:=])/i.test(value))){
+        [user,pass]=fields;
+      }
+    }
     const endpoint=original.match(/^https?:\/\/[^\/?#|]+/i)?.[0]||url.origin;
     const xtream=user&&pass;
     const playlist=isPlaylist(url);
