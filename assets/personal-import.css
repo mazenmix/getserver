@@ -1,6 +1,6 @@
 
 /* Owner-only, browser-local update UI. No account data is delivered to GitHub. */
-.tabs .mx-import-trigger{display:inline-flex!important;align-items:center;justify-content:center;border-radius:9px;background:#252b3b;border:1px solid #48506b;color:#f2f4ff;padding:9px 13px;font-size:12px;font-weight:800;cursor:pointer}
+.tabs .mx-import-trigger{display:inline-flex!important;align-items:center;justify-content:center;border-radius:9px;background:#252b3b;border:1px solid #48506b;color:#f2f4ff;padding:9px 13px;font-size:12px;font-weight:400;cursor:pointer}
 .tabs .mx-import-trigger:hover{border-color:#ff8ba6;background:#33223d}
 .mx-import-xtream{margin:12px 0 24px}
 .mx-import-xtream[hidden],.mx-import-backdrop[hidden]{display:none!important}
