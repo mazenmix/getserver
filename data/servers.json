@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T01:13:25Z",
+  "updated_at": "2026-11-22T07:59:14Z",
   "last_deep_scan": "2026-11-22T01:13:25Z",
   "deep_scan_completed": true,
   "sources": {
@@ -13,7 +13,7 @@
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
-      "found": 216
+      "found": 144
     }
   },
   "items": [
