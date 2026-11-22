@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish safe, short previews of public Telegram posts from two channels.
+"""Publish safe, short previews of public Telegram posts from configured channels.
 
 Credentials and raw full post bodies must never be stored or published.
 Historical fallback entries are summaries reconstructed from indexed post links.
@@ -151,7 +151,9 @@ def main():
     sources, successes = {}, 0
     for source in CHANNELS:
         try:
-            posts = fetch_channel(source, depth)
+            # Backfill newly added sources on their first successful sync.
+            was_indexed = previous.get("sources", {}).get(source, {}).get("status") == "ok"
+            posts = fetch_channel(source, 55 if not was_indexed else depth)
             successes += 1
             for item in posts:
                 merged[item["id"]] = item
