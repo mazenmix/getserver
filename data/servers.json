@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T15:55:17Z",
+  "updated_at": "2026-11-22T21:22:32Z",
   "last_deep_scan": "2026-11-22T01:13:25Z",
   "deep_scan_completed": true,
   "sources": {
@@ -14,9 +14,349 @@
     "StbEmucodesStalkerPortal": {
       "status": "ok",
       "found": 144
+    },
+    "satglobaltv": {
+      "status": "ok",
+      "found": 766
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6210-345a6d8050701d",
+      "type": "mac",
+      "server": "http://gfr5.mi20.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6210",
+      "date": "2026-11-22T17:09:58+00:00"
+    },
+    {
+      "id": "satglobaltv-6209-d640b1759c2203",
+      "type": "xtream",
+      "server": "http://abidtech.org:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6209",
+      "date": "2026-11-22T17:09:46+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-f8dddd78738c47",
+      "type": "xtream",
+      "server": "http://supott74.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-d3fa63cac36f9a",
+      "type": "xtream",
+      "server": "http://mastercdn.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-cdd0eda5a9039b",
+      "type": "xtream",
+      "server": "http://t77ert.top:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-b6d616f00b0bf4",
+      "type": "xtream",
+      "server": "http://www.vivatvs.uk:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-b334cf1e6ccfed",
+      "type": "xtream",
+      "server": "http://proiptv.co:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-ae0f999e68a26b",
+      "type": "xtream",
+      "server": "http://8kstronk.online:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-a9ce13022e0f1e",
+      "type": "xtream",
+      "server": "http://fr.fess.ch:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-9d710ff308747c",
+      "type": "xtream",
+      "server": "http://sansat.cc:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-9bd8bccb23af90",
+      "type": "xtream",
+      "server": "http://ng.vivasat.de:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-83ca6d15649beb",
+      "type": "xtream",
+      "server": "http://yobzk119.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-83c8762484b22d",
+      "type": "xtream",
+      "server": "http://sts.mydroon.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-58d1199364d962",
+      "type": "xtream",
+      "server": "http://octopustv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-4679f04e85d82d",
+      "type": "xtream",
+      "server": "http://khdzikjhd.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-35791bcc5f2397",
+      "type": "xtream",
+      "server": "http://mitvpro.online:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-281c3493de2d02",
+      "type": "xtream",
+      "server": "http://pal-sat.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6208-12e9bd5c2ac36b",
+      "type": "xtream",
+      "server": "http://grace4k.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6208",
+      "date": "2026-11-22T17:09:24+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-fbe858a1ce81dd",
+      "type": "xtream",
+      "server": "http://bntvs.com:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-fa1dfc5ea2b162",
+      "type": "xtream",
+      "server": "http://mundo2.vip",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-ebee384162f55f",
+      "type": "xtream",
+      "server": "http://vip.millenium.live:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-e7b126618f2bac",
+      "type": "xtream",
+      "server": "https://csxex.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-ca7baed2e54f97",
+      "type": "xtream",
+      "server": "http://tvsc.online",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-b8bf3449ff3ab5",
+      "type": "xtream",
+      "server": "https://forsale.godaddy.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-a381d94235b168",
+      "type": "xtream",
+      "server": "http://team.plus-stream.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-a0327a011a0816",
+      "type": "xtream",
+      "server": "http://dns.smartplayhdtv.xyz",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-78387f1d7056fb",
+      "type": "xtream",
+      "server": "http://mwplay.top",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-65b453a15d827b",
+      "type": "xtream",
+      "server": "https://vlue.life",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-5c579edc3f3b5f",
+      "type": "xtream",
+      "server": "https://aasd.fun",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-5809d4f21aa003",
+      "type": "xtream",
+      "server": "https://play83.top",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-53d7ff71f8293e",
+      "type": "xtream",
+      "server": "http://sulorwater.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-530fd2045fee0e",
+      "type": "xtream",
+      "server": "http://hsneu.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-52c07a38c0137b",
+      "type": "xtream",
+      "server": "https://185.143.196.35",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-4b3210e199b03e",
+      "type": "xtream",
+      "server": "http://jabawalkies.club:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-220ce516ee00bb",
+      "type": "xtream",
+      "server": "http://oygsnuh86f45.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-070c50854fe303",
+      "type": "xtream",
+      "server": "http://aft65.ddns.me:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-04d94ad77a7589",
+      "type": "xtream",
+      "server": "http://galaxypro.online:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-01f6a96624d373",
+      "type": "xtream",
+      "server": "http://jufnvqdf.extatlas.com:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6207-009dd4760c6ef1",
+      "type": "xtream",
+      "server": "https://menanews.live",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6207",
+      "date": "2026-11-22T17:09:03+00:00"
+    },
+    {
+      "id": "satglobaltv-6205-7851fcaeb9fd10",
+      "type": "mac",
+      "server": "http://tv.fusion4k.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6205",
+      "date": "2026-11-22T01:15:58+00:00"
+    },
+    {
+      "id": "satglobaltv-6205-5943be4c20a180",
+      "type": "mac",
+      "server": "http://169.197.141.116:63431/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6205",
+      "date": "2026-11-22T01:15:58+00:00"
+    },
+    {
+      "id": "satglobaltv-6204-91feb12eb5da5d",
+      "type": "xtream",
+      "server": "http://best-8k.org:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6204",
+      "date": "2026-11-22T01:15:32+00:00"
+    },
     {
       "id": "AisosElho-210-f51b52312616c4",
       "type": "xtream",
@@ -56,6 +396,14 @@
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/209",
       "date": "2026-11-16T20:44:02+00:00"
+    },
+    {
+      "id": "satglobaltv-6188-0251190dc1140b",
+      "type": "xtream",
+      "server": "http://tvmovie.cc:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6188",
+      "date": "2026-11-13T11:31:24+00:00"
     },
     {
       "id": "AisosElho-208-c8a849a8cac1d8",
@@ -530,6 +878,14 @@
       "date": "2026-09-15T20:51:33+00:00"
     },
     {
+      "id": "satglobaltv-5998-d6703a65df2953",
+      "type": "xtream",
+      "server": "http://scorpioniptv.com:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5998",
+      "date": "2026-09-10T16:11:58+00:00"
+    },
+    {
       "id": "AisosElho-176-d9dd0b625667f1",
       "type": "mac",
       "server": "http://dreamlandfx.com:8080/c/",
@@ -578,6 +934,22 @@
       "date": "2026-09-08T09:24:21+00:00"
     },
     {
+      "id": "satglobaltv-5989-40194551382e64",
+      "type": "mac",
+      "server": "http://zenroom.live/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5989",
+      "date": "2026-09-07T20:40:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5987-15fa905c7c4114",
+      "type": "mac",
+      "server": "http://old.viewtv.me/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5987",
+      "date": "2026-09-06T11:52:17+00:00"
+    },
+    {
       "id": "AisosElho-174-7b80b5aa302935",
       "type": "xtream",
       "server": "http://gamingtuga.xyz:80",
@@ -610,12 +982,244 @@
       "date": "2026-09-05T16:38:17+00:00"
     },
     {
+      "id": "satglobaltv-5983-ad8ef45ea34f9a",
+      "type": "mac",
+      "server": "http://nexusconnects.org/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5983",
+      "date": "2026-09-05T16:10:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5983-4f46cfcc031344",
+      "type": "mac",
+      "server": "http://pro.premiummrzoo.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5983",
+      "date": "2026-09-05T16:10:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5983-10c58d13e1a196",
+      "type": "mac",
+      "server": "http://line.godofiptv.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5983",
+      "date": "2026-09-05T16:10:18+00:00"
+    },
+    {
       "id": "AisosElho-173-ddf657d630d94c",
       "type": "xtream",
       "server": "http://fltv.xyz:80",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/173",
       "date": "2026-09-02T21:54:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5976-e91d6727b74290",
+      "type": "mac",
+      "server": "http://watchingt.site:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5976",
+      "date": "2026-09-02T15:14:02+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-fdb32fb88d549e",
+      "type": "mac",
+      "server": "http://nxtbox.uk/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-f9920cc5f2e807",
+      "type": "mac",
+      "server": "http://mag.trexlive.me/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-edc7c844da7aef",
+      "type": "mac",
+      "server": "http://line.iptvgoat.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-d9a27d806dcc9b",
+      "type": "mac",
+      "server": "http://main.light-ott.net/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-d478e639be92ff",
+      "type": "mac",
+      "server": "http://tkiptv.net/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-cdb9176a38d184",
+      "type": "mac",
+      "server": "http://103.176.90.186/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-b6ec6dc34a3cff",
+      "type": "mac",
+      "server": "http://saray68.darktv.nl/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-9d5a9a58b1d611",
+      "type": "mac",
+      "server": "http://d.tvdark.eu/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-80038035887816",
+      "type": "mac",
+      "server": "http://trxx.in/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-627d279f60d106",
+      "type": "mac",
+      "server": "http://globalgnet2.live/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-5feefb34faf59b",
+      "type": "mac",
+      "server": "http://185.80.197.39/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-56cc5b00964d98",
+      "type": "mac",
+      "server": "http://suiptv265.xyz/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-5433ef48a7724b",
+      "type": "mac",
+      "server": "http://mag.jee-ott.xyz/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-4f59fbe87cba92",
+      "type": "mac",
+      "server": "http://plpls-lite.ch/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-4bc594b36d5f51",
+      "type": "mac",
+      "server": "http://skunkytv.live/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-429711cb833731",
+      "type": "mac",
+      "server": "http://4kpro2.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-3772a55a0fa8c2",
+      "type": "mac",
+      "server": "http://line.vueott.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-3638946a0a3d62",
+      "type": "mac",
+      "server": "http://yo-yo.sbs/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-33c73243777632",
+      "type": "mac",
+      "server": "http://line.hostytv.store/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-314aab058c3549",
+      "type": "mac",
+      "server": "http://44.vb4444.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-2ce33aa3fdb7dc",
+      "type": "mac",
+      "server": "http://d.devtv.cc/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-2c2b15c91f7df5",
+      "type": "mac",
+      "server": "http://xpone.nl/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-24befb0b60ef20",
+      "type": "mac",
+      "server": "http://wowtv.cc/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-195fdc0610d570",
+      "type": "mac",
+      "server": "http://10431-plan.ott-cdn.me/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5975-1521c0abe3dbda",
+      "type": "mac",
+      "server": "http://innovationdns.eu/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5975",
+      "date": "2026-09-02T15:13:25+00:00"
     },
     {
       "id": "AisosElho-170-cb8d5f3592e579",
@@ -682,12 +1286,44 @@
       "date": "2026-09-01T16:33:18+00:00"
     },
     {
+      "id": "satglobaltv-5973-a93b391a3dc5e4",
+      "type": "mac",
+      "server": "http://4y-ott.online:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5973",
+      "date": "2026-09-01T16:15:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5973-95ed8d338787da",
+      "type": "mac",
+      "server": "http://91.208.115.23:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5973",
+      "date": "2026-09-01T16:15:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5973-0257ea548ddbbc",
+      "type": "mac",
+      "server": "http://mag.tiger-ott.net:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5973",
+      "date": "2026-09-01T16:15:15+00:00"
+    },
+    {
       "id": "AisosElho-168-e6bf29e983dc47",
       "type": "xtream",
       "server": "http://bitnew.site:80",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/168",
       "date": "2026-08-31T23:04:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5967-be7b40d5ed925c",
+      "type": "mac",
+      "server": "http://sp.initv.be/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5967",
+      "date": "2026-08-30T16:43:25+00:00"
     },
     {
       "id": "AisosElho-166-ffd3ac3528a160",
@@ -786,6 +1422,158 @@
       "date": "2026-08-29T11:08:09+00:00"
     },
     {
+      "id": "satglobaltv-5962-eae8e6c5aadfc1",
+      "type": "xtream",
+      "server": "http://hardcoremedia.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-e1032fed5b81fd",
+      "type": "mac",
+      "server": "http://5.mdtv.me/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-da26e2a56480d1",
+      "type": "xtream",
+      "server": "http://vt4k.org:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-c96f0fe344463d",
+      "type": "xtream",
+      "server": "http://ibovul.top:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-beec700c0caa1f",
+      "type": "xtream",
+      "server": "http://anovanatho.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-b8d485c4128fd5",
+      "type": "mac",
+      "server": "http://ip73.ip-5-196-40.eu:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-ab2417e53a6a9d",
+      "type": "xtream",
+      "server": "http://novatv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-9b9022661a9fb3",
+      "type": "xtream",
+      "server": "http://cf.cdn-90.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-8e0c79739a374f",
+      "type": "mac",
+      "server": "http://line.umetop.pro:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-8ce6ae3dd5ba6f",
+      "type": "xtream",
+      "server": "http://line.king-4k.cc:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-8cc276944b5bf4",
+      "type": "xtream",
+      "server": "http://forevertv.me:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-84ba6dc6e3c851",
+      "type": "mac",
+      "server": "http://black.opabtv.org:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-834a7729561573",
+      "type": "xtream",
+      "server": "http://mogr.magiclive.xyz:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-6f1bf9570ada31",
+      "type": "xtream",
+      "server": "http://line.here846px.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-695274886a953b",
+      "type": "xtream",
+      "server": "http://line.4k-beast.top:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-2b8459d4a9b918",
+      "type": "xtream",
+      "server": "http://app.agametv.com:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-03093194b6c92a",
+      "type": "xtream",
+      "server": "http://xsgswkzc.msgssmart.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5962-02ab68c379f02b",
+      "type": "xtream",
+      "server": "http://main.light-ott.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5962",
+      "date": "2026-08-29T03:32:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5961-011d01a7efde19",
+      "type": "mac",
+      "server": "http://tatatv.cc:80/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5961",
+      "date": "2026-08-29T03:31:26+00:00"
+    },
+    {
       "id": "AisosElho-163-b2692459255c5f",
       "type": "xtream",
       "server": "http://fx0101.com:8080",
@@ -872,6 +1660,38 @@
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/153",
       "date": "2026-08-17T23:29:40+00:00"
+    },
+    {
+      "id": "satglobaltv-5908-a20dd536cf4fe9",
+      "type": "mac",
+      "server": "http://line.moja-teve9.me:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5908",
+      "date": "2026-08-16T14:52:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5908-83fab1637250f4",
+      "type": "mac",
+      "server": "http://178.63.13.164:88/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5908",
+      "date": "2026-08-16T14:52:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5907-02f219187bfbfb",
+      "type": "mac",
+      "server": "http://line.4k-beast.top:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5907",
+      "date": "2026-08-16T14:51:57+00:00"
+    },
+    {
+      "id": "satglobaltv-5904-c7977df6783e88",
+      "type": "mac",
+      "server": "http://45.159.94.49:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5904",
+      "date": "2026-08-16T05:01:23+00:00"
     },
     {
       "id": "StbEmucodesStalkerPortal-5411-180921a5d0f092",
@@ -978,6 +1798,86 @@
       "date": "2026-08-15T18:24:39+00:00"
     },
     {
+      "id": "satglobaltv-5902-9c6fcb6fc4c7f1",
+      "type": "mac",
+      "server": "http://ultav3.me/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5902",
+      "date": "2026-08-15T18:07:10+00:00"
+    },
+    {
+      "id": "satglobaltv-5902-2a57f3c70efde2",
+      "type": "xtream",
+      "server": "http://ultratv.one:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5902",
+      "date": "2026-08-15T18:07:10+00:00"
+    },
+    {
+      "id": "satglobaltv-5899-089a37db24f9d9",
+      "type": "mac",
+      "server": "http://8k.coxtv.live/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5899",
+      "date": "2026-08-15T16:13:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5895-0281dbe924b6f6",
+      "type": "mac",
+      "server": "http://main.light-ott.net:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5895",
+      "date": "2026-08-14T00:08:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5891-82756f246ad9f6",
+      "type": "xtream",
+      "server": "http://lordstreams.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5891",
+      "date": "2026-08-12T17:41:30+00:00"
+    },
+    {
+      "id": "satglobaltv-5888-fece41b3125bea",
+      "type": "xtream",
+      "server": "http://hushaxx.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5888",
+      "date": "2026-08-11T11:50:13+00:00"
+    },
+    {
+      "id": "satglobaltv-5888-f17d5c75ccef16",
+      "type": "xtream",
+      "server": "http://mag.jee-ott.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5888",
+      "date": "2026-08-11T11:50:13+00:00"
+    },
+    {
+      "id": "satglobaltv-5888-6d63d3446c7d6e",
+      "type": "xtream",
+      "server": "http://eliplay.onl:8089",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5888",
+      "date": "2026-08-11T11:50:13+00:00"
+    },
+    {
+      "id": "satglobaltv-5876-f671f7050c888d",
+      "type": "mac",
+      "server": "http://mag.tivi-one-iptv.net/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5876",
+      "date": "2026-08-08T06:32:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5875-752508a8ea7070",
+      "type": "mac",
+      "server": "http://chaotic-streams.cc/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5875",
+      "date": "2026-08-08T06:31:46+00:00"
+    },
+    {
       "id": "StbEmucodesStalkerPortal-5394-30d4ebd685c7df",
       "type": "mac",
       "server": "http://chaotic-streams.cc/c/",
@@ -1032,6 +1932,14 @@
       "source": "StbEmucodesStalkerPortal",
       "post_url": "https://t.me/StbEmucodesStalkerPortal/5387",
       "date": "2026-08-07T22:42:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5872-4465054edde549",
+      "type": "mac",
+      "server": "http://main.light-ott.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5872",
+      "date": "2026-08-07T14:24:01+00:00"
     },
     {
       "id": "StbEmucodesStalkerPortal-5385-5a5a30e1c0a896",
@@ -1104,6 +2012,38 @@
       "source": "StbEmucodesStalkerPortal",
       "post_url": "https://t.me/StbEmucodesStalkerPortal/5376",
       "date": "2026-08-07T08:39:37+00:00"
+    },
+    {
+      "id": "satglobaltv-5869-670ddf4d6b0d7f",
+      "type": "mac",
+      "server": "http://tv.saartv.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5869",
+      "date": "2026-08-07T02:21:41+00:00"
+    },
+    {
+      "id": "satglobaltv-5862-716d9d3446a31d",
+      "type": "mac",
+      "server": "http://panel.onair8k.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5862",
+      "date": "2026-08-04T14:17:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5860-e5a478ec8419e6",
+      "type": "mac",
+      "server": "http://lefanten.com:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5860",
+      "date": "2026-08-04T08:42:54+00:00"
+    },
+    {
+      "id": "satglobaltv-5858-f2f78dce1edfcf",
+      "type": "mac",
+      "server": "http://89.187.191.54/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5858",
+      "date": "2026-08-04T08:42:09+00:00"
     },
     {
       "id": "StbEmucodesStalkerPortal-5373-997eda29bf32db",
@@ -1634,6 +2574,30 @@
       "date": "2026-07-11T08:32:34+00:00"
     },
     {
+      "id": "satglobaltv-5798-c9c8954ffa22dc",
+      "type": "mac",
+      "server": "http://45.139.122.199:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5798",
+      "date": "2026-07-11T00:00:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5798-8d6e4095712a23",
+      "type": "mac",
+      "server": "http://tvmoultv.xyz/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5798",
+      "date": "2026-07-11T00:00:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5798-7b43657f812f35",
+      "type": "mac",
+      "server": "http://vod.supremetv.live:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5798",
+      "date": "2026-07-11T00:00:08+00:00"
+    },
+    {
       "id": "StbEmucodesStalkerPortal-5309-e51584f8a4df75",
       "type": "mac",
       "server": "http://vod.supremetv.live:80/c/",
@@ -1858,6 +2822,22 @@
       "date": "2026-07-01T16:18:58+00:00"
     },
     {
+      "id": "satglobaltv-5757-51c9f21dcf27cb",
+      "type": "xtream",
+      "server": "http://pandaiptv.club:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5757",
+      "date": "2026-06-23T12:25:54+00:00"
+    },
+    {
+      "id": "satglobaltv-5755-5442778f20b1a5",
+      "type": "xtream",
+      "server": "http://line.iptv-4k.cc:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5755",
+      "date": "2026-06-23T12:24:40+00:00"
+    },
+    {
       "id": "AisosElho-145-776d6b7d3040b3",
       "type": "xtream",
       "server": "http://luna4k.eu:80",
@@ -2058,6 +3038,14 @@
       "date": "2026-06-18T23:33:10+00:00"
     },
     {
+      "id": "satglobaltv-5736-809688dfb99ca4",
+      "type": "xtream",
+      "server": "http://strong8k.art:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5736",
+      "date": "2026-06-17T22:02:46+00:00"
+    },
+    {
       "id": "StbEmucodesStalkerPortal-5237-21cdda542b2440",
       "type": "mac",
       "server": "http://atk97.online/c/",
@@ -2178,6 +3166,14 @@
       "date": "2026-06-12T18:16:04+00:00"
     },
     {
+      "id": "satglobaltv-5712-c94cc2dd737b36",
+      "type": "mac",
+      "server": "http://pro.most8knew.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5712",
+      "date": "2026-06-11T07:00:17+00:00"
+    },
+    {
       "id": "StbEmucodesStalkerPortal-5206-fb7439f14d5f2a",
       "type": "mac",
       "server": "http://play-plus.net/c/",
@@ -2274,12 +3270,276 @@
       "date": "2026-06-03T14:09:05+00:00"
     },
     {
+      "id": "satglobaltv-5622-ee16aea6be306f",
+      "type": "xtream",
+      "server": "http://2fn8r-m4lv3l-site:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5622",
+      "date": "2026-05-18T03:57:14+00:00"
+    },
+    {
+      "id": "satglobaltv-5604-6923aadabfaaf4",
+      "type": "xtream",
+      "server": "http://1tv41.icu:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5604",
+      "date": "2026-05-13T15:59:44+00:00"
+    },
+    {
+      "id": "satglobaltv-5583-1d485241347c55",
+      "type": "xtream",
+      "server": "http://2026go.org:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5583",
+      "date": "2026-05-07T14:24:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5557-c8b4b71c4aa160",
+      "type": "xtream",
+      "server": "http://vlue.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5557",
+      "date": "2026-04-27T08:22:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5554-e7f656bfa2ae60",
+      "type": "mac",
+      "server": "http://myxpanel.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5554",
+      "date": "2026-04-26T02:55:51+00:00"
+    },
+    {
+      "id": "satglobaltv-5551-edf6d9eb1c61ef",
+      "type": "xtream",
+      "server": "http://canal-pro.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5551",
+      "date": "2026-04-25T13:09:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5548-e389c5812cd7ec",
+      "type": "xtream",
+      "server": "http://xlion.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5548",
+      "date": "2026-04-24T21:18:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5548-ae2c271e3941f1",
+      "type": "xtream",
+      "server": "http://ivsport.tv:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5548",
+      "date": "2026-04-24T21:18:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5547-0b3003c23dab63",
+      "type": "mac",
+      "server": "http://play.tatasky.xyz/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5547",
+      "date": "2026-04-24T08:22:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5546-f9356837145459",
+      "type": "xtream",
+      "server": "http://srv3.site:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5546",
+      "date": "2026-04-24T06:57:20+00:00"
+    },
+    {
+      "id": "satglobaltv-5546-4d41bd253b0813",
+      "type": "xtream",
+      "server": "http://fastream.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5546",
+      "date": "2026-04-24T06:57:20+00:00"
+    },
+    {
+      "id": "satglobaltv-5546-2a15d942a6dc9d",
+      "type": "xtream",
+      "server": "http://uv0wwz.m4rv3l.online:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5546",
+      "date": "2026-04-24T06:57:20+00:00"
+    },
+    {
+      "id": "satglobaltv-5545-28737e4de02e75",
+      "type": "mac",
+      "server": "http://portal.airtel4k.co/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5545",
+      "date": "2026-04-23T23:01:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5543-48167f57394da0",
+      "type": "xtream",
+      "server": "http://sawa2025.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5543",
+      "date": "2026-04-23T20:09:13+00:00"
+    },
+    {
+      "id": "satglobaltv-5542-11fe4011872d2d",
+      "type": "mac",
+      "server": "http://12876-ottawa.cdn-o2.me:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5542",
+      "date": "2026-04-23T05:10:01+00:00"
+    },
+    {
+      "id": "satglobaltv-5541-6d99e7e1c5b2af",
+      "type": "xtream",
+      "server": "http://tigeriptv.co:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5541",
+      "date": "2026-04-23T04:44:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5541-66210005fd5ef3",
+      "type": "xtream",
+      "server": "http://izletvhd.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5541",
+      "date": "2026-04-23T04:44:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5541-15bba26b17ee1e",
+      "type": "xtream",
+      "server": "http://calcioa.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5541",
+      "date": "2026-04-23T04:44:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5539-e59b1a3f0c45f7",
+      "type": "mac",
+      "server": "http://main2.cwdn.cx/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5539",
+      "date": "2026-04-23T04:42:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5538-b5911f06fa30d1",
+      "type": "xtream",
+      "server": "http://ddgo770.live:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5538",
+      "date": "2026-04-22T21:01:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5536-9ff2240648a5bc",
+      "type": "xtream",
+      "server": "http://configuration.tn:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5536",
+      "date": "2026-04-22T12:09:23+00:00"
+    },
+    {
+      "id": "satglobaltv-5533-8593d2d12e70a0",
+      "type": "xtream",
+      "server": "http://anadolutv.shop:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5533",
+      "date": "2026-04-21T19:52:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5533-100028ba78ea9c",
+      "type": "xtream",
+      "server": "http://apexelite.xyz:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5533",
+      "date": "2026-04-21T19:52:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5532-e41a1ad2af58f2",
+      "type": "xtream",
+      "server": "http://bgdc.live:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5532",
+      "date": "2026-04-21T00:45:26+00:00"
+    },
+    {
+      "id": "satglobaltv-5528-0e3ac6be1f583c",
+      "type": "xtream",
+      "server": "http://narab.live:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5528",
+      "date": "2026-04-19T07:56:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5526-e2265d44dbb57b",
+      "type": "xtream",
+      "server": "https://whatsapp.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5526",
+      "date": "2026-04-18T20:00:03+00:00"
+    },
+    {
+      "id": "satglobaltv-5525-e808969e94f831",
+      "type": "xtream",
+      "server": "http://opplex.org:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5525",
+      "date": "2026-04-18T07:54:54+00:00"
+    },
+    {
+      "id": "satglobaltv-5521-88cdd28c2b0013",
+      "type": "xtream",
+      "server": "http://lite.globaldomain.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5521",
+      "date": "2026-04-16T18:05:26+00:00"
+    },
+    {
+      "id": "satglobaltv-5520-1dc1a0a02afe38",
+      "type": "xtream",
+      "server": "http://pure.ottpro2.org:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5520",
+      "date": "2026-04-16T18:04:11+00:00"
+    },
+    {
       "id": "AisosElho-141-ff75e8c89f9ac2",
       "type": "xtream",
       "server": "http://tigeriptv.co:25461",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/141",
       "date": "2026-04-14T18:42:53+00:00"
+    },
+    {
+      "id": "satglobaltv-5518-e7fa25ca3689cc",
+      "type": "xtream",
+      "server": "http://darpro4k.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5518",
+      "date": "2026-04-14T07:39:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5518-b657b0015728e3",
+      "type": "xtream",
+      "server": "http://z5g.8623cevu.top:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5518",
+      "date": "2026-04-14T07:39:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5518-97f3f4a792839d",
+      "type": "xtream",
+      "server": "http://darhome.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5518",
+      "date": "2026-04-14T07:39:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5515-5e26f4c76566b8",
+      "type": "xtream",
+      "server": "http://psk-sdk.ddno.us:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5515",
+      "date": "2026-04-13T20:42:29+00:00"
     },
     {
       "id": "AisosElho-140-4e78580c144fcd",
@@ -2290,12 +3550,92 @@
       "date": "2026-04-12T19:35:42+00:00"
     },
     {
+      "id": "satglobaltv-5512-4415b05ea45a42",
+      "type": "xtream",
+      "server": "http://aserv.one:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5512",
+      "date": "2026-04-12T12:25:30+00:00"
+    },
+    {
+      "id": "satglobaltv-5509-ec6c1168bc3081",
+      "type": "xtream",
+      "server": "http://117.55.202.58:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5509",
+      "date": "2026-04-12T05:19:04+00:00"
+    },
+    {
+      "id": "satglobaltv-5509-4bf64f6f755f21",
+      "type": "xtream",
+      "server": "http://117.55.202.58",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5509",
+      "date": "2026-04-12T05:19:04+00:00"
+    },
+    {
+      "id": "satglobaltv-5509-23b5bb63e52cc2",
+      "type": "xtream",
+      "server": "http://configuration.tn",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5509",
+      "date": "2026-04-12T05:19:04+00:00"
+    },
+    {
       "id": "AisosElho-139-14f9ad9deb695a",
       "type": "mac",
       "server": "http://pro2.premium-tv.org:80/c/",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/139",
       "date": "2026-04-11T19:05:46+00:00"
+    },
+    {
+      "id": "satglobaltv-5508-48578fe0db7bcf",
+      "type": "xtream",
+      "server": "http://jdpro.magiclive.xyz:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5508",
+      "date": "2026-04-11T05:35:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5508-0a68fb41e009b2",
+      "type": "xtream",
+      "server": "http://wickediptv.xyz:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5508",
+      "date": "2026-04-11T05:35:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5506-6528da9241f68d",
+      "type": "xtream",
+      "server": "http://premium.ottpro2.org:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5506",
+      "date": "2026-04-10T06:57:44+00:00"
+    },
+    {
+      "id": "satglobaltv-5505-44499cf0faaa24",
+      "type": "xtream",
+      "server": "http://013tv.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5505",
+      "date": "2026-04-09T22:28:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5504-d2516e12ee7e6c",
+      "type": "xtream",
+      "server": "http://dreamtv22.info:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5504",
+      "date": "2026-04-09T22:27:55+00:00"
+    },
+    {
+      "id": "satglobaltv-5504-042e1f41deb271",
+      "type": "xtream",
+      "server": "http://privatese.noip.uno:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5504",
+      "date": "2026-04-09T22:27:55+00:00"
     },
     {
       "id": "AisosElho-138-bf8f5509dc195e",
@@ -2328,6 +3668,1638 @@
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/137",
       "date": "2026-04-08T20:35:35+00:00"
+    },
+    {
+      "id": "satglobaltv-5500-a57f0c382711bb",
+      "type": "xtream",
+      "server": "http://0earz0q6.sttto-ott-2026.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5500",
+      "date": "2026-04-08T00:30:31+00:00"
+    },
+    {
+      "id": "satglobaltv-5500-1d8c903dd9afb2",
+      "type": "xtream",
+      "server": "http://ott.iptvpro2.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5500",
+      "date": "2026-04-08T00:30:31+00:00"
+    },
+    {
+      "id": "satglobaltv-5499-e11645f84b8e00",
+      "type": "xtream",
+      "server": "http://087ea805a32488bc3052858e744f1c0f.ar.iscaja.me:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5499",
+      "date": "2026-04-07T08:17:27+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-b7f85d67a1ca1d",
+      "type": "mac",
+      "server": "http://alpha6-tx.me/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-a372fc1f791d85",
+      "type": "mac",
+      "server": "http://vod.supremetv.live/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-89e1a2446f32f4",
+      "type": "mac",
+      "server": "http://weaseltv.live/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-760b17f632881c",
+      "type": "mac",
+      "server": "http://sbhgoldpro.org/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-41ba7969876b7b",
+      "type": "mac",
+      "server": "http://eu.majes-line.co/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-2714810288ab65",
+      "type": "mac",
+      "server": "http://io.t-v.io/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-1fc34a02b0479f",
+      "type": "mac",
+      "server": "http://prm.worldip.nl/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5496-1aa846191e1439",
+      "type": "mac",
+      "server": "http://globalgnet.live/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5496",
+      "date": "2026-04-06T18:40:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5488-978fe3a818138a",
+      "type": "xtream",
+      "server": "http://line.nspivot.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5488",
+      "date": "2026-04-03T19:13:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5488-4a30fbc597bb4b",
+      "type": "xtream",
+      "server": "http://latinapro.net:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5488",
+      "date": "2026-04-03T19:13:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5488-284be87d317f3e",
+      "type": "xtream",
+      "server": "http://udk60.mar31.site:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5488",
+      "date": "2026-04-03T19:13:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5488-19a30dc939635b",
+      "type": "xtream",
+      "server": "http://atrupo4k.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5488",
+      "date": "2026-04-03T19:13:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5484-f7e1af1e68cdd4",
+      "type": "xtream",
+      "server": "http://ag154.pjoejsvp.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5484",
+      "date": "2026-04-02T07:00:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5484-ead2d7e7b361df",
+      "type": "xtream",
+      "server": "http://myxpanel.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5484",
+      "date": "2026-04-02T07:00:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5484-2866a1d2b969e0",
+      "type": "xtream",
+      "server": "http://ipro.premium-ott3.com:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5484",
+      "date": "2026-04-02T07:00:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5481-1749b9b55c8a61",
+      "type": "mac",
+      "server": "http://pro.business-cdn-8kpro.ru:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5481",
+      "date": "2026-04-01T17:23:51+00:00"
+    },
+    {
+      "id": "satglobaltv-5479-cec030f4375ebf",
+      "type": "xtream",
+      "server": "https://ottpro.iptvpro2.com:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5479",
+      "date": "2026-04-01T02:04:44+00:00"
+    },
+    {
+      "id": "satglobaltv-5478-5100c16af54e12",
+      "type": "xtream",
+      "server": "http://tvpromas.com:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5478",
+      "date": "2026-04-01T02:04:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5477-d335adaef2838f",
+      "type": "xtream",
+      "server": "http://iptvnords.club:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5477",
+      "date": "2026-03-31T14:37:54+00:00"
+    },
+    {
+      "id": "satglobaltv-5476-d79fd6406f7ba5",
+      "type": "xtream",
+      "server": "http://tv.proyectox.vip:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5476",
+      "date": "2026-03-31T14:08:35+00:00"
+    },
+    {
+      "id": "satglobaltv-5476-5953402c02b303",
+      "type": "xtream",
+      "server": "http://sars.nobip.online:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5476",
+      "date": "2026-03-31T14:08:35+00:00"
+    },
+    {
+      "id": "satglobaltv-5476-0977f360ec6efb",
+      "type": "xtream",
+      "server": "http://omelhor.sucodefruta.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5476",
+      "date": "2026-03-31T14:08:35+00:00"
+    },
+    {
+      "id": "satglobaltv-5475-cefbc5e71d4b05",
+      "type": "xtream",
+      "server": "http://snap-tr.org",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5475",
+      "date": "2026-03-30T22:48:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5475-c86bbf9e1ebcc4",
+      "type": "xtream",
+      "server": "http://live.mypythontv.com:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5475",
+      "date": "2026-03-30T22:48:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5475-a355cf967aa2d2",
+      "type": "xtream",
+      "server": "http://goldenpro.xyz",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5475",
+      "date": "2026-03-30T22:48:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5475-8662d6318de7e4",
+      "type": "xtream",
+      "server": "http://royalibox.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5475",
+      "date": "2026-03-30T22:48:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5472-c9d3d5cbe37eb3",
+      "type": "xtream",
+      "server": "http://mag.france-ott.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5472",
+      "date": "2026-03-29T08:28:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5472-36229556a922a1",
+      "type": "xtream",
+      "server": "http://famad7d.click:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5472",
+      "date": "2026-03-29T08:28:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5472-28a2dfb1455ba9",
+      "type": "xtream",
+      "server": "http://boxserver.live:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5472",
+      "date": "2026-03-29T08:28:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5471-e577564184611a",
+      "type": "xtream",
+      "server": "http://notmepro.com:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5471",
+      "date": "2026-03-29T07:40:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5471-848edb79d9179a",
+      "type": "xtream",
+      "server": "http://nocable.cc:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5471",
+      "date": "2026-03-29T07:40:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5466-707d79f4f44609",
+      "type": "mac",
+      "server": "http://new.jiotv.be/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5466",
+      "date": "2026-03-28T02:33:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5461-b1de51071bc59b",
+      "type": "xtream",
+      "server": "http://iptv.watchhd.cc:5050",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5461",
+      "date": "2026-03-26T22:01:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5459-8d94d1af8b744e",
+      "type": "xtream",
+      "server": "http://teratv.online",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5459",
+      "date": "2026-03-25T09:38:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5458-a3f4e5b8f97127",
+      "type": "xtream",
+      "server": "http://bo.myirtv.biz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5458",
+      "date": "2026-03-25T09:38:01+00:00"
+    },
+    {
+      "id": "satglobaltv-5456-f8e2b4e0760edf",
+      "type": "xtream",
+      "server": "http://supjaa.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5456",
+      "date": "2026-03-24T22:31:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5456-d6058ddc20d55a",
+      "type": "xtream",
+      "server": "http://duplextv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5456",
+      "date": "2026-03-24T22:31:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5456-99333309d074d1",
+      "type": "xtream",
+      "server": "http://eaiptv.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5456",
+      "date": "2026-03-24T22:31:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5456-8df284a8c31ce4",
+      "type": "xtream",
+      "server": "http://star10.co:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5456",
+      "date": "2026-03-24T22:31:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5454-13aed3a41d9889",
+      "type": "xtream",
+      "server": "http://tv.host-pro2.com:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5454",
+      "date": "2026-03-24T21:19:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5453-226c72befe426e",
+      "type": "xtream",
+      "server": "http://d4kip.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5453",
+      "date": "2026-03-24T21:18:54+00:00"
+    },
+    {
+      "id": "satglobaltv-5452-3c90ff030d2e39",
+      "type": "xtream",
+      "server": "http://cms-ar.accesss.me:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5452",
+      "date": "2026-03-24T12:15:41+00:00"
+    },
+    {
+      "id": "satglobaltv-5451-2dad51fb4210f7",
+      "type": "xtream",
+      "server": "http://751463820722.elg-26.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5451",
+      "date": "2026-03-24T12:15:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5446-3787d7388deb27",
+      "type": "xtream",
+      "server": "http://ottpro.iptvpro2.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5446",
+      "date": "2026-03-23T03:56:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5444-38f8364d4bbe29",
+      "type": "xtream",
+      "server": "http://4kplus.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5444",
+      "date": "2026-03-22T13:59:29+00:00"
+    },
+    {
+      "id": "satglobaltv-5443-290f1caf31579c",
+      "type": "xtream",
+      "server": "http://istarpro.org:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5443",
+      "date": "2026-03-22T07:59:13+00:00"
+    },
+    {
+      "id": "satglobaltv-5436-60d2ed926ccbdf",
+      "type": "mac",
+      "server": "http://watch.doordarshan.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5436",
+      "date": "2026-03-21T04:32:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5433-dacd0a442ada93",
+      "type": "xtream",
+      "server": "http://maveniptv.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5433",
+      "date": "2026-03-20T21:50:50+00:00"
+    },
+    {
+      "id": "satglobaltv-5433-c7419a4262e3eb",
+      "type": "xtream",
+      "server": "http://illusion8k.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5433",
+      "date": "2026-03-20T21:50:50+00:00"
+    },
+    {
+      "id": "satglobaltv-5432-8135a6d9ba738b",
+      "type": "xtream",
+      "server": "http://proxpanel.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5432",
+      "date": "2026-03-20T09:11:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5432-7b606c38389f39",
+      "type": "xtream",
+      "server": "http://dss2.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5432",
+      "date": "2026-03-20T09:11:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5432-280b797010297a",
+      "type": "xtream",
+      "server": "http://vipketseyket.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5432",
+      "date": "2026-03-20T09:11:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5430-533a8d9348c1ea",
+      "type": "mac",
+      "server": "http://181.233.127.187:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5430",
+      "date": "2026-03-20T05:18:30+00:00"
+    },
+    {
+      "id": "satglobaltv-5428-d754b30f44fcb0",
+      "type": "xtream",
+      "server": "http://300300.org",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5428",
+      "date": "2026-03-19T08:46:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5426-88da9c0cc514a5",
+      "type": "xtream",
+      "server": "http://rch55.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5426",
+      "date": "2026-03-19T02:44:03+00:00"
+    },
+    {
+      "id": "satglobaltv-5423-1728e34f829f8f",
+      "type": "xtream",
+      "server": "http://tv.plusglobal.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5423",
+      "date": "2026-03-18T17:17:37+00:00"
+    },
+    {
+      "id": "satglobaltv-5421-00268b27bb5065",
+      "type": "xtream",
+      "server": "http://europe.cdneu.pro",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5421",
+      "date": "2026-03-18T06:09:38+00:00"
+    },
+    {
+      "id": "satglobaltv-5419-6d93da2bb5cda8",
+      "type": "xtream",
+      "server": "http://xvip.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5419",
+      "date": "2026-03-17T19:01:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5416-3683fa6e6dadcf",
+      "type": "xtream",
+      "server": "http://bestcast.pro:8089",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5416",
+      "date": "2026-03-17T01:45:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5415-60849ebff2b966",
+      "type": "xtream",
+      "server": "http://extarv3.me",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5415",
+      "date": "2026-03-16T19:36:11+00:00"
+    },
+    {
+      "id": "satglobaltv-5413-efedb796644a0c",
+      "type": "mac",
+      "server": "http://51.222.42.44/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5413",
+      "date": "2026-03-16T17:48:13+00:00"
+    },
+    {
+      "id": "satglobaltv-5412-6691c69a79f34c",
+      "type": "mac",
+      "server": "http://starhub.pro/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5412",
+      "date": "2026-03-16T16:57:44+00:00"
+    },
+    {
+      "id": "satglobaltv-5410-ed8863cd9d3baa",
+      "type": "xtream",
+      "server": "http://extarv3.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5410",
+      "date": "2026-03-15T20:57:14+00:00"
+    },
+    {
+      "id": "satglobaltv-5409-50aa4605aa7f8c",
+      "type": "xtream",
+      "server": "http://tv.startseven.tn:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5409",
+      "date": "2026-03-15T04:23:46+00:00"
+    },
+    {
+      "id": "satglobaltv-5408-da2713a807b9a2",
+      "type": "xtream",
+      "server": "http://boxviptv.net:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5408",
+      "date": "2026-03-14T17:56:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5408-b17d5fe1f6e824",
+      "type": "xtream",
+      "server": "http://7smartvplayers.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5408",
+      "date": "2026-03-14T17:56:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5408-941067ea7895a5",
+      "type": "xtream",
+      "server": "http://shoesports.site:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5408",
+      "date": "2026-03-14T17:56:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5408-79350c7eda217a",
+      "type": "xtream",
+      "server": "http://go.plugtv.fun:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5408",
+      "date": "2026-03-14T17:56:34+00:00"
+    },
+    {
+      "id": "satglobaltv-5407-bc8e4e7905f0b7",
+      "type": "xtream",
+      "server": "http://aumaletv.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5407",
+      "date": "2026-03-14T07:27:26+00:00"
+    },
+    {
+      "id": "satglobaltv-5404-21592c03dc28d4",
+      "type": "xtream",
+      "server": "http://tv.eurofrends.com:5500",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5404",
+      "date": "2026-03-13T22:41:40+00:00"
+    },
+    {
+      "id": "satglobaltv-5403-38f63f584ab89c",
+      "type": "xtream",
+      "server": "http://dream4k.co:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5403",
+      "date": "2026-03-13T22:25:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5401-f9eed9d1802114",
+      "type": "xtream",
+      "server": "http://prize10.ddns.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5401",
+      "date": "2026-03-13T09:20:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5401-c1840dcff2693f",
+      "type": "xtream",
+      "server": "http://bmedia.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5401",
+      "date": "2026-03-13T09:20:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5401-85db545359c16d",
+      "type": "xtream",
+      "server": "http://portal-iptv.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5401",
+      "date": "2026-03-13T09:20:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5395-9804a1a450ad63",
+      "type": "mac",
+      "server": "http://iptvs4.ultapulta.com/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5395",
+      "date": "2026-03-12T06:12:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5395-1a3352dccf8420",
+      "type": "mac",
+      "server": "http://germany.uireseller.xyz:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5395",
+      "date": "2026-03-12T06:12:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5395-0bde2104c898b6",
+      "type": "mac",
+      "server": "http://tr.redatvgold.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5395",
+      "date": "2026-03-12T06:12:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5394-c1fba901ae8484",
+      "type": "xtream",
+      "server": "http://opplex.ch:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5394",
+      "date": "2026-03-12T03:29:23+00:00"
+    },
+    {
+      "id": "satglobaltv-5394-2c5166e99c3627",
+      "type": "xtream",
+      "server": "http://opplex.tv:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5394",
+      "date": "2026-03-12T03:29:23+00:00"
+    },
+    {
+      "id": "satglobaltv-5393-f93ac41eefd1ba",
+      "type": "xtream",
+      "server": "http://10k.lucastv.pro",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5393",
+      "date": "2026-03-12T02:11:29+00:00"
+    },
+    {
+      "id": "satglobaltv-5389-ae9daa0b036101",
+      "type": "mac",
+      "server": "http://i511hq.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5389",
+      "date": "2026-03-11T08:21:23+00:00"
+    },
+    {
+      "id": "satglobaltv-5389-39f1dfca02ef2b",
+      "type": "mac",
+      "server": "http://supzak.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5389",
+      "date": "2026-03-11T08:21:23+00:00"
+    },
+    {
+      "id": "satglobaltv-5387-5b38b0f0002334",
+      "type": "xtream",
+      "server": "http://bouygues.r1v.us:7070",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5387",
+      "date": "2026-03-10T16:57:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5385-95288d15879a35",
+      "type": "xtream",
+      "server": "http://front-main.eagle-4k.me",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5385",
+      "date": "2026-03-10T08:31:11+00:00"
+    },
+    {
+      "id": "satglobaltv-5383-4b63d938c7d066",
+      "type": "mac",
+      "server": "http://alpha-2ott.me:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5383",
+      "date": "2026-03-09T21:26:47+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-d2b7b1d6ad1e05",
+      "type": "mac",
+      "server": "http://line.watchtivo-8k.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-c14e70e3921118",
+      "type": "mac",
+      "server": "http://hottest.vip/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-ad692bdf411706",
+      "type": "mac",
+      "server": "http://mag.dino.ws/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-a9c1add07916e6",
+      "type": "mac",
+      "server": "http://line.trx-ott.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-5f300f604b289e",
+      "type": "mac",
+      "server": "http://m.devbox.tv/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-4c48e11ef00f35",
+      "type": "mac",
+      "server": "http://mag.liveott.ru/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-3c703944706fce",
+      "type": "mac",
+      "server": "http://apksmart.dino.ws/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5380-027259b4a5112f",
+      "type": "mac",
+      "server": "http://iptv.darktv.in/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5380",
+      "date": "2026-03-09T07:06:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5379-8e00d8818d07ef",
+      "type": "mac",
+      "server": "http://filex.me:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5379",
+      "date": "2026-03-09T02:36:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5377-9974a0341313b5",
+      "type": "mac",
+      "server": "http://backup.xp1.tv/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5377",
+      "date": "2026-03-08T21:27:53+00:00"
+    },
+    {
+      "id": "satglobaltv-5373-e096c77fbdadc3",
+      "type": "xtream",
+      "server": "http://kstv.us:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5373",
+      "date": "2026-03-08T04:23:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5372-62fe3bb2df9424",
+      "type": "xtream",
+      "server": "http://4kgood.org:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5372",
+      "date": "2026-03-07T20:28:39+00:00"
+    },
+    {
+      "id": "satglobaltv-5371-f52201b67c17ca",
+      "type": "xtream",
+      "server": "http://mitv.netinc.org:8691",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5371",
+      "date": "2026-03-07T07:37:59+00:00"
+    },
+    {
+      "id": "satglobaltv-5371-54d3911c116e24",
+      "type": "xtream",
+      "server": "http://78.159.101.179:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5371",
+      "date": "2026-03-07T07:37:59+00:00"
+    },
+    {
+      "id": "satglobaltv-5371-32e4a078bad22b",
+      "type": "xtream",
+      "server": "http://magott.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5371",
+      "date": "2026-03-07T07:37:59+00:00"
+    },
+    {
+      "id": "satglobaltv-5371-1cf1f437aaefcc",
+      "type": "xtream",
+      "server": "http://cm1.portaltv.info:777",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5371",
+      "date": "2026-03-07T07:37:59+00:00"
+    },
+    {
+      "id": "satglobaltv-5370-965e002180e60e",
+      "type": "mac",
+      "server": "http://line.tvdsz.cc/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5370",
+      "date": "2026-03-07T07:37:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5370-83cd281bafb43e",
+      "type": "mac",
+      "server": "http://iptv.jalatech.ps/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5370",
+      "date": "2026-03-07T07:37:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5370-598636cacafb43",
+      "type": "mac",
+      "server": "http://23.88.84.253:2080/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5370",
+      "date": "2026-03-07T07:37:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5370-29ae71ae01c05c",
+      "type": "mac",
+      "server": "http://pon.access.ly/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5370",
+      "date": "2026-03-07T07:37:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5370-1667c0c04ad929",
+      "type": "mac",
+      "server": "http://esogalaxiusnext.tech/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5370",
+      "date": "2026-03-07T07:37:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5368-10b3c9d2e546a8",
+      "type": "xtream",
+      "server": "http://mh.smpy24.live:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5368",
+      "date": "2026-03-07T05:06:26+00:00"
+    },
+    {
+      "id": "satglobaltv-5365-cca4b5718158db",
+      "type": "xtream",
+      "server": "http://magic-tv.live:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5365",
+      "date": "2026-03-06T14:11:29+00:00"
+    },
+    {
+      "id": "satglobaltv-5354-6acb2c455c323d",
+      "type": "xtream",
+      "server": "http://live.lynxiptv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5354",
+      "date": "2026-03-04T19:46:52+00:00"
+    },
+    {
+      "id": "satglobaltv-5353-cb8d9b71d1ebd1",
+      "type": "xtream",
+      "server": "http://zonacero.lat:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5353",
+      "date": "2026-03-04T08:01:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5353-b6627b123048c4",
+      "type": "xtream",
+      "server": "http://matrivagoweb.xyz:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5353",
+      "date": "2026-03-04T08:01:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5351-0213043f8f6119",
+      "type": "xtream",
+      "server": "http://aqmar4k.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5351",
+      "date": "2026-03-03T20:06:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5349-be5e0902bb30c6",
+      "type": "xtream",
+      "server": "http://u-on.co:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5349",
+      "date": "2026-03-03T19:09:37+00:00"
+    },
+    {
+      "id": "satglobaltv-5348-93c5eae1b5bdc9",
+      "type": "xtream",
+      "server": "http://look4k.net",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5348",
+      "date": "2026-03-03T04:05:12+00:00"
+    },
+    {
+      "id": "satglobaltv-5347-0309c11337f080",
+      "type": "xtream",
+      "server": "http://aromatv.co:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5347",
+      "date": "2026-03-02T23:18:07+00:00"
+    },
+    {
+      "id": "satglobaltv-5345-1dbf610bb6e2d2",
+      "type": "xtream",
+      "server": "http://hydratv.cc:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5345",
+      "date": "2026-03-02T20:31:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5344-be5be887c03666",
+      "type": "xtream",
+      "server": "http://u.goldeniptv.com:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5344",
+      "date": "2026-03-02T06:05:01+00:00"
+    },
+    {
+      "id": "satglobaltv-5341-97bd29e2184072",
+      "type": "xtream",
+      "server": "http://line.ottcdn.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5341",
+      "date": "2026-03-01T17:59:51+00:00"
+    },
+    {
+      "id": "satglobaltv-5336-bf85ef7becd1c9",
+      "type": "xtream",
+      "server": "http://hlaa-tv.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5336",
+      "date": "2026-03-01T00:28:57+00:00"
+    },
+    {
+      "id": "satglobaltv-5335-679795d4184714",
+      "type": "xtream",
+      "server": "http://armorip.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5335",
+      "date": "2026-03-01T00:28:35+00:00"
+    },
+    {
+      "id": "satglobaltv-5328-0b180250d5eb16",
+      "type": "xtream",
+      "server": "http://doubleclicktv.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5328",
+      "date": "2026-02-27T17:00:21+00:00"
+    },
+    {
+      "id": "satglobaltv-5323-82a204ba3f32b9",
+      "type": "mac",
+      "server": "http://4k1.new4k.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5323",
+      "date": "2026-02-26T16:38:41+00:00"
+    },
+    {
+      "id": "satglobaltv-5322-c781d0781c159f",
+      "type": "xtream",
+      "server": "http://live.tvpython.net:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5322",
+      "date": "2026-02-26T00:15:29+00:00"
+    },
+    {
+      "id": "satglobaltv-5322-394bf48ea3134a",
+      "type": "xtream",
+      "server": "http://splustv.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5322",
+      "date": "2026-02-26T00:15:29+00:00"
+    },
+    {
+      "id": "satglobaltv-5320-9b7b714987e098",
+      "type": "xtream",
+      "server": "http://fortv.cc:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5320",
+      "date": "2026-02-25T04:21:03+00:00"
+    },
+    {
+      "id": "satglobaltv-5317-1c71ca92ace703",
+      "type": "mac",
+      "server": "http://esogalaxiusnext.tech:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5317",
+      "date": "2026-02-23T18:15:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5311-af3c9bacc96669",
+      "type": "xtream",
+      "server": "http://saad.lol:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5311",
+      "date": "2026-02-21T22:08:50+00:00"
+    },
+    {
+      "id": "satglobaltv-5311-620341292018e0",
+      "type": "xtream",
+      "server": "http://wnwntv.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5311",
+      "date": "2026-02-21T22:08:50+00:00"
+    },
+    {
+      "id": "satglobaltv-5311-0e057c597d0e3c",
+      "type": "xtream",
+      "server": "http://splus.smartres.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5311",
+      "date": "2026-02-21T22:08:50+00:00"
+    },
+    {
+      "id": "satglobaltv-5308-410d9f26d77f7b",
+      "type": "xtream",
+      "server": "http://skymedia-ott.online:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5308",
+      "date": "2026-02-21T06:10:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5306-ab4879e25f6bc0",
+      "type": "mac",
+      "server": "http://dhdtv.xyz/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5306",
+      "date": "2026-02-21T04:35:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5306-4b777ced600c12",
+      "type": "mac",
+      "server": "https://whatsapp.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5306",
+      "date": "2026-02-21T04:35:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5306-19876aaad218fd",
+      "type": "mac",
+      "server": "http://cf.goldiptv.ink/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5306",
+      "date": "2026-02-21T04:35:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5306-0910588e69f834",
+      "type": "mac",
+      "server": "http://i511hq.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5306",
+      "date": "2026-02-21T04:35:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5305-ef4c52cb5eaee7",
+      "type": "xtream",
+      "server": "http://servx.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5305",
+      "date": "2026-02-21T03:06:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5301-8d6881b8e1ffdf",
+      "type": "xtream",
+      "server": "http://abcdf-2026.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5301",
+      "date": "2026-02-20T03:03:10+00:00"
+    },
+    {
+      "id": "satglobaltv-5301-2db397a73df817",
+      "type": "xtream",
+      "server": "http://ismarter.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5301",
+      "date": "2026-02-20T03:03:10+00:00"
+    },
+    {
+      "id": "satglobaltv-5298-6e1654bf4fae5b",
+      "type": "xtream",
+      "server": "http://eagle2024.xyz:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5298",
+      "date": "2026-02-19T17:51:11+00:00"
+    },
+    {
+      "id": "satglobaltv-5295-fa82677c29288e",
+      "type": "mac",
+      "server": "http://livebox.pro/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5295",
+      "date": "2026-02-19T04:02:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-f4dc23edd3d838",
+      "type": "xtream",
+      "server": "http://planetline.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-f4668dd211c9a5",
+      "type": "xtream",
+      "server": "http://theta.pamdas.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-ea35dc5ea14611",
+      "type": "xtream",
+      "server": "http://1.iptv22.is",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-dda68a13ac3c3e",
+      "type": "xtream",
+      "server": "http://sudaka.link:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-d3292bb5c9dd35",
+      "type": "xtream",
+      "server": "http://bluetv.cc:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-c8021986771b33",
+      "type": "xtream",
+      "server": "http://sahratv.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-c2dd69d38c3305",
+      "type": "xtream",
+      "server": "http://ozk.879652.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-b8070924ab0f10",
+      "type": "xtream",
+      "server": "http://xxip9.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-aff458744e63d3",
+      "type": "xtream",
+      "server": "http://smartho.st:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-aadea10b3e6f36",
+      "type": "xtream",
+      "server": "http://vipbayi303.top:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-a29327ac07afcf",
+      "type": "xtream",
+      "server": "http://mytvstream.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-9c0222fd441acf",
+      "type": "xtream",
+      "server": "http://tvmate.icu:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-8f329dacf9eeca",
+      "type": "xtream",
+      "server": "http://filex.me:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-8a37c056a532c0",
+      "type": "xtream",
+      "server": "http://trsat.nl:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-89e2b0813e0a59",
+      "type": "xtream",
+      "server": "http://tv.zapping.life:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-74fa1e824f320f",
+      "type": "xtream",
+      "server": "http://tkosportz.live:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-3f69caf118a952",
+      "type": "xtream",
+      "server": "http://fhd.mail123.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-3aa468e4f9ce85",
+      "type": "xtream",
+      "server": "http://teratv.info",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-347007218d3534",
+      "type": "xtream",
+      "server": "http://hookpro.site",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5294-10706347b8efa6",
+      "type": "xtream",
+      "server": "http://sm213.xyz",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5294",
+      "date": "2026-02-19T04:01:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5293-cf87191990fa6c",
+      "type": "xtream",
+      "server": "http://176.123.9.60:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5293",
+      "date": "2026-02-18T22:14:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5293-587ad9da6490b4",
+      "type": "xtream",
+      "server": "http://c.proserver.in:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5293",
+      "date": "2026-02-18T22:14:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5293-4fa43be53f9f3b",
+      "type": "xtream",
+      "server": "http://vipfdedgevv.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5293",
+      "date": "2026-02-18T22:14:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5293-2a35c24dbfce70",
+      "type": "xtream",
+      "server": "http://noprnsbwobb.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5293",
+      "date": "2026-02-18T22:14:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5289-66a11a8edf6b6d",
+      "type": "mac",
+      "server": "http://tr.redatvgold.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5289",
+      "date": "2026-02-18T05:48:42+00:00"
+    },
+    {
+      "id": "satglobaltv-5287-6d2f8bce0789e8",
+      "type": "xtream",
+      "server": "http://yoogoldtv.click:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5287",
+      "date": "2026-02-17T16:38:24+00:00"
+    },
+    {
+      "id": "satglobaltv-5286-8f82b4308e2db1",
+      "type": "mac",
+      "server": "http://z.zcatt.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5286",
+      "date": "2026-02-17T15:51:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5284-0c496f2cf63e1f",
+      "type": "xtream",
+      "server": "http://3482581.tvway.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5284",
+      "date": "2026-02-17T02:54:39+00:00"
+    },
+    {
+      "id": "satglobaltv-5283-72eb75de7ab817",
+      "type": "mac",
+      "server": "http://tv.starsharetv.com:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5283",
+      "date": "2026-02-17T02:54:14+00:00"
+    },
+    {
+      "id": "satglobaltv-5279-ac83b0c66bc171",
+      "type": "mac",
+      "server": "http://play.zee5.live/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5279",
+      "date": "2026-02-16T04:14:23+00:00"
+    },
+    {
+      "id": "satglobaltv-5275-4aefc2262e34a8",
+      "type": "xtream",
+      "server": "http://ext2707.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5275",
+      "date": "2026-02-15T21:33:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5273-306710c10a703c",
+      "type": "xtream",
+      "server": "http://185.160.192.64:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5273",
+      "date": "2026-02-15T17:16:58+00:00"
+    },
+    {
+      "id": "satglobaltv-5268-02b539c9ff36d5",
+      "type": "mac",
+      "server": "http://pal.alphatx.me:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5268",
+      "date": "2026-02-15T03:49:55+00:00"
+    },
+    {
+      "id": "satglobaltv-5264-db2833c1a2fca4",
+      "type": "xtream",
+      "server": "http://matrix.raedisd.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5264",
+      "date": "2026-02-14T17:06:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5263-57c6f410fea600",
+      "type": "xtream",
+      "server": "http://10k.lucastv.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5263",
+      "date": "2026-02-14T14:55:08+00:00"
+    },
+    {
+      "id": "satglobaltv-5257-b81f37b8b15447",
+      "type": "xtream",
+      "server": "http://front-main.eagle-4k.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5257",
+      "date": "2026-02-13T21:17:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5252-c189cfa3c7abf2",
+      "type": "mac",
+      "server": "http://dhoom4u.me/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5252",
+      "date": "2026-02-13T05:19:52+00:00"
+    },
+    {
+      "id": "satglobaltv-5249-f1238ef2c0da4a",
+      "type": "xtream",
+      "server": "http://myxpanel.pro",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5249",
+      "date": "2026-02-12T20:57:27+00:00"
+    },
+    {
+      "id": "satglobaltv-5246-ede0dead9defcc",
+      "type": "xtream",
+      "server": "http://tv.diablotv.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5246",
+      "date": "2026-02-12T17:46:16+00:00"
+    },
+    {
+      "id": "satglobaltv-5240-2cc0f36c9b677d",
+      "type": "xtream",
+      "server": "http://al01.nxtbox.de",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5240",
+      "date": "2026-02-11T17:03:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5238-e62bd378154720",
+      "type": "xtream",
+      "server": "http://geniuscore.uk:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5238",
+      "date": "2026-02-11T17:01:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5238-da93750e675409",
+      "type": "xtream",
+      "server": "http://cairogroup.uk:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5238",
+      "date": "2026-02-11T17:01:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5238-6dbb876ace8cca",
+      "type": "xtream",
+      "server": "http://00322.xyz:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5238",
+      "date": "2026-02-11T17:01:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5238-4b75be3d2e2cc3",
+      "type": "xtream",
+      "server": "http://hptv.pro:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5238",
+      "date": "2026-02-11T17:01:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5238-2154349a08b876",
+      "type": "xtream",
+      "server": "http://zupasar.online:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5238",
+      "date": "2026-02-11T17:01:06+00:00"
+    },
+    {
+      "id": "satglobaltv-5237-466d4e9c4497bd",
+      "type": "mac",
+      "server": "http://ttt22.net:80/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5237",
+      "date": "2026-02-11T13:00:55+00:00"
+    },
+    {
+      "id": "satglobaltv-5234-661d4024d8a249",
+      "type": "xtream",
+      "server": "http://4kplatine.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5234",
+      "date": "2026-02-10T23:50:46+00:00"
+    },
+    {
+      "id": "satglobaltv-5233-b00b9c93102f5a",
+      "type": "xtream",
+      "server": "http://supersonictv.live:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5233",
+      "date": "2026-02-10T20:37:55+00:00"
+    },
+    {
+      "id": "satglobaltv-5232-c902382ea497e5",
+      "type": "mac",
+      "server": "http://smart4k.me/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5232",
+      "date": "2026-02-10T19:24:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5231-b1b40673235adf",
+      "type": "xtream",
+      "server": "http://tv.starsharetv.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5231",
+      "date": "2026-02-10T17:49:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5231-70d3c29d5f8d34",
+      "type": "mac",
+      "server": "http://starshare.one:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5231",
+      "date": "2026-02-10T17:49:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5224-6bd439f264a2a3",
+      "type": "mac",
+      "server": "http://cc2025.net/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5224",
+      "date": "2026-02-10T01:24:57+00:00"
+    },
+    {
+      "id": "satglobaltv-5223-b86944a2cbac75",
+      "type": "xtream",
+      "server": "http://rochno.com:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5223",
+      "date": "2026-02-09T22:43:07+00:00"
+    },
+    {
+      "id": "satglobaltv-5221-9172fef73850c2",
+      "type": "xtream",
+      "server": "http://line.fullir.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5221",
+      "date": "2026-02-09T19:05:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5221-89bf928560cbb8",
+      "type": "xtream",
+      "server": "http://bo.ib3mix.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5221",
+      "date": "2026-02-09T19:05:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5221-4e0266252dab88",
+      "type": "xtream",
+      "server": "http://line.irav25.biz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5221",
+      "date": "2026-02-09T19:05:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5220-dbb8017c50af2f",
+      "type": "xtream",
+      "server": "http://arstest.org:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5220",
+      "date": "2026-02-09T15:08:45+00:00"
+    },
+    {
+      "id": "satglobaltv-5219-db6d43cf572763",
+      "type": "xtream",
+      "server": "http://yusfiptv.ddvs.net:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5219",
+      "date": "2026-02-09T15:02:20+00:00"
+    },
+    {
+      "id": "satglobaltv-5218-e584e0e8c7fbac",
+      "type": "xtream",
+      "server": "http://protzpwcf1.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5218",
+      "date": "2026-02-08T21:26:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5217-5a0a5c95cb6754",
+      "type": "xtream",
+      "server": "http://gomn.xplus2.xyz:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5217",
+      "date": "2026-02-08T21:17:01+00:00"
+    },
+    {
+      "id": "satglobaltv-5213-ad2d1c4e3724a8",
+      "type": "xtream",
+      "server": "http://nawrastv.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5213",
+      "date": "2026-02-08T14:33:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5211-18a14b875aecad",
+      "type": "xtream",
+      "server": "http://sonymax.org:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5211",
+      "date": "2026-02-08T10:26:50+00:00"
     },
     {
       "id": "AisosElho-135-b967a98c38347f",
@@ -2370,12 +5342,524 @@
       "date": "2026-02-07T07:54:26+00:00"
     },
     {
+      "id": "satglobaltv-5203-c64a2dbc2458d9",
+      "type": "xtream",
+      "server": "http://otv4k.live",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5203",
+      "date": "2026-02-06T17:25:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5203-273f1b2950f10b",
+      "type": "xtream",
+      "server": "http://otv4k.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5203",
+      "date": "2026-02-06T17:25:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5201-28a3595c4d8f11",
+      "type": "mac",
+      "server": "http://official8k.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5201",
+      "date": "2026-02-06T16:29:00+00:00"
+    },
+    {
       "id": "AisosElho-130-25100cc56a9622",
       "type": "xtream",
       "server": "http://vipkendrake.top:8080",
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/130",
       "date": "2026-02-05T21:37:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5195-e0843620276780",
+      "type": "xtream",
+      "server": "http://seliga.fun",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5195",
+      "date": "2026-02-04T18:16:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5195-c3ea7576892b3b",
+      "type": "xtream",
+      "server": "http://nitroscor.xyz",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5195",
+      "date": "2026-02-04T18:16:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5195-66dea970329be8",
+      "type": "xtream",
+      "server": "http://vraws.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5195",
+      "date": "2026-02-04T18:16:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5195-66d7fff8a387b6",
+      "type": "xtream",
+      "server": "http://2025easy.lat",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5195",
+      "date": "2026-02-04T18:16:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5195-55e09b9664668d",
+      "type": "xtream",
+      "server": "http://lmdns.me",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5195",
+      "date": "2026-02-04T18:16:09+00:00"
+    },
+    {
+      "id": "satglobaltv-5191-de67a3df7180d6",
+      "type": "mac",
+      "server": "http://tvstar.top/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5191",
+      "date": "2026-02-03T09:29:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5191-00a0fc9effdd04",
+      "type": "mac",
+      "server": "http://tvstar.top:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5191",
+      "date": "2026-02-03T09:29:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5189-87f0d3c0d4178c",
+      "type": "xtream",
+      "server": "http://teratv.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5189",
+      "date": "2026-02-02T15:32:22+00:00"
+    },
+    {
+      "id": "satglobaltv-5188-941446fc5354a6",
+      "type": "xtream",
+      "server": "http://atlan2025.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5188",
+      "date": "2026-02-02T10:57:44+00:00"
+    },
+    {
+      "id": "satglobaltv-5185-fa92cf70539757",
+      "type": "xtream",
+      "server": "http://max.amigo00.com:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5185",
+      "date": "2026-02-02T06:42:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5185-b4df773aedeb98",
+      "type": "xtream",
+      "server": "http://illusion8k.pro",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5185",
+      "date": "2026-02-02T06:42:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5183-c55f27919d783f",
+      "type": "mac",
+      "server": "http://new.nexatv.be/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5183",
+      "date": "2026-01-31T10:46:53+00:00"
+    },
+    {
+      "id": "satglobaltv-5180-b3aa061f8f5771",
+      "type": "xtream",
+      "server": "http://webhop.live:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5180",
+      "date": "2026-01-31T06:12:02+00:00"
+    },
+    {
+      "id": "satglobaltv-5179-a4bbed0493d6ec",
+      "type": "xtream",
+      "server": "http://super-iptv.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5179",
+      "date": "2026-01-31T06:00:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5176-812bc9ff466ffe",
+      "type": "xtream",
+      "server": "http://premium2.ottpro2.org:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5176",
+      "date": "2026-01-30T23:53:47+00:00"
+    },
+    {
+      "id": "satglobaltv-5176-5d4f9fb7362e09",
+      "type": "xtream",
+      "server": "http://lemon.catchmeifyo.com:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5176",
+      "date": "2026-01-30T23:53:47+00:00"
+    },
+    {
+      "id": "satglobaltv-5175-e72967033b610e",
+      "type": "xtream",
+      "server": "http://dragontv.pro:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5175",
+      "date": "2026-01-30T17:22:07+00:00"
+    },
+    {
+      "id": "satglobaltv-5174-111d4b504e3818",
+      "type": "xtream",
+      "server": "http://fatv.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5174",
+      "date": "2026-01-30T10:20:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5173-9a4c7ee84488cf",
+      "type": "xtream",
+      "server": "http://showplustv.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5173",
+      "date": "2026-01-30T08:52:19+00:00"
+    },
+    {
+      "id": "satglobaltv-5171-bede2fe75c3350",
+      "type": "xtream",
+      "server": "http://hdhd.tk:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5171",
+      "date": "2026-01-30T06:12:27+00:00"
+    },
+    {
+      "id": "satglobaltv-5170-7226929fd8065f",
+      "type": "xtream",
+      "server": "http://tvpro.in:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5170",
+      "date": "2026-01-30T06:12:04+00:00"
+    },
+    {
+      "id": "satglobaltv-5167-f16f52545af17e",
+      "type": "mac",
+      "server": "http://synciptv.org:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5167",
+      "date": "2026-01-29T18:53:46+00:00"
+    },
+    {
+      "id": "satglobaltv-5165-681a4209a72af3",
+      "type": "xtream",
+      "server": "http://dksip.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5165",
+      "date": "2026-01-29T17:31:42+00:00"
+    },
+    {
+      "id": "satglobaltv-5162-e817a0c8630086",
+      "type": "mac",
+      "server": "http://fullhdtv.link:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5162",
+      "date": "2026-01-29T07:53:58+00:00"
+    },
+    {
+      "id": "satglobaltv-5159-1fcc63952619b1",
+      "type": "xtream",
+      "server": "http://yrc.lux-premium-ott.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5159",
+      "date": "2026-01-29T00:54:40+00:00"
+    },
+    {
+      "id": "satglobaltv-5157-d195e736c7e21f",
+      "type": "xtream",
+      "server": "http://pythonlive.qplaytv.net:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5157",
+      "date": "2026-01-28T22:12:00+00:00"
+    },
+    {
+      "id": "satglobaltv-5156-345fc89fcf2735",
+      "type": "mac",
+      "server": "http://watch.doordarshan.cc:80/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5156",
+      "date": "2026-01-28T19:45:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5153-102570572ca1bf",
+      "type": "xtream",
+      "server": "http://44.tvdragon.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5153",
+      "date": "2026-01-28T17:18:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5153-0bf1d3f585c40c",
+      "type": "xtream",
+      "server": "http://b.delta2022.xyz:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5153",
+      "date": "2026-01-28T17:18:28+00:00"
+    },
+    {
+      "id": "satglobaltv-5152-51e7431a9d072f",
+      "type": "xtream",
+      "server": "http://xxtv.me:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5152",
+      "date": "2026-01-28T05:50:24+00:00"
+    },
+    {
+      "id": "satglobaltv-5150-4e25ca12e49484",
+      "type": "xtream",
+      "server": "http://ttv-wink.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5150",
+      "date": "2026-01-27T21:13:17+00:00"
+    },
+    {
+      "id": "satglobaltv-5149-aea9d9822e94ed",
+      "type": "xtream",
+      "server": "http://itcbn.d4ktv.info",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5149",
+      "date": "2026-01-27T08:21:41+00:00"
+    },
+    {
+      "id": "satglobaltv-5147-6b278991426035",
+      "type": "xtream",
+      "server": "http://ginafelea.ddns.net:8008",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5147",
+      "date": "2026-01-27T05:25:05+00:00"
+    },
+    {
+      "id": "satglobaltv-5145-f9b10bcc354472",
+      "type": "xtream",
+      "server": "http://a9.lion.wine",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5145",
+      "date": "2026-01-26T17:21:36+00:00"
+    },
+    {
+      "id": "satglobaltv-5143-906b7fe8033f72",
+      "type": "mac",
+      "server": "http://magic-tv.live:2095/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5143",
+      "date": "2026-01-25T15:08:38+00:00"
+    },
+    {
+      "id": "satglobaltv-5141-f9741916c1a516",
+      "type": "xtream",
+      "server": "http://api.tvtop.cc",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5141",
+      "date": "2026-01-25T10:39:55+00:00"
+    },
+    {
+      "id": "satglobaltv-5140-883382c246ff14",
+      "type": "xtream",
+      "server": "http://mitvpro.site:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5140",
+      "date": "2026-01-25T00:59:57+00:00"
+    },
+    {
+      "id": "satglobaltv-5135-12426e079d8fa7",
+      "type": "mac",
+      "server": "http://firstclass007.com:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5135",
+      "date": "2026-01-23T21:35:15+00:00"
+    },
+    {
+      "id": "satglobaltv-5134-405bd3df814d26",
+      "type": "mac",
+      "server": "http://s1.u-on.to:2095/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5134",
+      "date": "2026-01-23T17:26:29+00:00"
+    },
+    {
+      "id": "satglobaltv-5132-aeebf22bcbfd6c",
+      "type": "xtream",
+      "server": "http://webhop.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5132",
+      "date": "2026-01-23T08:47:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5132-9e0333f8c5b55b",
+      "type": "mac",
+      "server": "http://webhop.xyz:8080/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5132",
+      "date": "2026-01-23T08:47:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5132-232b5c0de7e0d1",
+      "type": "mac",
+      "server": "http://webhop.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5132",
+      "date": "2026-01-23T08:47:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5132-1ffc38dadb1210",
+      "type": "mac",
+      "server": "http://webhop.xyz/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5132",
+      "date": "2026-01-23T08:47:25+00:00"
+    },
+    {
+      "id": "satglobaltv-5131-cd7969fc65dac7",
+      "type": "xtream",
+      "server": "http://starhub.pro:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5131",
+      "date": "2026-01-23T07:49:18+00:00"
+    },
+    {
+      "id": "satglobaltv-5129-00bbc256182a99",
+      "type": "xtream",
+      "server": "http://myserveriptv.com:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5129",
+      "date": "2026-01-23T05:52:43+00:00"
+    },
+    {
+      "id": "satglobaltv-5126-1c0668e1ae8959",
+      "type": "xtream",
+      "server": "http://pxlotv.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5126",
+      "date": "2026-01-23T00:22:32+00:00"
+    },
+    {
+      "id": "satglobaltv-5124-f75a6103648f86",
+      "type": "xtream",
+      "server": "http://magiz.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5124",
+      "date": "2026-01-22T14:01:30+00:00"
+    },
+    {
+      "id": "satglobaltv-5124-4b436e8ef4a459",
+      "type": "xtream",
+      "server": "http://593zona.live:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5124",
+      "date": "2026-01-22T14:01:30+00:00"
+    },
+    {
+      "id": "satglobaltv-5124-10bb01fe56f0e0",
+      "type": "xtream",
+      "server": "http://fiufiu.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5124",
+      "date": "2026-01-22T14:01:30+00:00"
+    },
+    {
+      "id": "satglobaltv-5121-35f0f857953d35",
+      "type": "xtream",
+      "server": "http://tv.123tv.to:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5121",
+      "date": "2026-01-21T19:11:11+00:00"
+    },
+    {
+      "id": "satglobaltv-5119-c08143f1774dc0",
+      "type": "xtream",
+      "server": "http://vipgerretger.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5119",
+      "date": "2026-01-20T19:54:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5119-a9f02c6e7cdf8e",
+      "type": "xtream",
+      "server": "http://ottmedia.pro:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5119",
+      "date": "2026-01-20T19:54:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5119-8e49f420899a41",
+      "type": "xtream",
+      "server": "http://g91live.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5119",
+      "date": "2026-01-20T19:54:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5119-6ffac2ffc047f4",
+      "type": "xtream",
+      "server": "http://45632-royal.ott-cdn.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5119",
+      "date": "2026-01-20T19:54:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5119-09eb8f7f3fdfc3",
+      "type": "xtream",
+      "server": "http://bafn2024.cfd:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5119",
+      "date": "2026-01-20T19:54:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5119-01bce1f37bca66",
+      "type": "xtream",
+      "server": "http://artist21140.cdn-akm.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5119",
+      "date": "2026-01-20T19:54:56+00:00"
+    },
+    {
+      "id": "satglobaltv-5118-81915b0f16ede0",
+      "type": "xtream",
+      "server": "http://forevertv.me:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5118",
+      "date": "2026-01-20T19:53:26+00:00"
+    },
+    {
+      "id": "satglobaltv-5117-90cd21a9545047",
+      "type": "xtream",
+      "server": "http://portal.mngrcwpro.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5117",
+      "date": "2026-01-20T19:52:11+00:00"
+    },
+    {
+      "id": "satglobaltv-5115-239191a9f9202d",
+      "type": "xtream",
+      "server": "http://103.176.90.189:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5115",
+      "date": "2026-01-20T05:17:10+00:00"
+    },
+    {
+      "id": "satglobaltv-5115-1a8496381a4bf5",
+      "type": "xtream",
+      "server": "http://492442377548.elg-26.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5115",
+      "date": "2026-01-20T05:17:10+00:00"
+    },
+    {
+      "id": "satglobaltv-5108-d4661b35cc1b96",
+      "type": "xtream",
+      "server": "http://31.220.78.193:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/5108",
+      "date": "2026-01-17T18:31:26+00:00"
     },
     {
       "id": "AisosElho-129-ed8e0cb98bea27",
@@ -2512,6 +5996,1158 @@
       "source": "AisosElho",
       "post_url": "https://t.me/AisosElho/129",
       "date": "2026-01-08T22:26:30+00:00"
+    },
+    {
+      "id": "satglobaltv-4970-cdfed7585fb211",
+      "type": "mac",
+      "server": "http://ghosttv.art:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4970",
+      "date": "2025-12-28T00:31:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4965-c8bb6ed329dddb",
+      "type": "xtream",
+      "server": "http://sm213.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4965",
+      "date": "2025-12-27T12:06:06+00:00"
+    },
+    {
+      "id": "satglobaltv-4924-6bffeda04b3151",
+      "type": "xtream",
+      "server": "http://bluedk.xyz:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4924",
+      "date": "2025-12-21T18:41:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4922-6f9af949980d8b",
+      "type": "xtream",
+      "server": "http://mhiptv.info:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4922",
+      "date": "2025-12-21T13:10:43+00:00"
+    },
+    {
+      "id": "satglobaltv-4920-3b0d03e9c484ff",
+      "type": "xtream",
+      "server": "http://iptvpe.blogdns.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4920",
+      "date": "2025-12-21T09:37:28+00:00"
+    },
+    {
+      "id": "satglobaltv-4917-dbbf2516ead9ca",
+      "type": "xtream",
+      "server": "http://ipro2.pro2-ott.com:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4917",
+      "date": "2025-12-21T06:51:29+00:00"
+    },
+    {
+      "id": "satglobaltv-4916-1ab04dc56554e6",
+      "type": "mac",
+      "server": "http://line.8k-ott.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4916",
+      "date": "2025-12-21T06:50:27+00:00"
+    },
+    {
+      "id": "satglobaltv-4915-53eaebfacd724d",
+      "type": "xtream",
+      "server": "http://1.mhpro1.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4915",
+      "date": "2025-12-20T22:58:48+00:00"
+    },
+    {
+      "id": "satglobaltv-4912-55b3da53172a97",
+      "type": "xtream",
+      "server": "http://tv.scorpioniptv.org:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4912",
+      "date": "2025-12-20T19:05:55+00:00"
+    },
+    {
+      "id": "satglobaltv-4909-2963dd286ecb4f",
+      "type": "xtream",
+      "server": "http://portal5458.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4909",
+      "date": "2025-12-20T17:14:59+00:00"
+    },
+    {
+      "id": "satglobaltv-4908-b9eb0b5d44e3a8",
+      "type": "xtream",
+      "server": "http://premiumorg2.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4908",
+      "date": "2025-12-20T07:52:17+00:00"
+    },
+    {
+      "id": "satglobaltv-4906-745685522e4eaf",
+      "type": "xtream",
+      "server": "http://tv-smarters-pro.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4906",
+      "date": "2025-12-20T05:45:59+00:00"
+    },
+    {
+      "id": "satglobaltv-4905-97efd0cc73db8c",
+      "type": "mac",
+      "server": "http://app.yupptv.io/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4905",
+      "date": "2025-12-20T05:44:56+00:00"
+    },
+    {
+      "id": "satglobaltv-4904-bb37fab82d0d9e",
+      "type": "mac",
+      "server": "http://new.dittotvv.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4904",
+      "date": "2025-12-20T05:44:19+00:00"
+    },
+    {
+      "id": "satglobaltv-4902-099521f9919160",
+      "type": "xtream",
+      "server": "http://moka-pro.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4902",
+      "date": "2025-12-19T21:20:21+00:00"
+    },
+    {
+      "id": "satglobaltv-4900-a0c2a5170a21a1",
+      "type": "xtream",
+      "server": "http://mhiptv.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4900",
+      "date": "2025-12-19T19:56:29+00:00"
+    },
+    {
+      "id": "satglobaltv-4899-dcc3263f1251bb",
+      "type": "xtream",
+      "server": "http://apsmart.in:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4899",
+      "date": "2025-12-19T18:03:19+00:00"
+    },
+    {
+      "id": "satglobaltv-4896-e76bf4a034c41b",
+      "type": "xtream",
+      "server": "http://iptv-premium-ott.com:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4896",
+      "date": "2025-12-19T05:28:35+00:00"
+    },
+    {
+      "id": "satglobaltv-4896-cec66d63fbeb39",
+      "type": "xtream",
+      "server": "http://1.pot1.fun:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4896",
+      "date": "2025-12-19T05:28:35+00:00"
+    },
+    {
+      "id": "satglobaltv-4895-ba0cea34f347d6",
+      "type": "xtream",
+      "server": "http://iptv.tivifa.com:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4895",
+      "date": "2025-12-18T23:52:43+00:00"
+    },
+    {
+      "id": "satglobaltv-4895-5f7684181aa2fc",
+      "type": "xtream",
+      "server": "http://staqzhxc.qastertv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4895",
+      "date": "2025-12-18T23:52:43+00:00"
+    },
+    {
+      "id": "satglobaltv-4894-c6d2f0b05202dc",
+      "type": "mac",
+      "server": "http://egaletv.cc:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4894",
+      "date": "2025-12-18T20:55:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4894-ab9a3afcbe671e",
+      "type": "mac",
+      "server": "http://egaletv.cc/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4894",
+      "date": "2025-12-18T20:55:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4893-0c10fc15d5867e",
+      "type": "xtream",
+      "server": "http://zain4k.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4893",
+      "date": "2025-12-18T17:10:09+00:00"
+    },
+    {
+      "id": "satglobaltv-4890-e3a7b309b377cc",
+      "type": "mac",
+      "server": "http://fonfogua.pro:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4890",
+      "date": "2025-12-17T23:43:44+00:00"
+    },
+    {
+      "id": "satglobaltv-4890-b74d787572e5a5",
+      "type": "xtream",
+      "server": "http://5tv.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4890",
+      "date": "2025-12-17T23:43:44+00:00"
+    },
+    {
+      "id": "satglobaltv-4890-b6908c8c65b135",
+      "type": "mac",
+      "server": "http://5tv.pro/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4890",
+      "date": "2025-12-17T23:43:44+00:00"
+    },
+    {
+      "id": "satglobaltv-4890-6c8f86dabdc504",
+      "type": "mac",
+      "server": "http://gtaott.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4890",
+      "date": "2025-12-17T23:43:44+00:00"
+    },
+    {
+      "id": "satglobaltv-4890-25f0316aa68ff5",
+      "type": "mac",
+      "server": "http://5tv.pro:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4890",
+      "date": "2025-12-17T23:43:44+00:00"
+    },
+    {
+      "id": "satglobaltv-4890-0b034185033fa7",
+      "type": "xtream",
+      "server": "http://proxpanel.pro",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4890",
+      "date": "2025-12-17T23:43:44+00:00"
+    },
+    {
+      "id": "satglobaltv-4889-abec0ae144f88b",
+      "type": "xtream",
+      "server": "http://livepptv.net",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4889",
+      "date": "2025-12-17T22:31:22+00:00"
+    },
+    {
+      "id": "satglobaltv-4888-d5766234f34fa9",
+      "type": "xtream",
+      "server": "http://sa.savpn.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4888",
+      "date": "2025-12-17T17:06:19+00:00"
+    },
+    {
+      "id": "satglobaltv-4886-480ca515509ad0",
+      "type": "xtream",
+      "server": "http://foli.live:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4886",
+      "date": "2025-12-17T12:06:20+00:00"
+    },
+    {
+      "id": "satglobaltv-4884-a3270a16c79186",
+      "type": "xtream",
+      "server": "http://egaletv.cc:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4884",
+      "date": "2025-12-17T09:03:59+00:00"
+    },
+    {
+      "id": "satglobaltv-4883-d65c78fefa6b36",
+      "type": "mac",
+      "server": "http://hexa.sonyy.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4883",
+      "date": "2025-12-17T08:43:14+00:00"
+    },
+    {
+      "id": "satglobaltv-4881-7859426302ad93",
+      "type": "xtream",
+      "server": "http://940866648342.cdn-eag.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4881",
+      "date": "2025-12-17T08:03:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4881-6c8957b7ab5790",
+      "type": "xtream",
+      "server": "http://940841664728.cdn-eag.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4881",
+      "date": "2025-12-17T08:03:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4881-1003b93b0544a4",
+      "type": "xtream",
+      "server": "http://940880953574.cdn-eag.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4881",
+      "date": "2025-12-17T08:03:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4881-0b42c17cee499b",
+      "type": "xtream",
+      "server": "http://vodafonecom.sbs:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4881",
+      "date": "2025-12-17T08:03:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4879-820813b4306855",
+      "type": "xtream",
+      "server": "http://mrctop.net:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4879",
+      "date": "2025-12-17T05:31:30+00:00"
+    },
+    {
+      "id": "satglobaltv-4878-cfc9b7c21a285c",
+      "type": "xtream",
+      "server": "http://794086475534.cdn-eag.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4878",
+      "date": "2025-12-17T00:29:38+00:00"
+    },
+    {
+      "id": "satglobaltv-4877-822260a7f473ae",
+      "type": "xtream",
+      "server": "http://116342296971.d4ktv.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4877",
+      "date": "2025-12-16T21:55:50+00:00"
+    },
+    {
+      "id": "satglobaltv-4877-1bac762c56b3af",
+      "type": "xtream",
+      "server": "http://fennec.tcode.cc:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4877",
+      "date": "2025-12-16T21:55:50+00:00"
+    },
+    {
+      "id": "satglobaltv-4875-b1ea066fd0ccc0",
+      "type": "xtream",
+      "server": "http://app.gogo-tv.com:2086",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4875",
+      "date": "2025-12-16T17:59:02+00:00"
+    },
+    {
+      "id": "satglobaltv-4874-67a346d7474037",
+      "type": "xtream",
+      "server": "http://jbdtgpmr.eldervpn.xyz",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4874",
+      "date": "2025-12-16T17:50:27+00:00"
+    },
+    {
+      "id": "satglobaltv-4869-29f8f24b0fb0fb",
+      "type": "mac",
+      "server": "http://mag.myox.me:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4869",
+      "date": "2025-12-15T17:47:02+00:00"
+    },
+    {
+      "id": "satglobaltv-4868-b4eddd3f55d617",
+      "type": "xtream",
+      "server": "http://plrs2.ttv-wink.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4868",
+      "date": "2025-12-15T17:28:13+00:00"
+    },
+    {
+      "id": "satglobaltv-4868-0674bf87ca13d9",
+      "type": "xtream",
+      "server": "http://win4kpanel.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4868",
+      "date": "2025-12-15T17:28:13+00:00"
+    },
+    {
+      "id": "satglobaltv-4867-92f00c83017283",
+      "type": "xtream",
+      "server": "http://dlta4k.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4867",
+      "date": "2025-12-15T15:34:34+00:00"
+    },
+    {
+      "id": "satglobaltv-4866-2a1de135b3f6a2",
+      "type": "xtream",
+      "server": "http://eu1.visiolinks.com:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4866",
+      "date": "2025-12-15T15:32:56+00:00"
+    },
+    {
+      "id": "satglobaltv-4861-3f09921745a03c",
+      "type": "mac",
+      "server": "http://portal.elite4k.co/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4861",
+      "date": "2025-12-15T04:45:02+00:00"
+    },
+    {
+      "id": "satglobaltv-4860-ee2aab809cc286",
+      "type": "xtream",
+      "server": "http://sh8kpro.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4860",
+      "date": "2025-12-15T04:44:26+00:00"
+    },
+    {
+      "id": "satglobaltv-4859-5f537916823745",
+      "type": "xtream",
+      "server": "http://funmitra.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4859",
+      "date": "2025-12-14T21:13:33+00:00"
+    },
+    {
+      "id": "satglobaltv-4855-a63cd524f0f34f",
+      "type": "mac",
+      "server": "http://dm.lion-ott.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4855",
+      "date": "2025-12-14T17:13:05+00:00"
+    },
+    {
+      "id": "satglobaltv-4850-fe990b4e576f10",
+      "type": "xtream",
+      "server": "http://alqadi-4k.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4850",
+      "date": "2025-12-14T15:57:22+00:00"
+    },
+    {
+      "id": "satglobaltv-4850-d206330308ba36",
+      "type": "xtream",
+      "server": "http://fuego-iptv.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4850",
+      "date": "2025-12-14T15:57:22+00:00"
+    },
+    {
+      "id": "satglobaltv-4846-5d27a33e6bdb3c",
+      "type": "xtream",
+      "server": "http://tayaar.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4846",
+      "date": "2025-12-13T15:11:27+00:00"
+    },
+    {
+      "id": "satglobaltv-4844-a938069e154c4c",
+      "type": "mac",
+      "server": "http://one.d4k4u.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4844",
+      "date": "2025-12-13T13:56:01+00:00"
+    },
+    {
+      "id": "satglobaltv-4843-eb907618ee8c7a",
+      "type": "xtream",
+      "server": "http://507169815957.d4ktv.info:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4843",
+      "date": "2025-12-13T13:54:48+00:00"
+    },
+    {
+      "id": "satglobaltv-4843-5702b83bfb2b48",
+      "type": "xtream",
+      "server": "http://4kplus.info",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4843",
+      "date": "2025-12-13T13:54:48+00:00"
+    },
+    {
+      "id": "satglobaltv-4837-ba7fe836fc1bf5",
+      "type": "xtream",
+      "server": "http://yuniott.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4837",
+      "date": "2025-12-13T03:14:36+00:00"
+    },
+    {
+      "id": "satglobaltv-4837-26395d1eb28307",
+      "type": "xtream",
+      "server": "http://4kgood.org:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4837",
+      "date": "2025-12-13T03:14:36+00:00"
+    },
+    {
+      "id": "satglobaltv-4835-6a3d35aac566ce",
+      "type": "xtream",
+      "server": "http://duopro.xyz:83",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4835",
+      "date": "2025-12-13T00:23:55+00:00"
+    },
+    {
+      "id": "satglobaltv-4835-19341f4f5edad2",
+      "type": "xtream",
+      "server": "http://2atv.xyz:83",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4835",
+      "date": "2025-12-13T00:23:55+00:00"
+    },
+    {
+      "id": "satglobaltv-4833-68d73b851d2217",
+      "type": "xtream",
+      "server": "http://bk.xiptv.network",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4833",
+      "date": "2025-12-12T20:39:32+00:00"
+    },
+    {
+      "id": "satglobaltv-4830-c039b346e68ed3",
+      "type": "mac",
+      "server": "http://001122.org:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4830",
+      "date": "2025-12-12T17:17:04+00:00"
+    },
+    {
+      "id": "satglobaltv-4830-75da2f3baf6bc3",
+      "type": "mac",
+      "server": "http://norkadymm.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4830",
+      "date": "2025-12-12T17:17:04+00:00"
+    },
+    {
+      "id": "satglobaltv-4830-1a86a539517cb5",
+      "type": "mac",
+      "server": "http://tv.platinumpython.net:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4830",
+      "date": "2025-12-12T17:17:04+00:00"
+    },
+    {
+      "id": "satglobaltv-4829-1868bbe41f8b2c",
+      "type": "xtream",
+      "server": "http://herevip.pro:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4829",
+      "date": "2025-12-12T17:15:48+00:00"
+    },
+    {
+      "id": "satglobaltv-4827-f47b83151c25be",
+      "type": "xtream",
+      "server": "http://v-5g-co.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4827",
+      "date": "2025-12-12T05:12:30+00:00"
+    },
+    {
+      "id": "satglobaltv-4826-6b841697968245",
+      "type": "xtream",
+      "server": "http://yshoots.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4826",
+      "date": "2025-12-11T22:00:18+00:00"
+    },
+    {
+      "id": "satglobaltv-4824-d269ee307f97d5",
+      "type": "mac",
+      "server": "http://eztv4k.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4824",
+      "date": "2025-12-11T17:07:03+00:00"
+    },
+    {
+      "id": "satglobaltv-4824-77c062c419f057",
+      "type": "mac",
+      "server": "http://23.227.130.90/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4824",
+      "date": "2025-12-11T17:07:03+00:00"
+    },
+    {
+      "id": "satglobaltv-4821-4929aa720ffdf6",
+      "type": "xtream",
+      "server": "http://tigertv.club:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4821",
+      "date": "2025-12-11T05:30:06+00:00"
+    },
+    {
+      "id": "satglobaltv-4808-3fc4620129bf7a",
+      "type": "mac",
+      "server": "http://ace4k.me/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4808",
+      "date": "2025-12-10T12:32:17+00:00"
+    },
+    {
+      "id": "satglobaltv-4806-759f550b4eafbf",
+      "type": "xtream",
+      "server": "http://d478.dtv.homes:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4806",
+      "date": "2025-12-10T06:08:24+00:00"
+    },
+    {
+      "id": "satglobaltv-4803-3f926f516b70e0",
+      "type": "xtream",
+      "server": "http://sansat4u.io:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4803",
+      "date": "2025-12-09T21:37:59+00:00"
+    },
+    {
+      "id": "satglobaltv-4800-e5be53750bae89",
+      "type": "xtream",
+      "server": "http://adminapk.in:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4800",
+      "date": "2025-12-09T19:34:49+00:00"
+    },
+    {
+      "id": "satglobaltv-4797-0279e0a6be9300",
+      "type": "xtream",
+      "server": "http://hookpro.site:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4797",
+      "date": "2025-12-09T18:12:49+00:00"
+    },
+    {
+      "id": "satglobaltv-4796-5902fda883c4c7",
+      "type": "xtream",
+      "server": "http://watchindia.net:8880",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4796",
+      "date": "2025-12-09T16:29:59+00:00"
+    },
+    {
+      "id": "satglobaltv-4793-804c8bd6126300",
+      "type": "xtream",
+      "server": "http://36811-free.oot-mx.me:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4793",
+      "date": "2025-12-09T14:14:41+00:00"
+    },
+    {
+      "id": "satglobaltv-4790-dc34f0964d815f",
+      "type": "mac",
+      "server": "http://sentv.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4790",
+      "date": "2025-12-09T07:54:54+00:00"
+    },
+    {
+      "id": "satglobaltv-4789-b514679247d85e",
+      "type": "xtream",
+      "server": "http://opplex.ch:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4789",
+      "date": "2025-12-09T07:51:29+00:00"
+    },
+    {
+      "id": "satglobaltv-4788-4706918a3d0b0b",
+      "type": "xtream",
+      "server": "http://dhoomtv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4788",
+      "date": "2025-12-09T07:44:32+00:00"
+    },
+    {
+      "id": "satglobaltv-4787-9b0c3624d37867",
+      "type": "xtream",
+      "server": "http://xott.live:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4787",
+      "date": "2025-12-09T06:44:33+00:00"
+    },
+    {
+      "id": "satglobaltv-4785-25f640f272306e",
+      "type": "mac",
+      "server": "http://newtv8k.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4785",
+      "date": "2025-12-09T05:43:27+00:00"
+    },
+    {
+      "id": "satglobaltv-4785-1025966faa3960",
+      "type": "mac",
+      "server": "http://newtv8k.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4785",
+      "date": "2025-12-09T05:43:27+00:00"
+    },
+    {
+      "id": "satglobaltv-4783-0b0ece95145d33",
+      "type": "xtream",
+      "server": "http://bluedk.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4783",
+      "date": "2025-12-08T21:05:01+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-f8438109316a92",
+      "type": "xtream",
+      "server": "http://superom5.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-c4667ea8f188a3",
+      "type": "xtream",
+      "server": "http://bumtv.mrak-iptv.com:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-a09cb955df0bad",
+      "type": "xtream",
+      "server": "http://medotv.nl:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-9c78978be68cdc",
+      "type": "xtream",
+      "server": "http://stb.iphd.tv:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-9172004ec1fad0",
+      "type": "xtream",
+      "server": "http://87143.fly63.be:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-6d99c3b14907ba",
+      "type": "xtream",
+      "server": "http://panel.globesrv.com",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-589ffdacd23b1e",
+      "type": "xtream",
+      "server": "http://zain4k.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-20016ba8ba5fda",
+      "type": "xtream",
+      "server": "http://ultrapremium.cloud:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4782-0a7bae6d5a1194",
+      "type": "xtream",
+      "server": "http://stb.iphd.tv",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4782",
+      "date": "2025-12-08T20:38:46+00:00"
+    },
+    {
+      "id": "satglobaltv-4779-4492be2982ebba",
+      "type": "xtream",
+      "server": "http://masa.snap-tr.org",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4779",
+      "date": "2025-12-08T16:43:21+00:00"
+    },
+    {
+      "id": "satglobaltv-4778-2bf570c4b96bc4",
+      "type": "xtream",
+      "server": "http://livehd77.pro:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4778",
+      "date": "2025-12-08T16:42:42+00:00"
+    },
+    {
+      "id": "satglobaltv-4776-b7ffec4976e1bb",
+      "type": "xtream",
+      "server": "http://kingsiptv.streamtv.to:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4776",
+      "date": "2025-12-08T07:35:37+00:00"
+    },
+    {
+      "id": "satglobaltv-4774-9be1e0b0a3038e",
+      "type": "xtream",
+      "server": "http://masrawy.nvpro.tv:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4774",
+      "date": "2025-12-08T01:07:15+00:00"
+    },
+    {
+      "id": "satglobaltv-4773-3949ea968a4a3b",
+      "type": "xtream",
+      "server": "http://iptvch.com:2082",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4773",
+      "date": "2025-12-08T01:04:22+00:00"
+    },
+    {
+      "id": "satglobaltv-4762-54ce40061eb7ef",
+      "type": "xtream",
+      "server": "http://marveltv.info:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4762",
+      "date": "2025-12-07T08:21:35+00:00"
+    },
+    {
+      "id": "satglobaltv-4760-36f3a1f0cb6f61",
+      "type": "xtream",
+      "server": "http://goldtvhd.tv:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4760",
+      "date": "2025-12-06T23:20:43+00:00"
+    },
+    {
+      "id": "satglobaltv-4760-21eac69a7427a1",
+      "type": "xtream",
+      "server": "http://fullahd.com:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4760",
+      "date": "2025-12-06T23:20:43+00:00"
+    },
+    {
+      "id": "satglobaltv-4759-fc71113c51b9db",
+      "type": "xtream",
+      "server": "http://tprohd.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4759",
+      "date": "2025-12-06T23:03:39+00:00"
+    },
+    {
+      "id": "satglobaltv-4758-3bb020675e7ba8",
+      "type": "xtream",
+      "server": "https://mo3ad.xyz:443",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4758",
+      "date": "2025-12-06T22:46:35+00:00"
+    },
+    {
+      "id": "satglobaltv-4756-b43ed50dab5ca6",
+      "type": "xtream",
+      "server": "http://line.cv2025.biz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4756",
+      "date": "2025-12-06T22:30:08+00:00"
+    },
+    {
+      "id": "satglobaltv-4755-257bfd3ff51dbc",
+      "type": "xtream",
+      "server": "http://warwas.co:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4755",
+      "date": "2025-12-06T21:52:06+00:00"
+    },
+    {
+      "id": "satglobaltv-4753-6adedc60b8813b",
+      "type": "xtream",
+      "server": "http://cms.tvland.pro:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4753",
+      "date": "2025-12-06T20:22:31+00:00"
+    },
+    {
+      "id": "satglobaltv-4753-159649c2961ff0",
+      "type": "xtream",
+      "server": "http://kocaeli41.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4753",
+      "date": "2025-12-06T20:22:31+00:00"
+    },
+    {
+      "id": "satglobaltv-4752-b25a4fcece9884",
+      "type": "xtream",
+      "server": "http://yddfknmd.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4752",
+      "date": "2025-12-06T19:42:39+00:00"
+    },
+    {
+      "id": "satglobaltv-4744-c7b649c4454d7d",
+      "type": "mac",
+      "server": "http://pro.reott8k.xyz/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4744",
+      "date": "2025-12-06T09:34:19+00:00"
+    },
+    {
+      "id": "satglobaltv-4744-5d30344b024f91",
+      "type": "mac",
+      "server": "http://pro.reott8k.xyz:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4744",
+      "date": "2025-12-06T09:34:19+00:00"
+    },
+    {
+      "id": "satglobaltv-4743-77b6f892c4a6bd",
+      "type": "xtream",
+      "server": "http://m3u.sea-iptv.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4743",
+      "date": "2025-12-06T06:04:42+00:00"
+    },
+    {
+      "id": "satglobaltv-4742-ea6a264a0b4e15",
+      "type": "mac",
+      "server": "http://portal.alliptvapp.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4742",
+      "date": "2025-12-06T05:00:09+00:00"
+    },
+    {
+      "id": "satglobaltv-4740-8192ce76015db6",
+      "type": "xtream",
+      "server": "http://python.sct-cloud.xyz:2052",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4740",
+      "date": "2025-12-05T17:28:06+00:00"
+    },
+    {
+      "id": "satglobaltv-4738-d401e2c6195e79",
+      "type": "xtream",
+      "server": "http://azerty.dynns.com:2103",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4738",
+      "date": "2025-12-05T17:16:00+00:00"
+    },
+    {
+      "id": "satglobaltv-4737-eab3809efb67fc",
+      "type": "xtream",
+      "server": "http://wzeukcn.smart-tv.xyz",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4737",
+      "date": "2025-12-05T16:40:27+00:00"
+    },
+    {
+      "id": "satglobaltv-4736-c7932f51b5664b",
+      "type": "xtream",
+      "server": "http://tv5star.com:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4736",
+      "date": "2025-12-05T13:53:21+00:00"
+    },
+    {
+      "id": "satglobaltv-4734-94cba2ecd3634b",
+      "type": "xtream",
+      "server": "http://apollolink.org:8789",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4734",
+      "date": "2025-12-05T04:40:58+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-f04532ab1fee4a",
+      "type": "xtream",
+      "server": "http://6digital9.chocoplus.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-e9e1bac1f68d13",
+      "type": "xtream",
+      "server": "http://kaantv.net:8000",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-d8964ce82825bb",
+      "type": "xtream",
+      "server": "http://cord-cutter.net:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-ab3506dd5f76ab",
+      "type": "xtream",
+      "server": "http://nuhygo.shop:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-56d63d498023f6",
+      "type": "xtream",
+      "server": "http://euroturk3.xyz:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-3351762b7e4b5f",
+      "type": "xtream",
+      "server": "http://62.182.83.108",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-2507f06b116826",
+      "type": "xtream",
+      "server": "http://underdogg.loginto.me:83",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4733-1a53b0a1e99a24",
+      "type": "xtream",
+      "server": "http://xxip25.top:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4733",
+      "date": "2025-12-05T02:41:52+00:00"
+    },
+    {
+      "id": "satglobaltv-4729-bd4adf2a59489c",
+      "type": "xtream",
+      "server": "http://001122.org:2095",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4729",
+      "date": "2025-12-04T22:02:45+00:00"
+    },
+    {
+      "id": "satglobaltv-4728-84de6028737589",
+      "type": "mac",
+      "server": "http://tv.stream4k.cc/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4728",
+      "date": "2025-12-04T19:12:25+00:00"
+    },
+    {
+      "id": "satglobaltv-4727-a5084fae9fd48b",
+      "type": "mac",
+      "server": "http://tv.max4k.us:80/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4727",
+      "date": "2025-12-04T12:33:58+00:00"
+    },
+    {
+      "id": "satglobaltv-4727-96930a4c2e324c",
+      "type": "mac",
+      "server": "http://glen.packetcdn.me:9324/stalker_portal/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4727",
+      "date": "2025-12-04T12:33:58+00:00"
+    },
+    {
+      "id": "satglobaltv-4727-48a1f099612e50",
+      "type": "xtream",
+      "server": "http://xxip9.top",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4727",
+      "date": "2025-12-04T12:33:58+00:00"
+    },
+    {
+      "id": "satglobaltv-4726-17b4b433c41366",
+      "type": "mac",
+      "server": "http://line.dino.ws/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4726",
+      "date": "2025-12-04T09:51:13+00:00"
+    },
+    {
+      "id": "satglobaltv-4724-0e22ab78d5fdb6",
+      "type": "mac",
+      "server": "http://cp.b1g.ooo:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4724",
+      "date": "2025-12-04T07:18:01+00:00"
+    },
+    {
+      "id": "satglobaltv-4723-95be1c2d67867d",
+      "type": "xtream",
+      "server": "http://marveltv.info:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4723",
+      "date": "2025-12-04T05:08:51+00:00"
+    },
+    {
+      "id": "satglobaltv-4722-e1c037c8d9c73f",
+      "type": "xtream",
+      "server": "http://tv-365.vip:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4722",
+      "date": "2025-12-04T01:19:47+00:00"
+    },
+    {
+      "id": "satglobaltv-4719-c93354c83eea3f",
+      "type": "mac",
+      "server": "http://tv.trexiptv.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4719",
+      "date": "2025-12-03T18:05:26+00:00"
+    },
+    {
+      "id": "satglobaltv-4719-c1e8bf9c873197",
+      "type": "xtream",
+      "server": "http://tv.trexiptv.com:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4719",
+      "date": "2025-12-03T18:05:26+00:00"
+    },
+    {
+      "id": "satglobaltv-4719-4758f817d6b3e6",
+      "type": "mac",
+      "server": "http://tv.trexiptv.com/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4719",
+      "date": "2025-12-03T18:05:26+00:00"
+    },
+    {
+      "id": "satglobaltv-4717-cf1a1393972553",
+      "type": "xtream",
+      "server": "http://pro.reott8k.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4717",
+      "date": "2025-12-03T18:00:13+00:00"
+    },
+    {
+      "id": "satglobaltv-4716-de06ed1f9df4b4",
+      "type": "mac",
+      "server": "http://apk.androidtrex.com:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4716",
+      "date": "2025-12-03T17:09:39+00:00"
+    },
+    {
+      "id": "satglobaltv-4715-db2dd1494d5715",
+      "type": "mac",
+      "server": "http://chaotic-streams.cc:80/c/",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/4715",
+      "date": "2025-12-03T17:08:53+00:00"
     },
     {
       "id": "AisosElho-126-840130d70192c5",
