@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "servers.json"
-CHANNELS = ("IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal")
+CHANNELS = ("IPTVXtremeFlix", "AisosElho", "StbEmucodesStalkerPortal", "satglobaltv")
 RECENT_PAGES = 8
 BACKFILL_PAGES = 55
 MAX_PER_CHANNEL = 2500
@@ -200,7 +200,11 @@ def main() -> int:
     all_ok = True
     for channel in CHANNELS:
         try:
-            channel_items = fetch(channel, min(pages, 12) if channel in SOURCE_LIMITS else pages)
+            # A newly configured feed gets a one-time historical scan immediately,
+            # without forcing a deep scan of all existing channels.
+            was_indexed = previous.get("sources", {}).get(channel, {}).get("status") == "ok"
+            source_pages = BACKFILL_PAGES if not was_indexed else pages
+            channel_items = fetch(channel, min(source_pages, 12) if channel in SOURCE_LIMITS else source_pages)
             statuses[channel] = {"status": "ok", "found": len(channel_items)}
             updated.extend(channel_items)
             print(channel + ": " + str(len(channel_items)) + " public server endpoints indexed")
