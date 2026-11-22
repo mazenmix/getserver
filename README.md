@@ -5,10 +5,11 @@ Responsive IPTV server endpoint index for these public Telegram channels:
 - https://t.me/IPTVXtremeFlix
 - https://t.me/AisosElho
 - https://t.me/StbEmucodesStalkerPortal
+- https://t.me/satglobaltv
 
 ## Automatic updates
 
-GitHub Actions fetches publicly visible Telegram posts every **15 minutes** (GitHub scheduled jobs may run later than the exact minute). The dashboard checks its JSON feed again every 60 seconds.
+GitHub Actions fetches publicly visible Telegram posts every **15 minutes** (GitHub scheduled jobs may run later than the exact minute). Newly added channels receive an initial historical scan. The dashboard checks its JSON feed again every 60 seconds.
 
 Only the **server/portal URL, type, source post URL and date** are published. Passwords, Xtream account usernames, M3U login query parameters, and STB MAC identifiers are never harvested or copied into the repository.
 
