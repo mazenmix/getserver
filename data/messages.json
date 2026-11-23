@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T21:23:31Z",
+  "updated_at": "2026-11-23T01:52:03Z",
   "last_deep_scan": "2026-11-22T01:14:13Z",
   "deep_scan_completed": true,
   "sources": {
@@ -17,7 +17,7 @@
     },
     "satglobaltv": {
       "status": "ok",
-      "posts": 926
+      "posts": 121
     }
   },
   "items": [
