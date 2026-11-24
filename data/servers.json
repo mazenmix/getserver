@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T21:46:09Z",
+  "updated_at": "2026-11-24T05:38:50Z",
   "last_deep_scan": "2026-11-22T01:13:25Z",
   "deep_scan_completed": true,
   "sources": {
@@ -17,10 +17,34 @@
     },
     "satglobaltv": {
       "status": "ok",
-      "found": 128
+      "found": 130
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6213-7d7b72a7b862d2",
+      "type": "xtream",
+      "server": "http://octopustv.xyz:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6213",
+      "date": "2026-11-24T03:14:07+00:00"
+    },
+    {
+      "id": "satglobaltv-6212-bb7de03f3bbaec",
+      "type": "xtream",
+      "server": "http://8kstronk.online:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6212",
+      "date": "2026-11-24T03:13:54+00:00"
+    },
+    {
+      "id": "satglobaltv-6211-2143f53fd7c40e",
+      "type": "xtream",
+      "server": "http://mitvpro.online:25461",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6211",
+      "date": "2026-11-24T03:13:38+00:00"
+    },
     {
       "id": "satglobaltv-6210-345a6d8050701d",
       "type": "mac",
@@ -78,14 +102,6 @@
       "date": "2026-11-22T17:09:24+00:00"
     },
     {
-      "id": "satglobaltv-6208-ae0f999e68a26b",
-      "type": "xtream",
-      "server": "http://8kstronk.online:80",
-      "source": "satglobaltv",
-      "post_url": "https://t.me/satglobaltv/6208",
-      "date": "2026-11-22T17:09:24+00:00"
-    },
-    {
       "id": "satglobaltv-6208-a9ce13022e0f1e",
       "type": "xtream",
       "server": "http://fr.fess.ch:80",
@@ -126,25 +142,9 @@
       "date": "2026-11-22T17:09:24+00:00"
     },
     {
-      "id": "satglobaltv-6208-58d1199364d962",
-      "type": "xtream",
-      "server": "http://octopustv.xyz:80",
-      "source": "satglobaltv",
-      "post_url": "https://t.me/satglobaltv/6208",
-      "date": "2026-11-22T17:09:24+00:00"
-    },
-    {
       "id": "satglobaltv-6208-4679f04e85d82d",
       "type": "xtream",
       "server": "http://khdzikjhd.com:80",
-      "source": "satglobaltv",
-      "post_url": "https://t.me/satglobaltv/6208",
-      "date": "2026-11-22T17:09:24+00:00"
-    },
-    {
-      "id": "satglobaltv-6208-35791bcc5f2397",
-      "type": "xtream",
-      "server": "http://mitvpro.online:25461",
       "source": "satglobaltv",
       "post_url": "https://t.me/satglobaltv/6208",
       "date": "2026-11-22T17:09:24+00:00"

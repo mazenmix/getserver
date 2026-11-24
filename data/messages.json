@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T21:46:26Z",
+  "updated_at": "2026-11-24T05:39:08Z",
   "last_deep_scan": "2026-11-22T01:14:13Z",
   "deep_scan_completed": true,
   "sources": {
@@ -17,10 +17,52 @@
     },
     "satglobaltv": {
       "status": "ok",
-      "posts": 121
+      "posts": 123
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6214",
+      "source": "satglobaltv",
+      "post_id": "6214",
+      "date": "2026-11-24T03:14:52+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
+    {
+      "id": "satglobaltv-6213",
+      "source": "satglobaltv",
+      "post_id": "6213",
+      "date": "2026-11-24T03:14:07+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://octopustv.xyz:80"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "satglobaltv-6212",
+      "source": "satglobaltv",
+      "post_id": "6212",
+      "date": "2026-11-24T03:13:54+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://8kstronk.online:80"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "satglobaltv-6211",
+      "source": "satglobaltv",
+      "post_id": "6211",
+      "date": "2026-11-24T03:13:38+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://mitvpro.online:25461"
+      ],
+      "excerpt": true
+    },
     {
       "id": "satglobaltv-6210",
       "source": "satglobaltv",
