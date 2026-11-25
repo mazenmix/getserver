@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T00:56:09Z",
+  "updated_at": "2026-11-25T09:21:21Z",
   "last_deep_scan": "2026-11-22T01:13:25Z",
   "deep_scan_completed": true,
   "sources": {
@@ -17,10 +17,18 @@
     },
     "satglobaltv": {
       "status": "ok",
-      "found": 130
+      "found": 131
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6216-839c8af5e52fa0",
+      "type": "xtream",
+      "server": "http://3rvqg.xgek.codes:80",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6216",
+      "date": "2026-11-25T02:50:27+00:00"
+    },
     {
       "id": "satglobaltv-6213-7d7b72a7b862d2",
       "type": "xtream",

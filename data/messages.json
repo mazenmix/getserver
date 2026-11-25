@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T00:56:27Z",
+  "updated_at": "2026-11-25T09:21:37Z",
   "last_deep_scan": "2026-11-22T01:14:13Z",
   "deep_scan_completed": true,
   "sources": {
@@ -17,10 +17,30 @@
     },
     "satglobaltv": {
       "status": "ok",
-      "posts": 123
+      "posts": 124
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6216",
+      "source": "satglobaltv",
+      "post_id": "6216",
+      "date": "2026-11-25T02:50:27+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://3rvqg.xgek.codes:80"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "satglobaltv-6215",
+      "source": "satglobaltv",
+      "post_id": "6215",
+      "date": "2026-11-25T02:50:00+00:00",
+      "summary": "منشور عام من القناة",
+      "servers": [],
+      "excerpt": true
+    },
     {
       "id": "satglobaltv-6214",
       "source": "satglobaltv",
