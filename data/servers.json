@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T11:10:45Z",
+  "updated_at": "2026-11-26T20:08:19Z",
   "last_deep_scan": "2026-11-22T01:13:25Z",
   "deep_scan_completed": true,
   "sources": {
@@ -9,7 +9,7 @@
     },
     "AisosElho": {
       "status": "ok",
-      "found": 225
+      "found": 226
     },
     "StbEmucodesStalkerPortal": {
       "status": "ok",
@@ -21,6 +21,14 @@
     }
   },
   "items": [
+    {
+      "id": "AisosElho-211-2d4d1056c7c623",
+      "type": "xtream",
+      "server": "http://maxplayplatform.com:8080",
+      "source": "AisosElho",
+      "post_url": "https://t.me/AisosElho/211",
+      "date": "2026-11-26T14:03:28+00:00"
+    },
     {
       "id": "satglobaltv-6216-839c8af5e52fa0",
       "type": "xtream",
