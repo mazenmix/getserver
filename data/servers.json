@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T11:30:30Z",
+  "updated_at": "2026-11-27T20:10:31Z",
   "last_deep_scan": "2026-11-22T01:13:25Z",
   "deep_scan_completed": true,
   "sources": {
@@ -17,10 +17,26 @@
     },
     "satglobaltv": {
       "status": "ok",
-      "found": 131
+      "found": 133
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6218-04c84f2525c47c",
+      "type": "xtream",
+      "server": "http://proiptv.co:88",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6218",
+      "date": "2026-11-27T15:50:15+00:00"
+    },
+    {
+      "id": "satglobaltv-6217-b473efa48f16f9",
+      "type": "xtream",
+      "server": "http://nobeltv.live:8080",
+      "source": "satglobaltv",
+      "post_url": "https://t.me/satglobaltv/6217",
+      "date": "2026-11-27T15:49:46+00:00"
+    },
     {
       "id": "AisosElho-211-2d4d1056c7c623",
       "type": "xtream",
@@ -105,14 +121,6 @@
       "id": "satglobaltv-6208-b6d616f00b0bf4",
       "type": "xtream",
       "server": "http://www.vivatvs.uk:8080",
-      "source": "satglobaltv",
-      "post_url": "https://t.me/satglobaltv/6208",
-      "date": "2026-11-22T17:09:24+00:00"
-    },
-    {
-      "id": "satglobaltv-6208-b334cf1e6ccfed",
-      "type": "xtream",
-      "server": "http://proiptv.co:88",
       "source": "satglobaltv",
       "post_url": "https://t.me/satglobaltv/6208",
       "date": "2026-11-22T17:09:24+00:00"

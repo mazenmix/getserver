@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T11:30:47Z",
+  "updated_at": "2026-11-27T20:10:48Z",
   "last_deep_scan": "2026-11-22T01:14:13Z",
   "deep_scan_completed": true,
   "sources": {
@@ -21,6 +21,28 @@
     }
   },
   "items": [
+    {
+      "id": "satglobaltv-6218",
+      "source": "satglobaltv",
+      "post_id": "6218",
+      "date": "2026-11-27T15:50:15+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://proiptv.co:88"
+      ],
+      "excerpt": true
+    },
+    {
+      "id": "satglobaltv-6217",
+      "source": "satglobaltv",
+      "post_id": "6217",
+      "date": "2026-11-27T15:49:46+00:00",
+      "summary": "منشور عن سيرفرات xtream",
+      "servers": [
+        "http://nobeltv.live:8080"
+      ],
+      "excerpt": true
+    },
     {
       "id": "AisosElho-211",
       "source": "AisosElho",
